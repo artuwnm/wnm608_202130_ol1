@@ -1,3 +1,3 @@
 # Mindy Quan
 
--http://mindyquan.com
+- https://mindyquan.com
