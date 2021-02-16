@@ -1,0 +1,305 @@
+/* CSS RESET*/
+
+*, *::before, *::after {
+	box-sizing: border-box;
+} 
+
+:root {
+	--color-netural-light: #eee;
+	--color-netural-medium: #999;
+	--color-netural-dark: #555;
+
+	--color-black: #000;
+	--color-white: #fff;
+
+	--header-height: 3rem;
+	--spacing: 1rem;
+
+	--font-serif: Geogria, "Times New Roman", serif;
+	--font-sans: Helvatica, Arial, sans-serif;
+}
+
+
+body{
+	margin: 0;
+	font-size: 100%;
+	font-family: var(--font-sans);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+	font-family: var(--font-serif);
+}
+
+
+a {
+	color: inherit;
+	font-weight: medium;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* LAYOUT CLASSES*/
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.display-flex { display: flex; }
+.display-inline-flex { display: inline-flex; }
+.display-block { display: block; }
+.display-inline-block { display: inline-block; }
+
+/* FLEX CHILD */
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items: center; }
+.flex-justify-center { justify-content: center; }
+
+
+
+/* NAVBAR COMPONENT */
+
+.nav ul{
+
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.navbar {
+	background-color: var(--color-netural-dark);
+	color: var(--color-white);
+	line-height: var(--header-height);
+}
+
+	.navbar h1 {
+		font-size: 1.5em;
+		font-family: var(--font-sans);
+		margin: 0;
+	}
+
+	.navbar ul a{
+		padding: 0 1em;
+		font-weight: bold;
+	}
+
+
+/* BANNER COMPONENT */
+
+.banner {
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	position: relative;
+}
+
+.announce {
+
+	position: absolute;
+	width: 260px;
+	height: 300px;
+	left: 380px;
+	top: 100px;
+
+	font-family: var(--font-sans);
+
+	background-color: var(--color-netural-medium);
+	color: var(--color-white);
+
+
+
+}
+
+	.announce_title {
+		padding: 0 0.5em;
+		
+		margin-bottom: 10px;
+	}
+
+	.announce_content {
+		margin-top: 0;
+		padding: 0 1em;
+		line-height: 1.5em;
+
+	}
+
+
+
+/* CARD COMPONENT*/
+
+.card {
+	background-color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+}
+
+    .card.soft {
+		
+		border-radius: 0.5em;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	}
+
+	.card.hard {
+		border-radius: 0.2em;
+		border: 2px solid var(--color-netural-medium);
+
+	}
+
+	.card.dark {
+		background-color: var(--color-netural-dark);
+		color: var(--color-netural-light);
+	}
+
+	.card.medium {
+		background-color: var(--color-netural-medium);
+	}
+
+	.card.flat{
+		
+		background-color: var(--color-netural-light);
+	}
+
+
+
+
+
+
+/* COLLECTION COMPONENT*/
+
+.generation_intro {
+	
+ 	flex-direction: column;
+ 	align-items: center;
+ 	margin-top: 5em;
+	
+}
+	
+
+	.generation_content {
+		
+		justify-content: space-between;
+		align-items: center;
+		width: 1200px;
+		height: 500px;
+
+	}
+
+	.generation_text {
+		width: 340px;
+		height: 450px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+		.generation_text p {
+			line-height: 1.5em;
+
+		}
+
+		.generation_text h2 {
+			font-size: 1.4em;
+		}
+	
+
+
+
+	/* VIEW WINDOW COMPONENT */
+
+	.view-window {
+		height: 60vh;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+
+		margin-top: 8em;
+	}
+
+	.collection_text{
+		position: absolute;
+		left: 650px;
+		top: 50px;
+
+		color: var(--color-black);
+		width: 250px;
+		height: 200px;
+		line-height: 1.5em;
+
+	}
+
+
+
+	/* GEM INTRODUCTION COMPONENT */
+
+	.gem_intro {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-top: 8em;
+		height: 450px;
+
+	}
+
+	.gem_text {
+		width: 300px;
+		height: 300px;
+		color: var(--color-black);
+		line-height: 1.5em;
+		margin-top: 20px;
+
+	}
+
+	.gem_img img{
+		width: 350px;
+		height: 350px;
+		margin-left: 80px;
+
+	}
+
+
+
+	/* NEWSLETTER COMPONENT */
+
+	.newsletter {
+		margin-top: 8em;
+		margin-bottom: 0;
+	}
+
+	 .news_text {
+	 	color: var(--color-white);
+	 }
+
+	 .news_button {
+	 	display: flex;
+	 	flex-direction: row;
+	 	
+	 	align-items: center;
+
+
+	 }
+
+	 .news_button button {
+	 	width: 80px;
+	 	height: 30px;
+	 	margin-left: 30px;
+	 	
+	 }
