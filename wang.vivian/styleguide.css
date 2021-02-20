@@ -1,0 +1,205 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-neutral-light:#eee;
+	--color-neutral-medium:#999;
+	--color-neutral-dark:#c4b9ae;
+
+	--color-black:#000;
+	--color-white:#fff;
+
+	--header-height:3rem;
+	--spacing: 1rem;
+
+
+
+	--font-serif:Philosopher, Georgia, "Times New Roman", serif;
+	--font-sans:Marcellus, Helvetica, Arial, sans-serif ;
+}
+
+body {
+	margin:0;
+	font-size:100%;
+	font-family:var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-serif);
+	color: #5f5851;
+}
+
+a{
+	color: #5f5851;
+	font-weight: thin;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* lauout classes */
+
+.container {
+	max-width:1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.display-flex { display:flex; }
+.display.inline-flex { display:inline-flex; }
+.display.block { display:block; }
+.display.inline-block { display:inline-block; }
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items: center; }
+.flex-justify-center { justify-content: center; }
+
+
+/* component class*/
+
+.nav ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.navbar {
+	background-color:var(--color-neutral-dark);
+	color:var(--color-white);
+	line-height: var(--header-height);
+	margin-bottom: 2.5em;
+}
+
+	.navbar h1 {
+		font-size: 1em;
+		margin: 0;
+		font-family:var(--font-sans);
+	}
+	.navbar a {
+		padding: 0 1em;
+	}
+
+/*card*/
+
+.card {
+	background-color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+
+}
+
+	.card.soft {
+		border-radius: 0em;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		width: 24vw;
+
+	}
+	.card.hard {
+		border-radius: 0.2em;
+		border:2px solid var(--color-neutral-medium);
+	}
+
+	.card.dark {
+		background-color: var(--color-netural-medieum);
+		color:var(--color-neutral-light);
+	}
+
+	.card.medium {
+		background-color:var(--color-netural-medium);
+	}
+
+	.card.flat {
+		padding:0;
+	}
+
+
+.view-window {
+	width: 87vw;
+	height:60vh;
+	position:relative;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	padding-top: 1em;
+	margin-left:0em;
+	align-items: stretch;
+
+
+}
+
+
+.discover {
+	padding-top: 3em;
+	padding-bottom: 3em;
+	margin-left: 65vh;
+}
+
+img {
+	width: 21.5vw; 
+}
+
+p{
+	margin-left: 7em;
+}
+
+p.article{
+	margin-top: 5em;
+	margin-bottom: 5em;
+
+}
+
+
+
+.ofgallery{
+	width: 100%;
+	padding: 0 6px;
+	padding-top: 40px;
+
+	float: left;
+	width: 30%;
+
+	display:block;
+	margin-left: 30px;
+	margin-right: auto;
+
+	object-fit: cover;
+	margin-bottom: 5em;
+
+}
+
+.footer{
+	margin-left: 40vw;
+	margin-bottom: 5em;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
