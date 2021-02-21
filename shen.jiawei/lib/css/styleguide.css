@@ -1,0 +1,257 @@
+/* CSS RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-neutral-light: #eee;
+  --color-neutral-medium: lightgray;
+  --color-neutral-dark: rgb(105, 105, 105);
+
+  --header-height: 3rem;
+  --spacing: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--color-neutral-light);
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: lighter;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 0;
+  background-color: transparent;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  line-height: inherit;
+  width: max-content;
+  transition: 0.2s;
+}
+
+button:after {
+  border: none;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+button:enabled:hover,
+.item-card > .img > .overlay:hover > button:enabled {
+  color: black;
+  background-color: white;
+}
+
+button:enabled:active {
+  opacity: 0.5;
+}
+
+button * {
+  pointer-events: none;
+}
+
+/* LAYOUT CLASSES */
+
+.container,
+section {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVBAR */
+
+header {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: var(--theme-color);
+  height: var(--header-height);
+  width: 100vw;
+}
+
+header > div {
+  flex-grow: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  height: 100%;
+}
+
+nav > a {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  transition: 0.2s;
+}
+
+nav > a:hover {
+  color: var(--theme-color);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+/* VIEW WINDOW */
+
+.view-window {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.view-window > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.view-window > div:hover {
+  opacity: 1;
+}
+
+/* ROW */
+
+.row {
+  --margin: 0.5rem;
+  margin: var(--margin);
+  display: flex;
+  height: 18rem;
+}
+
+.row > * {
+  flex-grow: 1;
+}
+
+/* ITEM CARD */
+
+.item-card {
+  cursor: pointer;
+  background-color: white;
+  margin: 0 var(--margin);
+  height: 100%;
+  width: calc(100% / 3 - var(--margin) * 2);
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
+.item-card:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.item-card > .img {
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-card > .img > .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.666);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  transition: 0.4s;
+}
+
+.item-card:hover > .img > .overlay {
+  opacity: 1;
+}
+
+.item-card > .info {
+  padding: 0.7em 1em;
+  display: flex;
+  align-items: center;
+}
+
+.item-card > .info > .desc {
+  flex-grow: 1;
+}
+
+.item-card > .info > .desc > h3,
+.item-card > .info > .desc > p {
+  margin: 0;
+}
+
+.item-card > .info > .desc > p {
+  color: var(--color-neutral-dark);
+  font-size: small;
+}
+
+.item-card > .info > .discount {
+  margin: 0 1em;
+  padding: 0.3em 0.5em;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.item-card > .info > .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-card > .info > .price > .full {
+  font-size: x-small;
+  text-decoration-line: line-through;
+  color: var(--color-neutral-dark);
+}
+
+.item-card > .info > .price > .current {
+  font-size: large;
+}
