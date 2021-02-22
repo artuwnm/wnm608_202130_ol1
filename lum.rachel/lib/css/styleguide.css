@@ -1,0 +1,157 @@
+/* CSS Reset */ 
+
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+:root{
+	--color-neutral-light: #eee;
+	--color-neutral-medium: #999;
+	--color-neutral-dark: #555;
+	--color-back: #000;
+	--color-white: #fff;
+
+	--header-heaght: 7rem;
+	--spacing: 1rem;
+
+	--font-sans: Helvetica, Arial, sans-serif;
+	--font-serif: Georgia, "Times New Roman", serif;
+}
+
+
+
+
+body{
+	margin: 0;
+	font-size: 100%;
+	font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4{
+	font-family: var(--font-serif);
+}
+
+a{
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+/* Layout classes */
+
+.container{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.product-container{
+	max-width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.product{
+	display: flex;
+	
+}
+
+
+
+
+
+.display-flex{
+	display: flex;
+}
+
+.display-inline-flex{
+	display: inline-flex;
+}
+.display-block{
+	display: block;
+}
+
+.display-inline-block{
+	display: inline-block;
+}
+
+.flex-stretch{
+	flex: 1 1 auto;
+}
+
+.flex-none{
+	flex: none;
+}
+
+.flex-align-center{
+	align-items: center;
+}
+
+.flex-justify-center{
+	justify-content: center;
+}
+
+/* Component classes */
+
+.nav ul{
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.navbar{
+	background-color: var(--color-white);
+	color: var(--color-dark);
+	line-height: var(--header-heaght);
+}
+
+.navbar h1{
+	font-size: 2em;
+	margin: 0;
+	font-family: var(--font-sans);
+}
+
+.navbar a{
+	padding: 0 0.5em;
+}
+
+/* Card component */
+
+.card{
+	background-color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	overflow: hidden;
+	position: relative;
+}
+
+.card.soft{
+	border-radius: 0.5em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
