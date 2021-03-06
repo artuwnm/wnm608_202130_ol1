@@ -6,6 +6,7 @@
 	<title>Store Name</Website></title>
 
 	<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" type="text/css" href="css/storetheme.css">
 </head>
 <body>
@@ -25,10 +26,83 @@
 			</nav>
 		</div>	
 	</header>
+	<div class="container">
+		<div class="card soft">
+			<h2>Grid</h2>
+				<div class="grid">
+					<div class="col-xs-6">column 6</div>
+					<div class="col-xs-6">column 6</div>
+				</div>
+				<div class="grid gap xs-small md-medium">
+					<div class="col-xs-4">column 4</div>
+					<div class="col-xs-4">column 4</div>
+					<div class="col-xs-4">column 4</div>
+					
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+				</div>
+				<div class="grid ten gap">
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+				</div></div>
+	</div>
+	<!--/*four card grid display*/-->
+	<div class="container">
+		<div class="grid gap xs-small md-medium">
+			<!-- .col-xs-6.col-md-3*4>.card>{Card} -->
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="img/dummy.jpg" alt="placeholder" class="media-image">
+			</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="img/dummy.jpg" alt="placeholder" class="media-image">
+			</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="img/dummy.jpg" alt="placeholder" class="media-image">
+			</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="img/dummy.jpg" alt="placeholder" class="media-image">
+			</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="card soft"><h2>Responsive Grid</h2>
+				<div class="grid">
+					<div class="col-xs-12 col-md-6">column 6</div>
+					<div class="col-xs-12 col-md-6">column 6</div>
+				</div>
+				<div class="grid">
+					<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+					<div class="col-xs-12 col-md-4 col-xl-6">column 4</div>
+					<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+				3
+			3	<div class="col-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+		
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-6">column 6</div>
+					<div class="col-xs-3">column 3</div>
+				</div></div>
+	</div>
 	<div class="view-window" style="background-image: url('img/dummy.jpg')">
 	</div>
-	<div class="container articles row">
-		<article id="article1" class="article card soft column">
+	<div class="container articles row grid">
+		<article id="article1" class="article card soft column col-6">
 			<div class= "display-flex flex-align-center">
 				<div class= "flex-stretch">
 					<div class="article-text">
@@ -39,8 +113,8 @@
 				</div>
 			</div>
 		</article>
-		<div class="row">
-			<article id="article2" class="article card soft column">
+		<div class="containter row grid">
+			<article id="article2" class="article card soft column col-12">
 				<div class="article-text">
 					<img src="img/dummy.jpg">
 					<h2>Item 2</h2>
@@ -49,7 +123,7 @@
 			</article>
 		</div>
 
-		<div class="row">
+		<div class="container row">
 			<article id="article3" class="article card soft column">
 				<div class="article-text">
 					<img src="img/dummy.jpg">
@@ -58,7 +132,7 @@
 				</div>
 			</article>
 		</div>
-		<div class="row">
+		<div class="container row">
 			<article id="article4" class="article card soft column">
 				<div class="article-text">
 					<img src="img/dummy.jpg">
