@@ -10,7 +10,11 @@
 	--color-netural-dark: #555;
 
 	--color-black: #000;
+	--color-offblack: #4F4F4F;
+	--color-grayblack: #8b9093;
 	--color-white: #fff;
+	--color-offwhite: #f3f3f3;
+	--color-lightwhite: #e5e5e5;
 
 	--header-height: 3rem;
 	--spacing: 1rem;
@@ -150,11 +154,15 @@ a:hover{
 	padding: 1em;
 
 }
-
-    .card.soft {
-		
+	.card.light {
+		background-color: var(--color-lightwhite);
+		box-shadow: 0 0 8px rgba(0,0,0,0.05);
 		border-radius: 0.5em;
-		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	}
+    .card.soft {
+		background-color: var(--color-white);
+		border-radius: 0.5em;
+		box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	}
 
 	.card.hard {
@@ -303,3 +311,362 @@ a:hover{
 	 	margin-left: 30px;
 	 	
 	 }
+
+
+
+	 /* Style Guide Sheet*/
+
+	 .style_title {
+	 	text-align: center;
+	 	margin-bottom: 4em;
+	 	line-height: 1.8em;
+	 }
+
+	 .style_title h1{
+	 	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 3em;
+		color: var(--color-black);
+		margin-bottom: 0;
+
+		
+	 }
+
+	 .style_title h4 {
+	 	font-family: proxima-nova,sans-serif;
+		font-weight: 300;
+		font-style: normal;
+		color: var(--color-offblack);
+		
+
+	 }
+
+	 
+
+	 .table_of_contents {
+	 	width: 70%;
+	 	margin-left: 10em;
+	 	margin-top: 1em;
+	 	margin-bottom: 1em;
+	 	flex-direction: row;
+	 	
+	 }
+
+	 .table_title {
+	 	
+	 }
+	  .table_title h2{
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 1.4em;
+		color: var(--color-offblack);
+	  }
+
+
+	  .table_list {
+	  	margin-left: 13em;
+	  	
+	  	color: var(--color-offblack);
+	  	width: 15em;
+	  }
+
+	  .list {
+	  	
+	  	
+	  }
+
+	  .table_list li {
+	  	
+	  	padding-bottom: 0.8em;
+	  	margin-top: -0.3em;
+	  	
+	  }
+	  .table_list a {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 1em;
+		border-bottom: 0.8px solid #bebebe;
+		
+
+	  }
+
+	  .table_list li:hover {
+	  	font-size: 1.2em;
+	  	transition: all 0.3s;
+	  	
+	  }
+
+	  .table_list a:hover {
+	  	text-decoration: none;
+	  	border-bottom: none;
+	  }
+
+
+
+	  .color {
+	  	width: 70%;
+	 	margin-left: 10em;
+	 	margin-top: 4em;
+	 	margin-bottom: 5em;
+	  }
+
+	  .color_title h3 {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		color: var(--color-offblack);
+		font-size: 1.2em;
+	  }
+
+
+
+
+	  .palette {
+	  	width: 10em;
+	  	height: 12em;
+	  	flex-direction: column;
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 12px;
+		padding: 0.5em;
+		text-align: center;
+		line-height: 1.6em;
+		color: var(--color-grayblack);
+	  }
+
+	  .main_name {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 12px;
+		color: var(--color-offblack);
+	  }
+
+	  .color_square {
+	  	height: 60%;
+	  	margin-bottom: 0.3em;
+	  }
+
+	  .main_pale1 {
+	  	background-color: #d9baad;
+	  }
+
+	  .main_pale2 {
+	  	background-color: #e5c2c2;
+	  }
+
+	  .main_pale3 {
+	  	background-color: #f7f0eb;
+	  }
+
+	  .main_pale4 {
+	  	background-color: #66696c;
+	  }
+
+	  .main_pale5 {
+	  	background-color: #a4a4a7;
+	  }
+
+	  .main_pale6 {
+	  	background-color: #e6e6e5;
+	  }
+
+	  .main_pale7 {
+	  	background-color: #3F312B;
+	  }
+
+	  .main_pale8 {
+	  	background-color: #dba554;
+	  }
+
+
+
+	  .typo {
+	  	
+	  	width: 70%;
+	 	margin-left: 10em;
+	 	margin-top: 5em;
+	  	
+
+	 	
+	  }
+
+	  .typo_title h3 {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		color: var(--color-offblack);
+		font-size: 1.2em;
+	  }
+
+
+	  .font {
+	  	width: 10em;
+	  	height: 12em;
+	  	flex-direction: column;
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 12px;
+		padding: 0.5em;
+		text-align: center;
+		line-height: 1.7em;
+		color: var(--color-grayblack);
+		
+
+	  }
+
+	 
+
+	  .typo_square1 {
+	  	height: 60%;
+	  	margin-bottom: 0.3em;
+	  	flex-direction: column;
+	  	font-family: 'Bodoni Moda', serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 4.5em;
+		padding: 0.2em;
+		border-bottom: 0.8px solid #bebebe;
+		text-align: center;
+		line-height: 0.8em;
+		color: var(--color-offblack);
+		margin-bottom: 0.15em;
+	  }
+
+	  .font_family {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 12px;
+		color: var(--color-offblack);
+	  }
+
+	  .Font_name {
+	  	font-family: proxima-nova,sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 12px;
+
+	  }
+
+	  .typo_square2 {
+	  	height: 60%;
+	  	margin-bottom: 0.3em;
+	  	flex-direction: column;
+	  	font-family: 'Nunito', sans-serif;
+	  	font-weight: 600;
+	  	font-style: normal;
+	  	font-size: 4.5em;
+		padding: 0.2em;
+		border-bottom: 0.8px solid #bebebe;
+		text-align: center;
+		line-height: 0.8em;
+		color: var(--color-offblack);
+		margin-bottom: 0.15em;
+	  }
+
+
+	  .typo_table {
+	  	width: 70%;
+	  	height: 50%;
+	 	margin-left: 10em;
+	 	margin-top: 6em;
+	  }
+	  .table {
+		width: 100%;
+		border-collapse: collapse;
+	  }
+
+	  .table th, .table td {
+	
+		text-align: left;
+		padding: 0.4em 0.5em;
+	 }
+
+	 .table th {
+	 	font-family: proxima-nova,sans-serif;
+	  	font-weight: 700;
+	  	font-style: normal;
+	  	font-size: 1em;
+	  	color: var(--color-offblack);
+	 }
+
+	 .table td {
+	 	font-family: proxima-nova,sans-serif;
+	  	font-weight: 400;
+	  	font-style: normal;
+	  	font-size: 0.8em;
+	  	color: var(--color-offblack);
+	 }
+
+	  .table.striped tbody tr:nth-child(odd) {
+	    background-color: var(--color-offwhite);
+
+      }
+
+      .heading {
+      	width: 70%;
+	  	height: 50%;
+	 	margin-left: 10em;
+	 	margin-top: 6em;
+	 	line-height: 1.8em;
+	 	color: var(--color-offblack);
+	 	margin-bottom: 4em; 
+	 	
+      }
+
+      .heading_title {
+      	font-family: proxima-nova,sans-serif;
+	  	font-weight: 600;
+	  	font-style: normal;
+	  	font-size: 1em;
+	  	
+      }
+
+      .header1 {
+      	font-family: 'Bodoni Moda', serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 32px;
+      }
+
+      .header2 {
+      	font-family: 'Bodoni Moda', serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 28px;
+      }
+
+      .header3 {
+      	font-family: 'Nunito', sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 24px;
+      }
+
+      .header4 {
+      	font-family: 'Nunito', sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 18px;
+      }
+
+      .body_text {
+      	width: 45%;
+      	color: var(--color-offblack);
+
+
+      }
+
+      .paragraph {
+      	font-family: 'Nunito', sans-serif;
+		font-weight: 500;
+		font-style: normal;
+		font-size: 12px;
+		line-height: 1.6em;
+      }
