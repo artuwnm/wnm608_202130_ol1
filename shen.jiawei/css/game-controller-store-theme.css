@@ -1,0 +1,116 @@
+:root {
+  --color-main: #13f2a1;
+  --color-main-dark: #038c5a;
+  --color-main-light: #82ffc4;
+  --color-sub: #760dc3;
+  --color-sub-dark: #570A90;
+  --color-sub-light: #964bcd;
+  --color-neutral-extra-dark: black;
+  --color-neutral-dark: #111;
+  --color-neutral-medium: #333;
+  --color-neutral-light: #999;
+  --color-neutral-extra-light: white;
+
+  --gradient-main-light: linear-gradient(
+    var(--color-main-light),
+    var(--color-main)
+  );
+
+  --glow-main-light: 0 0 25px var(--color-main-light);
+  --glow-main: 0 0 25px var(--color-main);
+  --glow-main-soft: 0 0 20px var(--color-main-dark);
+  --glow-main-strong: 0 0 50px var(--color-main-light);
+
+  --card-corner-radius: 15px;
+
+  font-size: 18px;
+}
+
+* {
+  font-family: "Oxanium", cursive;
+}
+
+body {
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-extra-light);
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 200;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+a {
+  color: inherit;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* NAV */
+
+header * {
+  color: var(--color-neutral-extra-dark);
+}
+
+header {
+  /* background: var(--gradient-main-light); */
+  box-shadow: var(--glow-main-light);
+}
+
+nav > a:hover {
+  color: var(--color-main);
+  background-color: var(--color-sub-light);
+  font-weight: normal;
+}
+
+/* CARD */
+
+.card {
+  box-shadow: var(--glow-main-soft);
+  background-color: var(--color-neutral-extra-dark);
+}
+
+.card.soft {
+  box-shadow: none;
+  background-color: var(--color-neutral-medium);
+}
+
+.card.sharp {
+  border-radius: 0;
+}
+
+.card.pill {
+  border-radius: 1000vh;
+}
+
+.card.selectable {
+  box-sizing: content-box !important;
+}
+
+.card.selectable:hover {
+  box-shadow: var(--glow-main);
+}
+
+.card.selected {
+  border: 4px solid var(--color-main);
+}
+
+/* ITEM CARD */
+
+.item-card {
+  box-shadow: var(--glow-main-soft);
+  background-color: var(--color-neutral-extra-dark);
+}
+
+.item-card > .info > .desc > p,
+.item-card > .info > .price > .full {
+  color: var(--color-neutral-light);
+}

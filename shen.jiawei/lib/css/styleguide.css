@@ -7,12 +7,10 @@
 }
 
 :root {
-  --color-neutral-light: #eee;
-  --color-neutral-medium: lightgray;
-  --color-neutral-dark: rgb(105, 105, 105);
-
   --header-height: 3rem;
+  --pill-header-margin: 20px;
   --spacing: 1rem;
+  --card-corner-radius: 5px;
 }
 
 html {
@@ -29,6 +27,7 @@ body {
 h1 {
   font-size: 5rem;
   font-weight: lighter;
+  text-align: center;
 }
 
 h2 {
@@ -81,6 +80,11 @@ section {
   margin-left: auto;
 }
 
+.container.padded,
+section.padded {
+  padding: 20px;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -94,10 +98,30 @@ header {
   z-index: 100;
   display: flex;
   align-items: center;
-  color: white;
-  background-color: var(--theme-color);
+  background-color: var(--color-main);
   height: var(--header-height);
-  width: 100vw;
+  width: 100%;
+}
+
+header.pill {
+  margin: var(--pill-header-margin);
+  padding-left: calc(var(--header-height) / 2);
+  padding-right: calc(var(--header-height) / 2);
+  border-radius: calc(var(--header-height) / 2);
+  width: calc(100vw - var(--pill-header-margin) * 2);
+  overflow: hidden;
+}
+
+.spacer.header {
+  height: var(--header-height);
+}
+
+.spacer.header.pill {
+  height: calc(var(--header-height) + var(--pill-header-margin) * 2);
+}
+
+header * {
+  color: white;
 }
 
 header > div {
@@ -116,13 +140,12 @@ nav > a {
   height: 100%;
   padding: 1rem;
   text-decoration: none;
-  color: white;
   font-weight: lighter;
   transition: 0.2s;
 }
 
 nav > a:hover {
-  color: var(--theme-color);
+  color: var(--color-main);
   background-color: rgba(255, 255, 255, 0.88);
 }
 
@@ -164,6 +187,19 @@ nav > a:hover {
 
 .row > * {
   flex-grow: 1;
+}
+
+/* CARD */
+
+.card {
+  border-radius: var(--card-corner-radius);
+  padding: var(--card-corner-radius);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.card.selectable {
+  cursor: pointer;
 }
 
 /* ITEM CARD */
