@@ -1,3 +1,52 @@
 body{
 	background-color: var(--color-offwhite);
+	padding-bottom: 5em;
+}
+
+.my_favorite {
+	text-align: center;
+	
+}
+
+.favorite_text, .bag_text {
+	font-family: nunito,sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 1em;
+	color: #4a342a;
+}
+
+.my_favorite label span {
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+	color: var(--color-neutral-medium);
+}
+
+.my_favorite input:checked + label span {
+	color: red;
+	transform: scale(1.3,1.3);
+}
+
+
+.my_bag label span {
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+
+}
+
+.my_bag input:checked + label span {
+	
+	transform: scale(1.3, 1.3);
+	
+}
+
+.bag_text {
+	justify-content: center;
+	align-items: center;
+}
+
+.bag_img {
+	margin: 0.2em 0.5em 0.2em 0.1em;
 }

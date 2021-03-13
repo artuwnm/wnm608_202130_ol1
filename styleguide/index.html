@@ -16,7 +16,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;900&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.typekit.net/vmc2klw.css">
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -44,6 +45,8 @@
 				<ul class="list">
 					<li><a href="#color">01 Color Palette</a></li>
 					<li><a href="#typo">02 Typograpghy</a></li>
+					<li><a href="#form">03 Input Forms</a></li>
+					<li><a href="#button">04 Buttons/Other Elements</a></li>
 						
 				</ul>
 			</div>
@@ -129,6 +132,14 @@
 						</div>
 					</div>
 			
+					<div class="col-xs-12 col-md-4">
+						<div class="card soft display-flex palette">
+							<div class="main_pale9 color_square"></div>
+							<div class="main_name">Dark Rose</div>
+							<div>RGB: 183 124 114</div>
+							<div>#b7cc72</div>
+						</div>
+					</div>
 			
 			</div>
 		</div>
@@ -228,7 +239,352 @@
 
 
 			</div>
-</div>
+    </div>
+
+
+
+    <div class="container card soft">
+
+    	<div class="flex-none form_title" id="form">
+			<h3>03 INPUT FORMS</h3>
+		</div>
+
+    	<div class="display-flex input_form">
+    		<div class="default_form flex-none">
+    			<h3>Boxed Default Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Name</label>
+						<input type="text" placeholder="Enter your name" class="default-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Card Number</label>
+						<input type="number" placeholder="xxxx xxxx xxxx xxxx" class="default-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Expiration</label>
+						<input type="month" placeholder="mm/yyyy" class="default-input expiration">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">CVV</label>
+						<input type="password" placeholder="xxx" class="default-input">
+					</div>
+				</form>
+    		</div>
+
+    		<div class="flex-none middle_form"></div>
+
+    		<div class="default_form flex-none">
+    			<h3>Lined Default Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Title</label>
+						<input type="text" placeholder="Item Title" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Price</label>
+						<input type="number" placeholder="$$" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Size</label>
+						<input type="number" placeholder="Size" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Color</label>
+						<input type="text" placeholder="Color" class="default-line">
+					</div>
+				</form>
+
+    		</div>
+    	</div>
+
+    	<div class="divide_line"></div>
+
+
+    	<div class="display-flex input_form">
+    		<div class="alert_form flex-none">
+    			<h3>Boxed Alert Inputs</h3>
+    			<div class="alert_sentence">Please complete all required fileds.</div>
+				<form>
+					<div class="form-control">
+						<label class="alert-lable">Name</label>
+						<input type="text" placeholder="Enter your name" class="alert-input">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">Card Number</label>
+						<input type="number" placeholder="xxxx xxxx xxxx xxxx" class="alert-input">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">Expiration</label>
+						<input type="month" placeholder="mm/yyyy" class="alert-input expiration">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">CVV</label>
+						<input type="password" placeholder="xxx" class="alert-input">
+					</div>
+				</form>
+    		</div>
+
+    		<div class="flex-none middle_form"></div>
+
+    		<div class="alert_form flex-none">
+    			<h3>Lined Alert Inputs</h3>
+    			<div class="alert_sentence">Please fill out each item information below.</div>
+
+				<form>
+					<div class="form-control">
+						<label class="alert-lable">Title</label>
+						<input type="text" placeholder="Item Title" class="alert-line">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">Price</label>
+						<input type="number" placeholder="$$" class="alert-line">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">Size</label>
+						<input type="number" placeholder="Size" class="alert-line">
+					</div>
+					<div class="form-control">
+						<label class="alert-lable">Color</label>
+						<input type="text" placeholder="Color" class="alert-line">
+					</div>
+				</form>
+
+    		</div>
+    	</div>
+
+
+    	<div class="divide_line"></div>
+
+    	<div class="display-flex input_form">
+    		<div class="default_form flex-none">
+    			<h3>Boxed Warning Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Name</label>
+						<input type="text" placeholder="Enter your name" class="default-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Card Number</label>
+						<input type="number" placeholder="xxxx xxxx xxxx xxxx" class="default-input warning-input">
+						<label class="invalid_warning">&#9888; Invalid Card Number</label>
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Expiration</label>
+						<input type="month" placeholder="mm/yyyy" class="default-input expiration">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">CVV</label>
+						<input type="password" placeholder="xxx" class="default-input warning-input">
+						<label class="invalid_warning">&#9888; Invalid CVV</label>
+					</div>
+				</form>
+    		</div>
+
+    		<div class="flex-none middle_form"></div>
+
+    		<div class="default_form flex-none">
+    			<h3>Lined Warning Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Title</label>
+						<input type="text" placeholder="Item Title" class="default-line warning-line">
+						<label class="invalid_warning">&#9888; Invalid Title</label>
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Price</label>
+						<input type="number" placeholder="$$" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Size</label>
+						<input type="number" placeholder="Size" class="default-line warning-line">
+						<label class="invalid_warning">&#9888; Invalid Size</label>
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Color</label>
+						<input type="text" placeholder="Color" class="default-line">
+					</div>
+				</form>
+
+    		</div>
+    	</div>
+
+
+    	<div class="divide_line"></div>
+
+
+    	<div class="display-flex input_form">
+    		<div class="default_form flex-none">
+    			<h3>Boxed Disabled Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Name</label>
+						<input type="text" placeholder="Enter your name" disabled="disabled" class="default-input disable-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Card Number</label>
+						<input type="number" placeholder="xxxx xxxx xxxx xxxx" class="default-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Expiration</label>
+						<input type="month" placeholder="mm/yyyy" disabled="disabled" class="default-input expiration disable-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">CVV</label>
+						<input type="password" placeholder="xxx" class="default-input">
+					</div>
+				</form>
+    		</div>
+
+    		<div class="flex-none middle_form"></div>
+
+    		<div class="default_form flex-none">
+    			<h3>Lined Disabled Inputs</h3>
+
+				<form>
+					<div class="form-control">
+						<label class="default-lable">Title</label>
+						<input type="text" placeholder="Item Title" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Price</label>
+						<input type="number" placeholder="$$" disabled="disabled" class="default-line disable-input">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Size</label>
+						<input type="number" placeholder="Size" class="default-line">
+					</div>
+					<div class="form-control">
+						<label class="default-lable">Color</label>
+						<input type="text" placeholder="Color" disabled="disabled" class="default-line disable-input">
+					</div>
+				</form>
+
+    		</div>
+    	</div>
+
+    </div>
+
+
+
+    <div class="container card soft">
+    	
+    	<div class="display-flex button" id="button" >
+			<div class="flex-none button_title">
+				<h3>04 Buttons/Other Elements</h3>
+			</div>
+					
+			<div class="flex-stretch"></div>	
+			
+			<div class="flex-none button_box">
+			
+				<div class="grid gap">
+			
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_outlined1">Learn More</button>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_filled1">Add To Cart</button>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_outlined2">Upload Image</button>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_filled2">Edit Item</button>
+						</div>
+					</div>
+
+
+					<div class="col-xs-12 col-md-6">
+						<div class="form-select">
+							<select>
+								<option>All</option>
+								<option>Earing</option>
+								<option>Ring</option>
+								<option>Necklace</option>
+								<option>Bracelet</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<form class="hotdog">
+								<span class="search_icon"><img src="../img/search_icon.png"></span>
+								<input type="search" placeholder="Search">
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_text">
+								<a href="#button">
+									<span>&#8636;</span> 
+									<span>Back</span>
+								</a>
+
+							</button>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="form-control">
+							<button type="button" class="form-button button_text">
+								<a href="#button">Continue Shopping &#8640;</a>
+							</button>
+						</div>
+					</div>
+
+
+
+					<div class="col-xs-12 col-md-6">
+						<div class="my_favorite">
+							<input type="checkbox" id="favorite" class="hidden">
+							<label class="favorite_text" for="favorite">
+								<span>&#10084;&nbsp;</span> My Favoriate
+							</label>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-6">
+						<div class="my_bag">
+							<input type="checkbox" id="bag" class="hidden">
+							<label class="bag_text display-flex" for="bag">
+								<span class="bag_img"><img src="../img/bag_icon.png"></span>
+								<div>My Bag</div>
+							</label>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+    </div>
+
+
+
+
 
 
 
