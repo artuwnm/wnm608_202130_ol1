@@ -3,13 +3,23 @@
   --color-main-dark: #038c5a;
   --color-main-light: #82ffc4;
   --color-sub: #760dc3;
-  --color-sub-dark: #570A90;
+  --color-sub-dark: #570a90;
   --color-sub-light: #964bcd;
-  --color-neutral-extra-dark: black;
-  --color-neutral-dark: #111;
+  --color-neutral-extra-dark: #111;
+  --color-neutral-dark: #222;
   --color-neutral-medium: #333;
   --color-neutral-light: #999;
   --color-neutral-extra-light: white;
+  --color-neutral-contrast-1: rgba(255, 255, 255, 0.1);
+  --color-neutral-contrast-2: rgba(255, 255, 255, 0.2);
+  --color-neutral-contrast-3: rgba(255, 255, 255, 0.3);
+  --color-neutral-contrast-4: rgba(255, 255, 255, 0.4);
+  --color-neutral-contrast-5: rgba(255, 255, 255, 0.5);
+  --color-neutral-contrast-6: rgba(255, 255, 255, 0.6);
+  --color-neutral-contrast-7: rgba(255, 255, 255, 0.7);
+  --color-neutral-contrast-8: rgba(255, 255, 255, 0.8);
+  --color-neutral-contrast-9: rgba(255, 255, 255, 0.9);
+  --color-neutral-contrast-10: rgba(255, 255, 255, 1);
 
   --gradient-main-light: linear-gradient(
     var(--color-main-light),
@@ -31,8 +41,9 @@
 }
 
 body {
-  background-color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-extra-dark);
   color: var(--color-neutral-extra-light);
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -43,6 +54,10 @@ h1 {
 h2 {
   font-weight: 600;
   font-size: 36px;
+}
+
+h3 {
+  margin: 0.4em;
 }
 
 a {
@@ -66,9 +81,8 @@ header {
 }
 
 nav > a:hover {
-  color: var(--color-main);
-  background-color: var(--color-sub-light);
-  font-weight: normal;
+  color: var(--color-neutral-extra-dark);
+  background-color: var(--color-neutral-extra-light);
 }
 
 /* CARD */
@@ -79,20 +93,8 @@ nav > a:hover {
 }
 
 .card.soft {
-  box-shadow: none;
-  background-color: var(--color-neutral-medium);
-}
-
-.card.sharp {
-  border-radius: 0;
-}
-
-.card.pill {
-  border-radius: 1000vh;
-}
-
-.card.selectable {
-  box-sizing: content-box !important;
+  background-color: var(--color-neutral-dark);
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); */
 }
 
 .card.selectable:hover {
@@ -108,9 +110,53 @@ nav > a:hover {
 .item-card {
   box-shadow: var(--glow-main-soft);
   background-color: var(--color-neutral-extra-dark);
+  /* background-color: var(--color-neutral-dark); */
 }
 
 .item-card > .info > .desc > p,
 .item-card > .info > .price > .full {
   color: var(--color-neutral-light);
+}
+
+/* INPUT */
+
+input {
+  color: var(--color-neutral-extra-light);
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* BUTTON */
+
+button {
+  border-radius: 233vh;
+  font-weight: 500;
+  padding-bottom: ;
+}
+
+button.primary {
+  color: var(--color-neutral-extra-dark);
+  font-weight: 700;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+  box-shadow: var(--glow-main-soft);
+}
+
+button.primary:hover {
+  box-shadow: var(--glow-main);
+  background-color: var(--color-main);
+}
+
+button.primary.strong {
+  box-shadow: var(--glow-main);
+}
+
+button.primary.strong:hover {
+  background-color: var(--color-neutral-extra-light);
+  box-shadow: var(--glow-main-strong);
+}
+
+button.primary.strong:active {
+  opacity: 1;
+  border-color: var(--color-neutral-extra-light);
+  transform: scale(1.1);
 }

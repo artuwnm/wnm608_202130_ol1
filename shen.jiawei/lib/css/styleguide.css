@@ -19,7 +19,6 @@ html {
 
 body {
   margin: 0;
-  font-size: 100%;
   font-family: Helvetica, Arial, sans-serif;
   background-color: var(--color-neutral-light);
 }
@@ -82,7 +81,7 @@ section {
 
 .container.padded,
 section.padded {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .flex-center {
@@ -198,6 +197,18 @@ nav > a:hover {
   transition: 0.2s;
 }
 
+.card.soft {
+  box-shadow: none;
+}
+
+.card.sharp {
+  border-radius: 0;
+}
+
+.card.pill {
+  border-radius: 1000vh;
+}
+
 .card.selectable {
   cursor: pointer;
 }
@@ -290,4 +301,71 @@ nav > a:hover {
 
 .item-card > .info > .price > .current {
   font-size: large;
+}
+
+/* INPUT */
+
+input {
+  margin: 0.5em 0;
+  padding: 0.4em 0;
+}
+
+input::placeholder {
+  color: var(--color-neutral-contrast-2);
+}
+
+label {
+  color: var(--color-neutral-contrast-6);
+}
+
+.material-input {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.material-input > input {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  outline: none;
+  font: inherit;
+  border-bottom: 2px solid var(--color-neutral-contrast-2);
+  transition: border 0.2s;
+}
+
+.material-input > input:hover {
+  border-bottom: 2px solid var(--color-neutral-contrast-6);
+}
+
+.material-input > input:focus {
+  border-bottom: 2px solid var(--color-main);
+}
+
+.material-input > label {
+  font-size: 0.8rem;
+  transition: color 0.2s, transform 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.material-input > input:focus + label {
+  color: var(--color-main);
+}
+
+.material-input > input[placeholder=" "] + label {
+  display: block;
+  pointer-events: none;
+  margin-top: 0.2rem;
+  height: 1rem;
+}
+
+.material-input > input[placeholder=" "]:placeholder-shown + label {
+  transform-origin: left;
+  transform: translateY(1.2rem) scale(1.25);
+}
+
+.material-input > input[placeholder=" "]:focus + label {
+  transform: none;
 }
