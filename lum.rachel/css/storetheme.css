@@ -1,12 +1,13 @@
 
 :root{
-  --color-neutral-light: #c1ad98;
-  --color-neutral-medium: #ae9176;
-  --color-neutral-dark: #987655;
 
-  --color-main-light: #f0dba6;
-  --color-main-medium: #e5c063;
-  --color-main-dark: #deae37;
+--color-main-light: #c1ad98;
+  --color-main-medium: #ae9176;
+  --color-main-dark: #987655;
+
+  --color-accent-light: #f0dba6;
+  --color-accent-medium: #e5c063;
+  --color-accent-dark: #deae37;
 
   --color-black: #000;
   --color-white: #fff;
@@ -19,7 +20,7 @@
 }
 
 body{
-  background: var(--color-neutral-light);
+  background: var(--color-main-light);
   padding-bottom: 4em;
 }
 
@@ -27,7 +28,7 @@ body{
   transition: all 0.3s;
   display: inline-block;
   transform: scale(1,1);
-  color: var(--color-neutral-medium);
+  color: var(--color-main-medium);
 }
 
 
@@ -35,10 +36,6 @@ body{
   color: red;
   transform: scale(1.3, 1.3);
 }
-
-
-
-
 
 
 
@@ -109,3 +106,19 @@ body{
     padding: 0;
   }
 }
+
+
+
+
+.cart-button{
+  color: var(--color-white);
+}
+
+.edit-button{
+  text-decoration: underline;
+  background: transparent;
+  color: var(--color-black);
+  border-width: 0;
+}
+
+

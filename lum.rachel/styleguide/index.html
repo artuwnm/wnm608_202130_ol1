@@ -44,7 +44,7 @@
 						<ul>
 							<li><a href="#inputs">Inputs</a></li>
 							<li><a href="#labels">Labels</a></li>
-							<li><a href="#controls">Controls</a></li>			
+							<li><a href="#controls">Controls</a></li>	
 						</ul>
 					<li><a href="#buttons">Buttons</a></li>	
 					<li><a href="#hotdog">Hotdog</a></li>
@@ -194,9 +194,9 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<!--<div class="container">
 			<h2>Flex System</h2>
-		</div>
+		</div> -->
 
 		<script>
 		const makeTable = (classes='') => {
@@ -222,8 +222,7 @@
 		}
 		</script>
 
-		<div class="container" id="tables
-		">
+		<div class="container" id="tables">
 			<h2>Tables</h2>
 
 			<div class="card soft">
@@ -449,7 +448,7 @@
 				<div class="card soft">
 					<h3>Default Buttons</h3>
 
-					<button>Button</button>
+						<button>Button</button>
 
 					<h3>Form Buttons</h3>
 					<div class="form-control">
@@ -461,6 +460,15 @@
 					<div class="form-control">
 						<a href="#" class="form-button">Anchor</a>
 					</div>	
+					<div class="form-control">
+						<button class="form-button cart-button">Add to Cart/Keep Shopping/Checkout</button>
+					</div>
+
+
+					<h3>Edit Buttons</h3>
+
+						<button class="edit-button">Edit</button>
+
 				</div>
 
 
@@ -517,6 +525,16 @@
 							</div>
 						</div>
 					</div>
+
+					<h3>Outlined Select Box</h3>
+						<div class="outline-button">
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
 				</div>
 
 		
@@ -526,7 +544,9 @@
 					<h3>Basic Check Box</h3>
 						<label>Label<input type="checkbox" id="input-1"></label>
 						<label for="input-1">Label</label>
-				
+						<div class="display-flex">
+						<label>Same as Shipping Address<input type="checkbox"></label>
+						</div>
 
 
 					<h3>Heart Check box</h3>
