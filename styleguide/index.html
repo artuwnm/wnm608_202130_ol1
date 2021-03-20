@@ -20,7 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.typekit.net/vmc2klw.css">
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	
 </head>
@@ -47,6 +47,10 @@
 					<li><a href="#typo">02 Typograpghy</a></li>
 					<li><a href="#form">03 Input Forms</a></li>
 					<li><a href="#button">04 Buttons/Other Elements</a></li>
+					<li><a href="#navigation">05 Navigation</a></li>
+					<li><a href="#product">06 Product Grid</a></li>
+
+					
 						
 				</ul>
 			</div>
@@ -95,8 +99,8 @@
 						<div class="card soft display-flex palette">
 							<div class="main_pale4 color_square"></div>
 							<div class="main_name">Dark Gray</div>
-							<div>RGB: 102 105 108</div>
-							<div>#66696c</div>
+							<div>RGB: 90 91 91</div>
+							<div>#5a5b5b</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-4">
@@ -137,7 +141,7 @@
 							<div class="main_pale9 color_square"></div>
 							<div class="main_name">Dark Rose</div>
 							<div>RGB: 183 124 114</div>
-							<div>#b7cc72</div>
+							<div>#b77c72</div>
 						</div>
 					</div>
 			
@@ -189,11 +193,11 @@
 			const makeTable = (classes='') => {
 			const head = ['#', 'Style Name', 'Font Family', 'Font Weight', 'Font Size'];
 			const body = [
-				['Header 1',"Bodoni Moda", "Black", '32px'],
+				['Header 1',"Bodoni Moda", "Black", '36px'],
 				['Header 2',"Bodoni Moda", "Bold", '28px'],
 				['Header 3',"Nunito", "Bold", '24px'],
-				['Header 4',"Nunito", "SemiBold", '18px'],
-				['Body Text',"Nunito", "Regular", '12px'],
+				['Header 4',"Nunito", "SemiBold", '20px'],
+				['Body Text',"Nunito", "Light", '16px'],
 
 
 			];
@@ -577,11 +581,190 @@
 			</div>
 		</div>
 
+    </div>
+
+
+
+    <div class="container card soft">
+    	
+    	<div class="display-flex navigation" id="navigation">
+			<div class="navigation_title">
+				<h3>05 Navigation</h3>
+			</div>
+		
+			<div class="navigation_bar">
+				
+				
+
+				<script>
+					const makenav = (classes= '') => {
+					const links = ['Home', 'Store', 'Cart', 'About'];
+					let ran = Math.floor(Math.random()*links.length);
+
+					document.write( `
+					<div>
+						<nav class="${classes}">
+							<ul>
+							${links.reduce((r,o,i)=>{       /* r,o,i   value, object, index*/
+
+								return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`
+							},'')}
+							</ul>
+
+						</nav>
+				
+
+					</div>
+
+
+					`);
+
+				}
+
+				</script>
+
+				<h4>Flex Navigation</h4>
+
+				<div class="flex_navigation">
+					
+					<script>makenav('nav nav-flex')</script>
+
+
+				</div>
+
+				<script>
+					$("#navigation a").on("click",function(e){
+						e.preventDefault();
+					$(this).closest("li").addClass("active")
+						.siblings().removeClass("active")
+					})
+				</script>
+
+			</div>
+		
+		</div>
+
+    </div>
+
+
+
+
+    <div class="container card soft">
+    	<div class="product_title" id="product">
+    		<h3>06 Product Grid</h3>
+    	</div>
+    	<div class="product_grid display-flex">
+    		
+    		<div class="product_layout">Product Layout</div>
+    		<div class="grid gap product_grid1">
+				<div class="col-xs-12 col-md-4">
+
+					<figure class="figure product">
+						<img src="https://via.placeholder.com/400x400?text=product" alt="">
+						<figcaption>
+							<div class="product_name">Product Name</div>
+							<div class="product_price">$200</div>
+						</figcaption>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+
+					<figure class="figure product">
+						<img src="https://via.placeholder.com/400x400?text=product" alt="">
+						<figcaption>
+							<div class="product_name">Product Name</div>
+							<div class="product_price">$80</div>
+						</figcaption>
+					</figure>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+
+					<figure class="figure product">
+						<img src="https://via.placeholder.com/400x400?text=product" alt="">
+						<figcaption>
+							<div class="product_name">Product Name</div>
+							<div class="product_price">$150</div>
+						</figcaption>
+					</figure>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="product_layout">Edit/Add Product</div>
+    		<div class="grid gap product_grid2">
+				<div class="col-xs-12 col-md-4">
+
+					<div class="product_frame">
+						<figure class="figure product edit_product">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">
+							<div class="product_description">Product Name</div>
+							<figcaption class="display-flex edit-buttons">
+								<div class="edit_button1">
+									<button type="button" class="form-button button_filled2">Edit</button>
+								</div>
+								<div class="edit_button2">
+									<button type="button" class="form-button button_filled2">Add</button>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+
+					<div class="product_frame">
+						<figure class="figure product edit_product">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">
+							<div class="product_description">Product Name</div>
+							<figcaption class="display-flex edit-buttons">
+								<div class="edit_button1">
+									<button type="button" class="form-button button_filled2">Edit</button>
+								</div>
+								<div class="edit_button2">
+									<button type="button" class="form-button button_filled2">Add</button>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+
+				</div>
+				<div class="col-xs-12 col-md-4">
+
+					<div class="product_frame">
+						<figure class="figure product edit_product">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">
+							<div class="product_description">Product Name</div>
+							<figcaption class="display-flex edit-buttons">
+								<div class="edit_button1">
+									<button type="button" class="form-button button_filled2">Edit</button>
+								</div>
+								<div class="edit_button2">
+									<button type="button" class="form-button button_filled2">Add</button>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+
+    	</div>
+
+
 
 
 
     </div>
-
 
 
 
