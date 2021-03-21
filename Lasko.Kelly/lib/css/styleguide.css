@@ -6,13 +6,14 @@
 }
 
 :root {
+	/*grays*/
 	--color-neutral-light: #eee;
 	--color-neutral-medium: #999;
 	--color-neutral-dark: #555;
 
-	--color-main-light: lightblue;
-	--color-main-medium: blue;
-	--color-main-dark: darkblue;
+	--color-second-light: #CBA7E4;
+	--color-second-medium: #AB5FBD;
+	--color-second-dark: #702868;
 	
 	--color-black: #000;
 	--color-white: #fff;

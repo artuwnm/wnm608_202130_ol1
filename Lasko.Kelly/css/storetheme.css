@@ -1,7 +1,7 @@
 
 :root{
 	--color-offwhite: #f4f4f4;
-
+/*Greens*/
 	--color-main-light: #a3e6c5;
     --color-main-medium: #67bf94;
     --color-main-dark: #406e57;
@@ -40,10 +40,15 @@ body {
 }
 
 .view-window {
-	width: auto;
-	height: 400px;
-	float: center;
-
+	height: 50vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.view-window h2{
+	color: var(--color-main-light);
 }
 
 .articles {

@@ -40,7 +40,7 @@
 			   		<li><a href="#viewwindow">View Window</a></li>
 			   		<li><a href="#navigations">Navigations</a></li>
 			   		<li><a href="#gridsystem">Grid System</a></li>
-			   		<li><a href="#flexsystem">Flex System</a></li>
+			   		<!--<li><a href="#flexsystem">Flex System</a></li>-->
 			   		<li><a href="#tables">Tables</a></li>
 			   		<li><a href="#forms">Forms</a></li>
 			   		<ul>
@@ -102,6 +102,10 @@
 
 	<div class="container">
 		<h2>View Window</h2>
+		<div class="view-window" style="background-image: url('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80')">
+			<h2>Come Visit us today!</h2>
+			<Button type="button">Get Directions</Button>
+		</div>
 	</div>
 
 	<div class="container" id="navigations">
@@ -211,11 +215,37 @@
 
 	<div class="container">
 		<h2>Grid System</h2>
+		<!--/*four card grid display*/-->
+		<div class="container">
+			<div class="grid gap xs-small md-medium">
+				<!-- .col-xs-6.col-md-3*4>.card>{Card} -->
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">Card
+					<img src="https://via.placeholder.com/400x400?text=product" alt="placeholder" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="https://via.placeholder.com/400x400?text=product" alt="placeholder" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="https://via.placeholder.com/400x400?text=product" alt="placeholder" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">Card
+				<img src="https://via.placeholder.com/400x400?text=product" alt="placeholder" class="media-image">
+				</div>
+			</div>
+
+		</div>
 	</div>
 
-	<div class="container">
+	<!--<div class="container">
 		<h2>Flex System</h2>
-	</div>
+	</div>-->
 
 <script>
 	const makeTable = (classes='') => {
