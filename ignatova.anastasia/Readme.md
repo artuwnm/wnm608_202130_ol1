@@ -1,6 +1,6 @@
 # Anastasia Ignatova
 
-##Relevant links
+#Relevant links
 
 http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/Readme.md
 
