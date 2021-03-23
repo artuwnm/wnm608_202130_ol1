@@ -6,24 +6,29 @@
 }
 
 :root {
-	--color-neutral-light:#F4DDCF;
---color-neutral-medium:#fad3c8;
---color-neutral-dark:#e58273;
+	--color-neutral-light:#fffbfa;
+	--color-neutral-medium:#f5c3c0;
+	--color-neutral-dark:#d99c9c;
 
-    --color-main-light: #F4DDCF;
+    --color-main-light: #fffbfa;
     --color-main-medium: #fad3c8;
     --color-main-dark: #e58273;
 
+	--color-dark-light: #fffbfa;
+    --color-dark-medium: #fad3c8;
+    --color-dark-dark: #261C1D;
 
---color-black:#261C1D;
---color-white:#ffffff;
 
---header-height:3rem;
---spacing:1rem;
+	--color-black:#261C1D;
+	--color-white:#ffffff;
 
---font-serif: bree, "Times New Roman", serif;
---font-sans: futura-pt, Arial, san-serif;
---font-decorative: Coquette, Bree, serif;
+	--header-height:3rem;
+	--spacing:1rem;
+
+	--font-serif: edita-small, serif;
+	--font-sans: futura-pt, Arial, san-serif;
+	--font-decorative: Coquette, Bree, serif;
+	--font-headings: bree, sans-serif;
 	}
 
 body {
@@ -40,10 +45,10 @@ h3,
 h4,
 h5, 
 h6 {
-	font-family: var(--font-serif);
+	font-family: var(--font-headings);
 	font-weight: 400;
 	margin-top: 0.1em;
-	margin-bottom: 0.2em;
+	margin-bottom: 0.1em;
 }
 
 a {
@@ -106,13 +111,13 @@ a:hover {
 }
 
 .nav a:hover {
-	background-color: var(--color-main-medium);
-	color: var(--color-black);
+	background-color: var(--color-neutral-medium);
+	color: var(--color-dark);
 	text-decoration: none;
 }
 
 .nav .active a {
-	background-color: var(--color-main-light);
+	background-color: #f2d4d2;
 	color: inherit;
 }
 
@@ -165,7 +170,7 @@ background-color:transparent;
 }
 
 .nav-material a:hover {
-background-color:var(--color-neutral-light);
+background-color:var(--color-neutral-medium);
 	color: inherit;
 }
 
@@ -189,13 +194,13 @@ height: 4px;
 
 
 .navbar {
-	background-color: var(--color-neutral-dark);
-color: var(--color-white);
+	background-color: var(--color-neutral-medium);
+color: var(--color-dark-dark);
 line-height: var(--header-height);
 }
 
 .navbar h1 {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin: 0;
 	font-family: var(--font-serif);
 }
@@ -225,15 +230,20 @@ line-height: var(--header-height);
 }
 
 .card.soft {
-	margin: .4em auto;
+	margin-top: 0.4em;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 0.5rem;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+
+
 .card.hard {
-	border-radius: 0.2rem;
 	border: 2px solid var(--color-neutral-medium);
+	box-shadow: 0 0 10px rgba(0,0,0,0.1)
 }
+
 
 .card.dark {
 	background-color: var(--color-neutral-dark);
@@ -241,13 +251,17 @@ line-height: var(--header-height);
 }
 
 
+
 .card.medium {
 	background-color: var(--color-neutral-medium);
 }
 
+
 .card.flat {
 	padding: 0;
+	border: 2px solid var(--color-neutral-medium);
 }
+
 
 .view-window {
 	height: 50vh;
@@ -256,7 +270,6 @@ line-height: var(--header-height);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	
 }
 
 
@@ -274,7 +287,7 @@ line-height: var(--header-height);
 }
 
 .table.striped tbody tr:nth-child(odd) {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-main-medium);
 }
 
 .table.lined.all th:not(:first-child),
@@ -317,7 +330,7 @@ line-height: var(--header-height);
 
 
 .form-control {
-	margin: 1em 0;
+	margin: 1em auto;
 }
 
 .form-select>select,
@@ -341,6 +354,7 @@ display: inline-block;
 .form-input {
 	border-bottom: 1px solid var(--color-neutral-light);
 	padding: 0.5em 1em;
+	font-size: 1em;
 }
 
 .form-input:focus {
@@ -348,7 +362,7 @@ display: inline-block;
 }
 
 .form-label {
-	font-size: 0.8em;
+	font-size: 1em;
 	color: var(--color-neutral-dark);
 	display: block;
 	width: 100%;
@@ -359,15 +373,17 @@ display: inline-block;
 /* BUTTON */
 
 .form-button {
-	background-color: var(--color-neutral-light);
-	border-radius: 0.2em;
+	background-color: var(--color-neutral-medium);
+	border-radius: 1em;
 	cursor: pointer;
 	text-align: center;
 	padding: 0.5em 1em;
+	max-width: 10em;
 }
 
 .form-button:hover {
 	text-decoration: none;
+	background-color: var(--color-neutral-dark);
 }
 
 .form-button:active {
@@ -377,15 +393,15 @@ display: inline-block;
 
 
 .hotdog {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-neutral-medium);
 	border-radius: 2em;
-	padding:0.5em 1.5em;
+	padding: 0.5em 1.5em;
 	display: flex;
 }
 
 .hotdog.dark {
-	background-color: var(--color-neutral-dark);
-	color: var(--color-neutral-light)
+	background-color: var(--color-neutral-medium);
+	color: var(--color-neutral-light);
 }
 
 .hotdog.light {
@@ -399,7 +415,7 @@ display: inline-block;
 
 .form-select>select {
 	padding:0.5em 1.5em;
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-main-medium);
 	border-radius: 0.3em;
 	cursor: pointer;
 }

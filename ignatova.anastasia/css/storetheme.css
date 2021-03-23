@@ -27,6 +27,40 @@ color: red;
 transform: scale(2.3,2.3);
 }
 
+#card-basic,
+#card-soft {
+border: 2px solid var(--color-neutral-medium);
+}
+
+#body-text-16 {
+	font-family: var(--font-sans);
+	font-weight: 400;
+	font-size: 16px;
+}
+
+#body-text-14 {
+	font-family: var(--font-sans);
+	font-weight: 400;
+	font-size: 14px;
+}
+
+#decorative-text {
+	font-family: var(--font-decorative);
+	font-size: 20px;
+	padding: 0;
+}
+
+.styleguide-type {
+	font-family: var(--font-serif);
+	font-weight: 400;
+	color: var(--color-main-dark);
+}
+
+.styleguide-type h2 {
+	padding-left: 5%;
+	}
+
+
 @media (max-width: 1200px) {
 	.container {
 		padding-left: 1em;
@@ -40,7 +74,7 @@ transform: scale(2.3,2.3);
 }
 
 .container {
-		padding-left: 1em;
+	padding-left: 1em;
 	padding-right:1em;
 }
 }
@@ -68,12 +102,6 @@ transform: scale(2.3,2.3);
 	line-height: 2em;
 }
 }
-
-
-
-
-
-
 
 .figure.product {
 	border-radius: 0.5em;

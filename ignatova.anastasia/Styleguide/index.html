@@ -37,7 +37,7 @@
 
 <div class="card soft">
     <div class="container" id="tableofcontents">
-      <h2>Table of Contents</h2>
+      <h2 class="styleguide-type">Table of Contents</h2>
       <div class="card soft">
         <nav class="nav">
            <ul>
@@ -71,14 +71,23 @@
 </div>
 
 <div class="card soft">
-<div class="container" id="typography">
-    <h2>Typography</h2>
+<div id="typography">
+    <h2 class="styleguide-type">Typography</h2>
 
     <div class="card soft" id="headings">
-        <h3>Headings</h3>
-        <h1>Bree 30pts</h1>
-        <h2>Bree 20 pts</h2>
-        <h3>Bree 15 pts</h3>
+        <h3 class="styleguide-type">Headings</h3>
+            <h1>Bree 30pts</h1>
+            <h2>Bree 20 pts</h2>
+            <h3>Bree 15 pts</h3>
+<br>
+    <h3 class="styleguide-type">Body text</h3>
+            <p id="body-text-16">Futura 16pt</p>
+            <p id="body-text-14">Futura 14pt</p>
+
+    <h3 class="styleguide-type">Decorative Text</h3>
+            <p id="decorative-text">Coquette Regular</p>
+
+
        <!--  <h3>Heading 3</h3>
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
@@ -87,7 +96,7 @@
     </div>
 
     <div class="card soft" id="paragraphs">
-        <h3>Paragraphs</h3>
+        <h3 class="styleguide-type">Paragraphs</h3>
 
         <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Corporis pariatur possimus neque quas et maiores saepe tempore ipsam. Sit possimus dolorem magnam repellendus beatae alias voluptatum itaque quia velit necessitatibus!</p>
         <p>Quasi, vel? Autem, sed. Accusantium sunt explicabo voluptatem, sit, incidunt perferendis laudantium tempore unde, provident molestias, nostrum. Nisi provident, esse cupiditate, id maxime praesentium sint beatae et unde itaque incidunt.</p>
@@ -98,15 +107,15 @@
 </div>
 <div class="card soft">
 <div class="container">
-    <h2>Cards</h2>
+    <h2 class="styleguide-type">Cards</h2>
 
     <div class="grid gap">
 
         <div class="col-xs-12 col-md-4">
-            <div class="card">Card</div>
+            <div class="card" id="card-basic">Basic Card</div>
         </div>
         <div class="col-xs-12 col-md-4">
-            <div class="card soft">Card Soft</div>
+            <div class="card soft" id="card-soft">Card Soft</div>
         </div>
         <div class="col-xs-12 col-md-4">
             <div class="card hard">Card Hard</div>
@@ -137,7 +146,7 @@
 
 <div class="card soft">
 <div class="container" id="navigations">
-    <h2>Navigations</h2>
+    <h2 class="styleguide-type">Navigations</h2>
 
     <script type="text/javascript">
         const makeNav = (classes='') => {
@@ -161,32 +170,32 @@
 
 
     <div class="card soft">
-        <h3>Basic Navigation</h3>
+        <h3 class="styleguide-type">Basic Navigation</h3>
         <script>makeNav('nav')</script>
     </div>
 
     <div class="card soft">
-        <h3>Flex Nav</h3>
+        <h3 class="styleguide-type">Flex Nav</h3>
         <script>makeNav( 'nav nav-flex' )</script>
     </div>
 
     <div class="card soft">
-        <h3>Stretch Nav</h3>
+        <h3 class="styleguide-type">Stretch Nav</h3>
         <script>makeNav( 'nav nav-stretch' )</script>
     </div>
 
     <div class="card soft">
-        <h3>Pills Nav</h3>
+        <h3 class="styleguide-type">Pills Nav</h3>
         <script>makeNav( 'nav nav-pills' )</script>
     </div>
 
     <div class="card soft">
-        <h3>Crumbs Nav</h3>
+        <h3 class="styleguide-type">Crumbs Nav</h3>
         <script>makeNav( 'nav nav-crumbs' )</script>
     </div>
 
     <div class="card soft">
-        <h3>Material Nav</h3>
+        <h3 class="styleguide-type">Material Nav</h3>
         <script>makeNav( 'nav nav-material' )</script>
     </div>
 
@@ -249,42 +258,42 @@ document.write(`
 
  <div class="card soft">
 <div class="container" id="tables">
-    <h2>Tables</h2>
+    <h2 class="styleguide-type">Tables</h2>
 
 
     <div class="card soft">
-        <h3>Basic Table</h3>
+        <h3 class="styleguide-type">Basic Table</h3>
         <script>makeTable("table")</script>
     </div>
 
 <br>
     <div class="card soft">
-        <h3>Stripped Table</h3>
+        <h3 class="styleguide-type">Stripped Table</h3>
         <script>makeTable("table striped")</script>
     </div>
     <br>
     <div class="card soft">
-        <h3>Stripped Table Lined Vertical</h3>
+        <h3 class="styleguide-type">Stripped Table Lined Vertical</h3>
         <script>makeTable("table lined vertical")</script>
     </div>
 <br>
     <div class="card soft">
-        <h3>Stripped Table Lined Horizontal</h3>
+        <h3 class="styleguide-type">Stripped Table Lined Horizontal</h3>
         <script>makeTable("table lined horizontal")</script>
     </div>
 <br>
     <div class="card soft">
-        <h3>Stripped Table Lined border</h3>
+        <h3 class="styleguide-type">Stripped Table Lined border</h3>
         <script>makeTable("table lined border")</script>
     </div>
 <br>
     <div class="card soft">
-        <h3>Lined all</h3>
+        <h3 class="styleguide-type">Lined all</h3>
         <script>makeTable("table lined all")</script>
     </div>
 <br>
     <div class="card soft">
-        <h3>Combinations</h3>
+        <h3 class="styleguide-type">Combinations</h3>
         <script>makeTable("table lined striped vertical border")</script>
     </div>
 
@@ -299,10 +308,10 @@ document.write(`
 <br>
 <!-- FIGURE -->
 <div class="card soft">
-<h2 id="figures">Figures</h2>
+<h2 id="figures" class="styleguide-type">Figures</h2>
 
 
-<h3>Basic Figure</h3>
+<h3 class="styleguide-type">Basic Figure</h3>
 <div class="card soft">
     <figure class="figure">
 
@@ -317,7 +326,7 @@ document.write(`
 
 
 
-<h3>Figure Grid</h3>
+<h3 class="styleguide-type">Figure Grid</h3>
 <div class="grid gap">
     <div class="col-xs-12 col-md-4">
         <figure class="figure">
@@ -348,7 +357,7 @@ document.write(`
 
 
 
-<h3>Product Grid</h3>
+<h3 class="styleguide-type">Product Grid</h3>
 <div class="grid gap">
 
     <div class="col-xs-12 col-md-4">
@@ -387,7 +396,7 @@ document.write(`
 
 
 
-<h3>Product Overlay</h3>
+<h3 class="styleguide-type">Product Overlay</h3>
 
 <div class="grid gap">
 
@@ -442,13 +451,13 @@ document.write(`
  <div class="card soft">
 <div class="container" id="inputs">
 
-    <h2 id="forms">Forms</h2>
+    <h2 id="forms" class="styleguide-type">Forms</h2>
 
 <div class="card soft">
-    <h3>Inputs</h3>
+    <h3 class="styleguide-type">Inputs</h3>
 
    
-        <h3 id="default-inputs">Default Inputs</h3>
+        <h3 id="default-inputs" class="styleguide-type">Default Inputs</h3>
         <form>
             <input type="text"><br>
             <input type="number"><br>
@@ -462,7 +471,7 @@ document.write(`
 </div>
 
 <div class="card soft">
-        <h3 id="input">Form Input</h3>
+        <h3 id="input" class="styleguide-type">Form Input</h3>
         <form>
             <input type="text" placeholder="Text" class="form-input">
             <input type="number" placeholder="Number" class="form-input">
@@ -472,7 +481,7 @@ document.write(`
 </div>
 
 <div class="card soft">
-        <h3 id="labels">Form Label</h3>
+        <h3 id="labels" class="styleguide-type">Form Label</h3>
         <form>
             <label class="form-label">Example</label>
             <input type="text" placeholder="Text" class="form-input">
@@ -490,7 +499,7 @@ document.write(`
 
 
 <div class="card soft">
-  <h3 id="controls">Form Control</h3>
+  <h3 id="controls" class="styleguide-type">Form Control</h3>
         <form>
             <div class="form-control">
                 <label class="form-label">Example</label>
@@ -532,27 +541,27 @@ document.write(`
     </div>
     </div>
 
-
+</div>
 
 
 
 
 <br>
 <div class="card soft">
-<h2 id="buttons">Buttons</h2>
+<h2 id="buttons" class="styleguide-type">Buttons</h2>
 
     
-        <h3>Default Buttons</h3>
+        <h3 class="styleguide-type">Default Buttons</h3>
             <button>Button</button>
 
-      <h3>Form Buttons</h3>
+      <h3 class="styleguide-type">Form Buttons</h3>
 
         <div class="form-control">
             <button type="button" class="form-button">Button</button>
         </div>
 
         <div class="form-control">
-            <input type="button" class="form-button" value="input">
+            <input type="button" class="form-button" value="Input">
         </div>
 
         <div class="form-control">
@@ -569,7 +578,7 @@ document.write(`
 <br>
 
 <div class="card soft">
-<h2 id="hotdog">Hotdog</h2>
+<h2 id="hotdog" class="styleguide-type">Hotdog</h2>
 
     
         <div class="form-control">
@@ -614,7 +623,7 @@ document.write(`
 <br>
 
 <div class="card soft">
-<h2 id="select">Select dropdown</h2>
+<h2 id="select" class="styleguide-type">Select dropdown</h2>
 
 
     <div class="form-select">
@@ -649,16 +658,16 @@ document.write(`
 
 <div class="card soft">
 
-<h2 id="checkboxes">Check Boxes</h2>
+<h2 id="checkboxes" class="styleguide-type">Check Boxes</h2>
 
 
-<h3>Basic Checkbox</h3>
+<h3 class="styleguide-type">Basic Checkbox</h3>
     <label> Label <input type="checkbox" id="input-1"></label>
     <!-- <label for="input-1">Label 2</label> -->
 
 
 
-<h3>Heart Checkbox</h3>
+<h3 class="styleguide-type">Heart Checkbox</h3>
 
     <div class="favorite">
     <input type="checkbox" id="heart-1" class="hidden">
@@ -666,7 +675,7 @@ document.write(`
 
 </div>
 
-<h3>Toggle</h3>
+<h3 class="styleguide-type">Toggle</h3>
 <div class="toggle">
      <input type="checkbox" id="toggle-1" class="hidden">
     <label for="toggle-1"></label>
