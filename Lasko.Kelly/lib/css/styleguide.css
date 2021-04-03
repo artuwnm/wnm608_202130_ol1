@@ -11,6 +11,7 @@
 	--color-neutral-medium: #999;
 	--color-neutral-dark: #555;
 
+	/*Purples*/
 	--color-second-light: #CBA7E4;
 	--color-second-medium: #AB5FBD;
 	--color-second-dark: #702868;
@@ -183,7 +184,7 @@ a:hover {
 }
 
 .navbar {
-	background-color: var(--color-neutral-dark);
+	background-color: var(--color-second-light);
 	color: var(--color-white);
 	line-height: var(--header-height);
 }
@@ -240,6 +241,8 @@ a:hover {
 	overflow: hidden;
 	background-size: cover;
 	background-position: center;
+	width: 100%;
+	height: auto; 
 }
 
 
