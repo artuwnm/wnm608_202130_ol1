@@ -3,6 +3,14 @@ body{
 	padding-bottom: 5em;
 }
 
+
+
+
+
+
+
+
+
 .my_favorite {
 	text-align: center;
 	
@@ -49,4 +57,270 @@ body{
 
 .bag_img {
 	margin: 0.2em 0.5em 0.2em 0.1em;
+}
+
+
+
+
+/*  Header  */
+
+.header_container {
+	margin-top: 2em; 
+	margin-bottom: 3em;
+}
+
+
+.navigation1 {
+	display: flex; 
+	flex-direction: row;
+}
+
+.navigation_real {
+	font-family: 'Nunito', sans-serif; 
+	font-weight: 500;
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a; 
+	margin-left: 46em; 
+	margin-top:2em;
+}
+
+
+/* Shop Page */
+
+.shop {
+
+}
+
+.shop h1 {
+	text-align: center; 
+	font-family: 'Bodoni Moda', serif; 
+	font-weight: 700; 
+	font-style: normal; 
+	font-size: 36px; 
+	color: #4a342a; 
+	margin-bottom: 2em; 
+	margin-top: 2em;
+}
+
+
+.back_button {
+	margin-bottom: 3em;
+}
+
+
+.back_button a {
+	font-family: nunito,sans-serif; 
+	font-weight: 500; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a;
+}
+
+
+.form_bar {
+	display: flex; 
+	flex-direction: row;
+}
+
+
+.select_left {
+	width: 20%; 
+	font-weight: 400; 
+	margin-top: 2em;
+}
+
+
+.search_right {
+	width:25%; 
+	margin-left: 45em; 
+	margin-top: 1em;
+}
+
+
+.all_line {
+	margin-top: 5em;
+}
+
+.all_line h3 {
+	font-family: nunito,sans-serif; 
+	font-weight: 600; 
+	font-style: normal; 
+	font-size: 1.2em; 
+	color: #4a342a; 
+	margin-top: 1.5em;
+}
+
+
+.divide_line1 {
+	width: 100%;
+	border-bottom: 1px solid #d8bbad;
+	margin-top: -1em;
+}
+
+.product_container {
+	margin-top: 3em; 
+	margin-left: 12em;
+	margin-bottom: 10em;
+}
+
+
+.admin h3 {
+	font-family: nunito,sans-serif; 
+	font-weight: 600; 
+	font-style: normal; 
+	font-size: 1.2em; 
+	color: #4a342a; 
+	text-align: right; 
+	text-decoration: underline;
+}
+
+.admin a:hover {
+	text-decoration: underline;
+	color: #d8a355;
+}
+
+
+
+.footer {
+	background-color: #e5c2c1; 
+	width: 100%; 
+	height: 7em; 
+	margin: 0;
+	text-align: center;
+
+}
+
+.footer p {
+	font-family: 'Nunito', sans-serif; 
+	font-weight: 500;
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a; 
+	padding-top: 2em;
+}
+
+
+
+
+
+/* individual item */
+
+
+.individual_item h2{
+	font-family: 'Bodoni Moda', serif; 
+	font-weight: 700; 
+	font-style: normal; 
+	font-size: 30px; 
+	color: #4a342a; 
+	padding-top: 1em;
+
+}
+
+
+.item_intro {
+	display: flex;
+	flex-direction: row;
+	margin-top: 3em; 
+	margin-left: 12em;
+	font-family: 'Nunito', sans-serif; 
+	font-weight: 500;
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a; 
+	margin-bottom: 15em;
+}
+
+.item_info {
+	display: flex;
+	flex-direction: column;
+}
+
+.item_detail {
+	
+	margin-top: -1.2em;
+}
+
+.item_detail li {
+	padding: 0.2em 0 0.5em;
+}
+
+.item_bold {
+	font-weight: 600;
+
+}
+
+.item_descrip {
+	margin-top: -1em;
+}
+
+.item_descrip h3 {
+	font-family: nunito,sans-serif; 
+	font-weight: 600; 
+	font-style: normal; 
+
+	 
+}
+
+.item_descrip p {
+	margin-top: -0.8em;
+}
+
+.addToCart {
+	width: 12em;
+	margin-top: 1.4em;
+}
+
+
+.item_line h3 {
+	font-family: 'Bodoni Moda', serif; 
+	font-weight: 700; 
+	font-style: normal; 
+	font-size: 24px; 
+	color: #4a342a; 
+}
+
+.product_container1 {
+	margin-top: 3em; 
+	margin-left: 4em;
+	margin-bottom: 10em;
+}
+
+
+
+/* Landing Page */
+.default-line1 {
+	display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+  	font-family: 'Nunito', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1em;
+    -webkit-appearance: none;
+    
+    width: 100%;
+    outline: 0;
+  	
+    border-bottom: 1px solid #4a342a;
+}
+
+.default-lable1 {
+	font-size: 1em;
+    color: var(--color-black);
+    display: block;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+  	
+}
+
+.joinUs {
+	width: 20em;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1em;
+	color: white;
 }
