@@ -19,6 +19,13 @@
   --font-serif: Playfair Display,Georgia, "Times New Roman", serif;
 }
 
+nav a{
+  font-weight: bold;
+}
+
+
+
+
 body{
   background: var(--color-main-light);
   padding-bottom: 4em;
