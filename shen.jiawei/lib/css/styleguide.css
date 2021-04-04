@@ -11,6 +11,7 @@
   --pill-header-margin: 20px;
   --spacing: 1rem;
   --card-corner-radius: 5px;
+  --round-button-size: 50px;
 }
 
 html {
@@ -70,6 +71,11 @@ button * {
   pointer-events: none;
 }
 
+button.round {
+  width: var(--round-button-size);
+  height: var(--round-button-size);
+}
+
 /* LAYOUT CLASSES */
 
 .container,
@@ -84,10 +90,27 @@ section.padded {
   padding: 0 20px;
 }
 
+.no-padding {
+  padding: 0 !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center,
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex > .grow {
+  flex-grow: 1;
 }
 
 /* NAVBAR */
@@ -194,6 +217,7 @@ nav > a:hover {
   border-radius: var(--card-corner-radius);
   padding: var(--card-corner-radius);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition: 0.2s;
 }
 
@@ -213,6 +237,11 @@ nav > a:hover {
   cursor: pointer;
 }
 
+.card > img.hero {
+  width: 100%;
+  margin-bottom: -7px;
+}
+
 /* ITEM CARD */
 
 .item-card {
@@ -222,11 +251,15 @@ nav > a:hover {
   height: 100%;
   width: calc(100% / 3 - var(--margin) * 2);
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: var(--card-corner-radius);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   transition: 0.4s;
+}
+
+.grid > .item-card {
+  width: auto;
 }
 
 .item-card:hover {
@@ -250,7 +283,7 @@ nav > a:hover {
   justify-content: center;
   opacity: 0;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--card-corner-radius) var(--card-corner-radius) 0 0;
   transition: 0.4s;
 }
 
