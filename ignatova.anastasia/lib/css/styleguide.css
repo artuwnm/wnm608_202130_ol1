@@ -15,7 +15,7 @@
     --color-main-dark: #e58273;
 
 	--color-dark-light: #fffbfa;
-    --color-dark-medium: #fad3c8;
+    --color-dark-medium: #184539;
     --color-dark-dark: #261C1D;
 
 
@@ -34,8 +34,8 @@
 body {
 	margin:0;
 	font-size: 100%;
-	font-family: var(--font-sans);
-	font-weight: 400;
+	/*font-family: var(--font-sans);
+	font-weight: 400;*/
 
 }
 
@@ -107,7 +107,9 @@ a:hover {
 
 .nav a {
 	display: block;
-	padding: 0.2em 0.5em;
+	/*padding: 0.2em 0.5em;*/
+	font-family: var(--font-serif);
+	font-weight: 300;
 }
 
 .nav a:hover {
@@ -120,6 +122,54 @@ a:hover {
 	background-color: #f2d4d2;
 	color: inherit;
 }
+
+
+.navbar {
+background-color: var(--color-neutral-medium);
+color: var(--color-dark-dark);
+line-height: var(--header-height);
+}
+
+.navbar h1 {
+	font-size: 1.4em;
+	margin: 0;
+	font-family: var(--font-serif);
+}
+
+.navbar a {
+	padding: 0 0.5em;
+	font-family: var(--font-serif);
+	font-weight: 300;
+
+}
+
+
+
+
+
+/*footer {
+	
+	max-width: 100%;
+	height: 4em;
+	
+
+background-color: var(--color-neutral-medium);
+color: var(--color-dark-dark);
+display: flex;
+bottom: 0;
+}*/
+
+
+/*footer p {
+	font-family: var(--font-serif);
+	font-size: .7em;
+	line-height: 1.5em;
+	margin-right: auto;
+	margin-left: auto;
+
+}*/
+
+
 
 
 .nav-material ul,
@@ -193,21 +243,17 @@ height: 4px;
 
 
 
-.navbar {
-	background-color: var(--color-neutral-medium);
-color: var(--color-dark-dark);
-line-height: var(--header-height);
-}
 
-.navbar h1 {
-	font-size: 1.4em;
-	margin: 0;
-	font-family: var(--font-serif);
-}
 
-.navbar a {
-	padding: 0 0.5em;
-}
+
+
+
+
+
+
+
+
+
 
 
 /*Small classes*/
