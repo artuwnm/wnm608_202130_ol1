@@ -1,4 +1,7 @@
-	<meta name="viewport" content="width=device-width">     <!-- create a real responsive view-->
+<meta name="viewport" content="width=device-width">     <!-- create a real responsive view-->
+
+
+<base href="http://www.mindyquan.com/aau/wnm608/quan.mindy/">   <!--base only apply for front-end -->
 
 <link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
 <link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">

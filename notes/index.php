@@ -178,7 +178,27 @@
 	print_p($_GET)
 
 
+
+	//symbols json notes
+	
+    //json starts with an array or an object
+
+    //brackets/square brackets
+    //[]
+
+    //braces/curly braces
+    
+    //parenthesese
+    //()
+
+    //carrots/angle brackets
+    //<>
+
+
 	?>
+
+
+
 
 
 

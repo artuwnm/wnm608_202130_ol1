@@ -23,7 +23,7 @@
 		<div class="back_button" style="margin-top: 5em;">
 			<a href="#" >
 				<span>&#8636;</span> 
-				<span>Back</span>
+				<span><a href="product_list.php">Back</a></span>
 			</a>
 		</div>
 

@@ -24,7 +24,7 @@
 		<div class="back_button">
 			<a href="#">
 				<span>&#8636;</span> 
-				<span>Back</span>
+				<span><a href="landing_page.php">Back</a></span>
 			</a>
 		</div>
 
