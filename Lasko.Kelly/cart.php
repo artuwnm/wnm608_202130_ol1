@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Product List</title>
+	<title>Cart</title>
 
 	<?php include "parts/meta.php"; ?>
 
@@ -15,7 +15,7 @@
 
 	<div class="container">
 		<div class="card soft">
-			<h2>Product List</h2>
+			<h2>Cart</h2>
 			<!--ul>li*4>a[href="product_item.php"]>{Product $}-->
 			<ul>
 				<li><a href="product_item.php?id=1">Product 1</a></li>
@@ -26,10 +26,12 @@
 		</div>
 	</div>
 
+	<button>Checkout</button>
 
 
 
 
-	<?php include "parts/footer.php"; ?>
+
+<?php include "parts/footer.php"; ?>
 </body>
 </html>
