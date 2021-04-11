@@ -100,16 +100,23 @@ a:hover{
 }
 
 .nav a:hover{
-	background-color: var(--color-accent-medium);
-	color: var(--color-white);
+	/*background-color: var(--color-accent-medium);*/
+
+	color: var(--color-main-dark);
 	text-decoration: none;
 }
 
+
 .nav .active a{
-	background-color: var(--color-accent-light);
-	color: inherit;
+	text-decoration: underline;
+	color: var(--color-main-dark);
 }
 
+
+.nav a:active{
+	text-decoration: underline !important;
+	color: var(--color-main-dark);
+}
 
 
 .nav-material ul,
@@ -302,7 +309,7 @@ a:hover{
 	font: inherit;
 	-webkit-appearance: none;
 	color: inherit;
-	width: 100%;
+	width: 50%;
 	outline: 0;
 }
 
@@ -323,6 +330,7 @@ a:hover{
 }
 
 .form-button{
+	color: var(--color-white);
 	padding: 0.5em 1em;
 	background-color: var(--color-main-dark);
 	border-radius: 0.2em;

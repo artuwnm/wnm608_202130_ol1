@@ -24,6 +24,8 @@
 				<p>This is item # <?= $_GET['id'] ?></p>
 			
 		</div>
+
+		<h3><a href="cart.php">Add to cart</a></h3>
 	</div>
 
 

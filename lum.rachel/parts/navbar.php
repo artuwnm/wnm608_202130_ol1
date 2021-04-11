@@ -2,7 +2,7 @@
 <header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
-				<h1>LUX Beauty</h1>
+				<h1><a href="index.php">LUX Beauty</a></h1>
 			</div>
 			<div class="flex-stretch"></div>
 			<nav class="nav nav-flex flex-none">
@@ -13,7 +13,8 @@
 					<li><a href="cart.php">Cart</a></li>
 				</ul>
 				
-			</nav>
-			
+			</nav>	
 		</div>
+
 	</header>
+	<hr>

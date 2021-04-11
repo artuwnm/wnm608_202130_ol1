@@ -11,6 +11,7 @@
 
   --color-black: #000;
   --color-white: #fff;
+  --color-grey: #555;
 
   --header-heaght: 7rem;
   --spacing: 1rem;
@@ -26,8 +27,9 @@ nav a{
 
 
 
+
 body{
-  background: var(--color-main-light);
+  
   padding-bottom: 4em;
 }
 
@@ -116,16 +118,22 @@ body{
 
 
 
-
-.cart-button{
-  color: var(--color-white);
-}
-
 .edit-button{
   text-decoration: underline;
   background: transparent;
   color: var(--color-black);
   border-width: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
