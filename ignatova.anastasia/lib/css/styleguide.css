@@ -22,7 +22,7 @@
 	--color-black:#261C1D;
 	--color-white:#ffffff;
 
-	--header-height:3rem;
+	--header-height:1em;
 	--spacing:1rem;
 
 	--font-serif: edita-small, serif;
@@ -127,7 +127,8 @@ a:hover {
 .navbar {
 background-color: var(--color-neutral-medium);
 color: var(--color-dark-dark);
-line-height: var(--header-height);
+/*line-height: var(--header-height);*/
+
 }
 
 .navbar h1 {
@@ -398,13 +399,13 @@ display: inline-block;
 }
 
 .form-input {
-	border-bottom: 1px solid var(--color-neutral-light);
+	border-bottom: 1px solid var(--color-neutral-medium);
 	padding: 0.5em 1em;
 	font-size: 1em;
 }
 
 .form-input:focus {
-	border-bottom-color:var(--color-main-light);
+	border-bottom-color:var(--color-main-dark);
 }
 
 .form-label {

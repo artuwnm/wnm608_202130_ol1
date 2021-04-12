@@ -9,3 +9,9 @@ http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/Styleguide/index.htm
 
 #Homepage
 http://anastasia-ignatova.com/aignatova/aau/wnm608/ignatova.anastasia/index.php
+
+#Reading_Data
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/notes/reading_data.php
+
+#User Admin
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/admin/users.php
