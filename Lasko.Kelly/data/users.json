@@ -1,5 +1,6 @@
-[
-	{
+{
+	"names":[
+		{
 		"name":"Kelly Lasko",
 		"type":"Student",
 		"email":"klasko2@art.edu",
@@ -36,3 +37,4 @@
 		"classes":[605,608,613]
 	}
 ]
+}

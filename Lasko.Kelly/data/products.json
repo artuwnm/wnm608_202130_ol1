@@ -1,0 +1,23 @@
+{
+	"products":[
+	{
+		"product_name":"Macbook Pro",
+		"product_description":"This is a laptop computer with a lot of power",
+		"technical_specs":["mem 16gb","storage 500gb"],
+		"price":1399
+	},
+	{
+		"product_name":"Macbook Air",
+		"product_description":"This is a laptop computer with a little of power",
+		"technical_specs":["mem 4gb","storage 100gb"],
+		"price":1199
+	},
+	{
+		"product_name":"Power Mac",
+		"product_description":"This is a desktop computer with a lot of power",
+		"technical_specs":["mem 32gb","storage 1000gb"],
+		"price":1999
+	}
+
+]
+}
