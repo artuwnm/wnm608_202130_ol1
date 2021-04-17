@@ -8,4 +8,7 @@
 
 - http://www.mindyquan.com/aau/wnm608/quan.mindy/notes/reading_data.php
 
-- http://www.mindyquan.com/aau/wnm608/quan.mindy/admin/users.php
+- http://www.mindyquan.com/aau/wnm608/quan.mindy/admin/users-test.php
+
+- http://www.mindyquan.com/aau/wnm608/quan.mindy/products.sql
+
