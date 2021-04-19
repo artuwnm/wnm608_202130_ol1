@@ -1,36 +1,38 @@
-[
+{
+	"users":[
 	{
 		"name":"Anastasia Ignatova",
 		"type":"Student",
 		"email":"email@gmal.com",
 		"classes":[608, 617, 820]
-	},
+		},
 
 	{
 		"name":"Vinilo Skinny Legend",
 		"type":"DJ",
 		"email":"email@gmal.com",
 		"classes":[608, 617, 820]
-	},
+		},
 
 	{
 		"name":"Eva M",
 		"type":"Teacher",
 		"email":"evam21@gmal.com",
 		"classes":[608, 617, 820]
-	},
+		},
 
 	{
 		"name":"Solomon K.",
 		"type":"Architect",
 		"email":"solomonk@gmal.com",
 		"classes":[608, 617, 820]
-	},
+		},
 
 	{
 		"name":"Jimmy S.",
 		"type":"Chef",
 		"email":"jimmyl32@gmal.com",
 		"classes":[608, 617, 820]
-	}
+		}
 ]
+}

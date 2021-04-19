@@ -1,0 +1,27 @@
+
+	"products":[
+	{
+		"product_name":"Lancome Tonique Confort",
+		"product_description":"Re-Hydrating Comforting Toner with Acacia Honey",
+		"product_formulation":["Toner", "Lightweight Liquid"],
+		"price":35.00
+	},
+	{
+		"product_name":"Glossier Solution",
+		"product_description":"A gentle way to slough away dead skin to reveal a fresh, smooth complexion",
+		"product_formulation":["Toner","Liquid"],
+		"price":24.00
+	},
+	{
+		"product_name":"Drunk Elephant Protini",
+		"product_description":"A protein moisturizer that combines signal peptides, growth factors, amino acids, and pygmy waterlily to visibly improve skin‘s tone, texture, and firmness.",
+		"product_formulation":["Cream Moisturizer", "Polypeptide Moisturizer"],
+		"price":68.00
+	}
+{
+		"product_name":"Drunk Elephant Lala-Retro",
+		"product_description":"A rescue cream infused with six African oils and a plant ceramide complex for intense moisture and replenishing barrier support.",
+		"product_formulation":["Cream moisturizer", "Whipped Moisturizer with Ceramides"],
+		"price":60.00
+	}
+]
