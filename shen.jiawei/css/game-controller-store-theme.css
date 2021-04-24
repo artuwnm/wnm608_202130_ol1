@@ -118,6 +118,10 @@ nav > a:hover {
   /* background-color: var(--color-neutral-dark); */
 }
 
+.item-card:hover {
+  box-shadow: var(--glow-main);
+}
+
 .item-card > .info > .desc > p,
 .item-card > .info > .price > .full {
   color: var(--color-neutral-light);

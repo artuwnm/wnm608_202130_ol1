@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="/wnm608/shen.jiawei/lib/css/grid.css" />
 <link rel="stylesheet" href="/wnm608/shen.jiawei/lib/css/styleguide.css" />
 <link rel="stylesheet" href="/wnm608/shen.jiawei/css/game-controller-store-theme.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>

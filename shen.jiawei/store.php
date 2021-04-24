@@ -20,114 +20,14 @@
       <script>selCards("#filters" ,console.log ,true)</script>
     </div>
     <div class="col-s-12 col-l-9 card soft grid gap">
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
-      <div class="item-card col-s-12 col-l-6" onclick="location.href = '/wnm608/shen.jiawei/product.php'">
-        <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/soyuzms14.jpg);">
-          <div class="overlay">
-            <button>Buy</button>
-          </div>
-        </div>
-        <div class="info">
-          <div class="desc">
-            <h3>Soyuz</h3>
-            <p>🇷🇺 Russian Spaceship</p>
-          </div>
-          <div class="discount">-90%</div>
-          <div class="price">
-            <div class="full">$ 99.99</div>
-            <div class="current">$ 9.99</div>
-          </div>
-        </div>
-      </div>
+      <?php
+        include_once "lib/php/auth.php";
+        $db = db_joystore();
+        include_once "lib/php/functions.php";
+        $products = queryAll("SELECT * FROM `products` LIMIT 6");
+        include_once "lib/php/templates.php";
+        array_walk($products, "item_card", 6)
+      ?>
     </div>
   </div>
 </body>

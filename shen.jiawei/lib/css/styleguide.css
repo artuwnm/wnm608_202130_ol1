@@ -113,6 +113,11 @@ section.padded {
   flex-grow: 1;
 }
 
+.h-gap-margin > *:not(:first-child) {
+  --h-gap: 1rem;
+  margin-left: var(--h-gap);
+}
+
 /* NAVBAR */
 
 header {
@@ -324,6 +329,7 @@ nav > a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .item-card > .info > .price > .full {
@@ -401,4 +407,26 @@ label {
 
 .material-input > input[placeholder=" "]:focus + label {
   transform: none;
+}
+
+/* POPUP */
+
+.popup-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.popup-container.active {
+  pointer-events: unset;
+  opacity: 1;
 }
