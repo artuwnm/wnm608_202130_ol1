@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Mindy Quan",
+        "type": "UI\/UX Designer",
+        "email": "mquan4@art.edu",
+        "classes": [
+            608,
+            605,
+            613
+        ]
+    },
+    {
+        "name": "Sarah Smith",
+        "type": "Graphic Designer",
+        "email": "sarahsmith@gmail.com",
+        "classes": [
+            601,
+            606,
+            613
+        ]
+    },
+    {
+        "name": "Megan White",
+        "type": "Instructor",
+        "email": "maganw07@gmail.com",
+        "classes": [
+            660,
+            695,
+            617
+        ]
+    },
+    {
+        "name": "Ryan Thomas",
+        "type": "Sculpture Artist",
+        "email": "ryanthomas@hotmail.com",
+        "classes": [
+            623,
+            605,
+            700
+        ]
+    }
+]
