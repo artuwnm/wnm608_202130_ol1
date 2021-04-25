@@ -14,16 +14,27 @@
 
 
 	<div class="container">
-		<div class="card soft">
-			<h2>Product List</h2>
-			<!--ul>li*4>a[href="product_item.php"]>{Product $}-->
-			<ul>
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-			</ul>
-		</div>
+		<h2>Product List</h2>
+	
+		<?php
+
+		include_once "lib/php/functions.php";
+		include_once "parts/templates.php";
+
+		$result = makeQuery(
+			makeConn(),
+			"
+			SELECT * 
+			FROM `products`
+			ORDER BY `date_created` DESC
+			LIMIT 12
+			"
+		);
+
+		echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+
+
+		?>
 	</div>
 
 
