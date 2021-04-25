@@ -86,7 +86,7 @@ border: 2px solid var(--color-neutral-medium);
 		height: initial;
 		opacity: 1;
 		background-color: initial;
-	}
+	}}
 
 
 
@@ -100,9 +100,25 @@ border: 2px solid var(--color-neutral-medium);
 }
 
 .figure.product {
-	border-radius: 0.5em;
+	border-radius: 0.2em;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	overflow: hidden;
+	height: 100%;
+	transition: all 0.3s;
+}
+
+.product.figure img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .product-overlay {
@@ -123,6 +139,10 @@ border: 2px solid var(--color-neutral-medium);
 	align-items: center;
 	justify-content: center;
 }
+
+
+
+
 
 .product-overlay:hover figcaption {
 	opacity: 1;
@@ -158,6 +178,8 @@ transition: all 0.3s;
 
 	}
 }
+
+
 
 
 
