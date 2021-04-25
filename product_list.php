@@ -59,191 +59,50 @@
 	</div>
 
 	<div class="container product_container">
-		<div class="grid gap product_grid1">
-				<div class="col-xs-12 col-md-4" >
+		
 
-					<a href="product_item.php?id=1">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #1</div>
-								<div class="product_price">$200</div>
-							</figcaption>
-						</figure>
-					</a>
+		
 
-				</div>
+	<div class="grid_container">
+		<?php 
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=2">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #2</div>
-								<div class="product_price">$80</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
+		include_once "lib/php/functions.php";    //once means just one-time called
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=3">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #3</div>
-								<div class="product_price">$150</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-			
+		include_once "parts/templates.php";
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=4">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #4</div>
-								<div class="product_price">$200</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-			
+		$result = makeQuery(
+			makeConn(),
+			"
+			SELECT *                     /*`id`,`title`,`price`*/
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=5">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #5</div>
-								<div class="product_price">$80</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
+			FROM `products`
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=6">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #6</div>
-								<div class="product_price">$150</div>
-							</figcaption>
-						</figure>
-					</a>
+			ORDER BY 'date_create' DESC  /*ASC*/
 
-				</div>
-				
+			LIMIT 12
+			"
+		);
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=7">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #7</div>
-								<div class="product_price">$200</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
+		echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'),"</div>";
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=8">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #8</div>
-								<div class="product_price">$80</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
+		?>
 
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=9">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #9</div>
-								<div class="product_price">$150</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
+	</div>
 
-
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=10">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #10</div>
-								<div class="product_price">$200</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
-
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=11">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #11</div>
-								<div class="product_price">$80</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
-
-				
-				<div class="col-xs-12 col-md-4" >
-					<a href="product_item.php?id=12">
-						<figure class="figure product">
-							<img src="img/placeholder400.png" alt="">
-							<figcaption>
-								<div class="product_name">Product Name #12</div>
-								<div class="product_price">$150</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				
-
-			</div>
 
 		<div class="admin" style="margin-bottom: 15em;">
 			<h3>
 				<a href="#" >Product Admin</a>
 			</h3>
 		</div>
+
 	</div>
 
 
-	<div class="footer">
-		<p>WNM618 - Final Project - Mindy Quan</p>
-	</div>
 
+
+
+	<?php include "footer.php"; ?>
 	
 
 

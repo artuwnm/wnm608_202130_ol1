@@ -75,6 +75,10 @@ a:hover{
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
 
+.flex-column { flex-direction: column; }
+
+.flex-row { flex-direction: row; }
+
 
 
 /* NAVBAR COMPONENT */
@@ -168,8 +172,8 @@ a:hover{
 
 }
 	.card.light {
-		background-color: var(--color-lightwhite);
-		box-shadow: 0 0 8px rgba(0,0,0,0.05);
+		background-color: #f9f9f9;
+		box-shadow: 0 0 12px rgba(0,0,0,0.1);
 		border-radius: 0.5em;
 	}
     .card.soft {
@@ -245,7 +249,7 @@ a:hover{
 			font-family: 'Nunito', sans-serif;
 			font-weight: 500;
 			font-style: normal;
-			font-size: 1em;
+			font-size: 0.9em;
 			text-align: left;
 			width: 270px;
 			color: #4a342a;
@@ -283,7 +287,7 @@ a:hover{
 		color: var(--color-black);
 		width: 250px;
 		height: 200px;
-		line-height: 1.5em;
+		line-height: 2em;
 
 	}
 
@@ -1242,9 +1246,9 @@ a:hover{
 .form-select {
 	position: relative;
 	font-family: nunito,sans-serif;
-	font-weight: 600;
+	font-weight: 500;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 0.9em;
 	color: #4a342a;
 	text-align: center;
 	margin-top: 1em;
@@ -1256,13 +1260,60 @@ a:hover{
 	font-family: arial, sans-serif;
 	font-size: 1.2em;
 	position: absolute;
-	top: 40%;
+	top: 0.8em;
 	right: 0.8em;
 	transform: translateY(-50%);
 	pointer-events: none;
 	color: #b77c72;
 }
 
+
+
+
+.form-select1>select {
+	display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+    
+}
+
+
+.form-select1>select {
+	padding: 0.3em 1.3em;
+	background-color: #f7f0eb;
+	border-radius: 0.3em;
+	cursor: pointer;
+	
+}
+
+.form-select1 {
+	position: relative;
+	font-family: nunito,sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.9em;
+	color: #4a342a;
+	text-align: center;
+	margin-top: 1em;
+
+}
+
+.form-select1::after {
+	content: '▾'; /*  google ascii triangle, and copy a symbol */
+	font-family: arial, sans-serif;
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	right: 0.8em;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: #b77c72;
+}
 
 
 
@@ -1400,10 +1451,6 @@ a:hover{
 		
  }
 
-.figure {
-	margin: 0;
-	
-}
 
 
 .product {
