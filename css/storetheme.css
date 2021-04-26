@@ -1,0 +1,48 @@
+@media (max-width: 800px) {
+	.container{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.navbar h1 {
+		padding-left: 0.5em;
+	}
+}
+
+@media (max-width: 400px) {
+	.navbar .display-flex{
+		display: block;
+	}
+	.navbar .nav li{
+		line-height: 2em;
+	}
+}
+body{
+	padding-bottom: 0em;
+}
+
+.favorite label{
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+	color: var(--color-neutral-medium);
+}
+.favorite input:checked + label {
+	color: red;
+	transform: scale(1.5,1.5);
+}
+
+.productlist a{
+	text-decoration: none;
+}
+
+.images-main {
+	width: 100%;
+	height: 40vh;
+	object-fit:contain;
+}
+
+.images-thumbs img{
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
