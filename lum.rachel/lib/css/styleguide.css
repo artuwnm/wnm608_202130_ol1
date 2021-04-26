@@ -77,6 +77,10 @@ a:hover{
 	justify-content: center;
 }
 
+.flex-column{
+	flex-direction: column;
+}
+
 /* Small Classes*/
 
 .hidden{
@@ -238,6 +242,19 @@ a:hover{
 	padding: 0;
 }
 
+.card-section~.card-section{
+	border-top: 1px solid var(--color-accent-light);
+}
+
+.card-section{
+	padding: 1em;
+}
+
+
+
+
+
+
 
 /* TABLES */
 .table{
@@ -384,7 +401,7 @@ a:hover{
 	position: relative;
 }
 
-.form-select::after{
+/*.form-select::after{
 	content: '\25BE';
 	font-family: arial,sans-serif;
 	font-size: 1em;
@@ -394,7 +411,7 @@ a:hover{
 	transform: translateY(-50%);
 	pointer-events: none;
 	color: var(--color-main-dark);
-}
+} */
 
 
 /* Toggle*/
