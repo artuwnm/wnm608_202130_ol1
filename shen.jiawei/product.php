@@ -11,19 +11,18 @@ $discount = round($product->discount);
 <head>
   <?php $title = "Product" ?>
   <?php include "parts/head.php" ?>
-  <script src="./lib/js/popup.js"></script>
-  <script src="./js/cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 </head>
 <body>
   <?php include "parts/navbar.php" ?>
   <section class="flex center">
-    <img src="https://via.placeholder.com/500?text=Product" alt="product">
+    <img src="/wnm608/shen.jiawei/img/products/<?= $product->id ?>.jpeg" alt="product">
     <div class="flex column" style="margin-left: 50px;">
       <h2 style="text-align: left;"><?= $product->name ?></h2>
       <h3>$ <?= $current?></h3>
-      <div class="flex" style="margin: 40px 0;">
+      <div class="flex stepper" style="margin: 40px 0;">
         <button class="round">-</button>
-        <div class="material-input" style="margin: 0 1rem; width: 50px;"><input type="text" value="1"></div>
+        <div class="material-input" style="margin: 0 1rem; width: 50px;"><input id="amount" type="text" value="1"></div>
         <button class="round">+</button>
       </div>
       <button class="primary" onclick="addToCart()">Add To Cart</button>
@@ -48,5 +47,7 @@ $discount = round($product->discount);
       </div>
     </div>
   </div>
+  <script src="./lib/js/popup.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 </html>

@@ -76,6 +76,11 @@ button.round {
   height: var(--round-button-size);
 }
 
+button:disabled,
+button:disabled:hover {
+  opacity: 0.25;
+}
+
 /* LAYOUT CLASSES */
 
 .container,
@@ -107,6 +112,10 @@ section.padded {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex .wrap {
+  flex-wrap: wrap;
 }
 
 .flex > .grow {

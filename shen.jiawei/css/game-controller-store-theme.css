@@ -168,3 +168,9 @@ button.primary.strong:active {
   border-color: var(--color-neutral-extra-light);
   transform: scale(1.1);
 }
+
+button.delete:hover {
+  color: var(--color-neutral-extra-light);
+  background-color: red;
+  border-color: red;
+}
