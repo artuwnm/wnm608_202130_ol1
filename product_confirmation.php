@@ -1,3 +1,10 @@
+<?php 
+
+include_once "lib/php/functions.php";
+resetCart();
+
+?>
+
 <!DOCTYPE html> <!-- html:5 -->
 
 <html lang="en">
@@ -19,10 +26,10 @@
 
 	<div class="container shop" style="margin-bottom: 12em;">
 		
-		<div class="item_line" style="margin-top: 7em; text-align: center;">
+		<div class="item_line" style="margin-top: 6em; text-align: center;">
 			<h1>Thank your for your purchase!</h1>
 		</div>
-		<div class="divide_line1" style="margin-top: -3em;"></div>
+		<div class="divide_line1" style="margin-top: -1em;"></div>
 
 		<div class="card thankYou_box">
 			<h2 class="thankYou_notes">We hope you enjoy your shopping</h2>

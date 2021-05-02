@@ -13,6 +13,10 @@
 
 	});
 
+//print_p($_SESSION);
+
+
+
 ?>
 
 
@@ -42,7 +46,7 @@
 	<div class="container individual_item" style="margin-bottom: 15em;">
 		
 
-		<div class="back_button" style="margin-top: 5em;">
+		<div class="back_button" style="margin-top: 3em;">
 			<a href="#" >
 				<span>&#8636;</span> 
 				<span><a href="product_list.php">Back</a></span>
@@ -73,48 +77,79 @@
 
 			
 				<div class="item_info grid gap" style="margin-left: -14em;">
-					<div class="item_detail col-xs-12 col-md-5">
-						<ol style="list-style: none; margin-left: -2.7em;">
-							<li class="item_name">
-								<span class="item_bold">Name: </span>
-								<span><?= $product->name ?></span>
-							</li>
-							<li class="item_price" style="margin-top: 0.6em;">
-								<span class="item_bold">Price: </span>
-								<span>&dollar;<?= $product->price ?></span>
+					<form method="post" action="cart_actions.php?action=add-to-cart">
+
+						<input type="hidden" name="product-id" value="<?= $product->id ?>">
+
+					    <div class="item_detail col-xs-12 col-md-5">
 						
-							</li>
-							<li style="margin-top: -0.3em;">
-								<li>
-									<span class="item_bold">Quantity: </span>
+							<ol style="list-style: none; margin-left: -2.7em;">
+								<li class="item_name">
+									<span class="item_bold">Name: </span>
+									<span><?= $product->name ?></span>
+								</li>
+								<li class="item_price" style="margin-top: 0.3em;">
+									<span class="item_bold">Price: </span>
+									<span>&dollar;<?= $product->price ?></span>
+							
+								</li>
+								<li style="margin-top: 0.5em;">
+								
+									
+									<label class="item_bold" for="product-amount">Quantity:</label>
+									<div class="form-select1" style="width: 30%; margin-top: -0.01px;">
+										<select id="product-amount" name="product-amount">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									
+								</li>
+
+								<li style="margin-top: 0.5em;">
+								
+									
+									<label class="item_bold" for="product-size">Size:</label>
+									<div class="form-select1" style="width:80%; margin-top: -0.01px;">
+										<select id="product-size" name="product-size">
+											<option>None</option>
+											<option>Bracelet 5.0-5.5in</option>
+											<option>Bracelet 5.5-6.5in</option>
+											<option>Bracelet 6.5-7.0in</option>
+											<option>Necklace 16in</option>
+											<option>Necklace 18in</option>
+											<option>Ring size 5</option>
+											<option>Ring size 6</option>
+											<option>Ring size 7</option>
+											<option>Ring size 8</option>
+											<option>Ring size 9</option>
+										
+										</select>
+									</div>
+									
 								</li>
 								
-								<span class="form-select1">
-									<select style="width: 30%;">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-								</span>
-							</li>
-							
-						</ol>
+							</ol>
+						
 					</div>
 				
-					<div class="item_descrip" style="margin-top: -1.1em;">
-						<h3>Description</h3>
-						<p><?= $product->description ?></p>
+					
+					<div style="margin-top: 1em;">
+							<div class="item_bold">Description</div>
+							<p style="margin-top: -0.05px;"><?= $product->description ?></p>
 					</div>
-				
-					<div class="form-control addToCart" style="margin-top: 0.6em;">
-						<a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button button_filled1">Add To Cart</a>
+										
+					<div class="form-control addToCart" style="margin-top: 1.7em;">
+						<input type="submit" class="form-button button_filled1" value="Add To Cart">
 					</div>
-				</div>
-				
-				
+				</form>
 			</div>
+				
+				
+		</div>
 			
 
 

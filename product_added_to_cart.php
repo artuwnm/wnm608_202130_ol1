@@ -9,6 +9,7 @@
 	$images = explode(",", $product->images);
 
 
+	$cart_product = cartItemById($_GET['id']);
 
 ?>
 
@@ -35,11 +36,11 @@
 	<?php include "parts/header_nav.php"; ?>
 
 	
-	<div class="container individual_item" style="margin-bottom: 15em;">
+	<div class="container individual_item" style="margin-bottom: 12em;">
 		
 
 
-		<div class="item_line" style="margin-top: 7em;">
+		<div class="item_line" style="margin-top: 1.5em;">
 			<h2>Recently Added</h2>
 			
 			<div class="divide_line1" style="margin-top: -1.4em;"></div>
@@ -73,10 +74,15 @@
 							<li style="margin-top: 1.5em;">
 								
 								<span class="item_bold">Quantity: </span>
-								<span>1</span>
-							
+								<span><?= $cart_product->amount ?></span>
+						
+							</li>
+
+							<li style="margin-top: 1.5em;">
 								
-							
+								<span class="item_bold">Size: </span>
+								<span><?= $cart_product->size ?></span>
+						
 							</li>
 							
 						</ol>

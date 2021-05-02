@@ -66,7 +66,7 @@ body{
 
 .header_container {
 	margin-top: 2em; 
-	margin-bottom: 3em;
+	
 }
 
 
@@ -81,7 +81,7 @@ body{
 	font-style: normal; 
 	font-size: 1em; 
 	color: #4a342a; 
-	margin-left: 42em; 
+	margin-left: 41em;
 	margin-top:2em;
 }
 
@@ -90,6 +90,17 @@ body{
 	margin-left: -1em;
 
 }
+
+
+span.badge:not(:empty)::after {
+	content: ')';
+}
+
+
+span.badge:not(:empty)::before {
+	content: '(';
+}
+
 
 
 /* Shop Page */
@@ -105,8 +116,8 @@ body{
 	font-style: normal; 
 	font-size: 36px; 
 	color: #4a342a; 
-	margin-bottom: 2em; 
-	margin-top: 2em;
+	
+	
 }
 
 
@@ -459,6 +470,8 @@ body{
 }
 
 
+
+
 /*Thank you page*/
 
 
@@ -475,5 +488,31 @@ body{
 	font-style: normal; 
 	font-size: 1em; 
 	color: #4a342a; 
+	text-align: center;
+}
+
+
+
+/* About page */
+
+
+.about_title {
+	font-family: 'Bodoni Moda', serif; 
+		font-weight: 700; 
+		font-style: normal; 
+		font-size: 24px; 
+		margin-left: 4.2em;
+		margin-top: 0.5em;
+}
+
+.about_p1 {
+	line-height: 2em;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 1em;
+	width: 95%;
+	color: #4a342a;
+	margin-left: 0.5em;
 	text-align: center;
 }

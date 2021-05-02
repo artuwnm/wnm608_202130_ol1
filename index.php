@@ -1,4 +1,10 @@
- <!DOCTYPE html> <!-- html:5 -->
+<?php 
+
+include_once "lib/php/functions.php";
+
+?>
+
+<!DOCTYPE html> <!-- html:5 -->
 
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
 
 
     <!-- banner -->
-	<div class="display-flex banner">
+	<div class="display-flex banner" style="margin-top: 1em;">
 		
 			<img class="banner_img" src="img/jewelry/banner1-2.png">
 			<div class="announce">
@@ -58,9 +64,9 @@
 
 	<!-- View Window -->
 	<div class="view-window" style="background-image: url('img/jewelry/banner2-1.png');">
-		<div class="collection_text">
+		<div class="collection_text" style="margin-top: -2em;">
 			<h1>About Our Goal</h1>
-			<p>The fine jewelry world has been intimidating, inaccessible, (way) overpriced, and frankly pretty outdated for too long. We knew we needed to break its rules to make a difference. Our piece is thoughtfully designed for everyday wear. Luxury today is collected, shared, and classic. We think jewelry should be too.</p>
+			<p>The fine jewelry world has been intimidating, inaccessible, way overpriced, and frankly pretty outdated for too long. We knew we needed to break its rules to make a difference. Our piece is thoughtfully designed for everyday wear. Luxury today is collected, shared, and classic. We think jewelry should be too.</p>
 
 		</div>
 	</div>
@@ -89,7 +95,7 @@
 
 			<div class="news_text flex-none">
 				<h1>Subscribe To Our Newsletter</h1>
-				<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit.</p>
+				<p>Start your experience today to make your own unique jewelry!</p>
 			</div>
 			
 			<div class="flex-stretch"></div>

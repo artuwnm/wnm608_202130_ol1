@@ -1,3 +1,9 @@
+<?php 
+
+include_once "lib/php/functions.php";
+
+?>
+
 <!DOCTYPE html> <!-- html:5 -->
 
 <html lang="en">
@@ -19,13 +25,13 @@
 
 	<div class="container shop" style="margin-bottom: 12em;">
 		
-		<div class="item_line" style="margin-top: 7em;">
+		<div class="item_line" style="margin-top: 3em;">
 			<h2>Checkout</h2>
 		</div>
 		<div class="divide_line1" style="margin-top: -1em;"></div>
 
 		<div class="input_form">
-    		<div class="default_form" style="margin-top: -1em;">
+    		<div class="default_form" style="margin-top: -2em;">
     			<h3>Credit Card</h3>
 
 				<form>
@@ -54,7 +60,7 @@
     <div class="divide_line1" style="margin-top:2em;"></div>
 
     <div class="input_form">
-    	<div class="default_form" style="margin-top: -1em;">
+    	<div class="default_form" style="margin-top: -2em;">
     		<h3>Billing Address</h3>
     							
     			<form>
@@ -81,6 +87,8 @@
     			</form>
     	</div>
   	</div>
+
+    <div class="divide_line1" style="margin-top:2em;"></div>
     	
 
 

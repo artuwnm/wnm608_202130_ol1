@@ -1,3 +1,11 @@
+<?php 
+
+include_once "lib/php/functions.php";    //once means just one-time called
+
+include_once "parts/templates.php";
+
+?>
+
 <!DOCTYPE html> <!-- html:5 -->
 
 <html lang="en">
@@ -17,7 +25,7 @@
 	</div>
 	<?php include "parts/header_nav.php" ?>
 
-	<div class="container shop">
+	<div class="container shop" style="margin-top: -1em;">
 		
 		<h1>Shop</h1>
 
@@ -65,10 +73,6 @@
 
 	<div class="grid_container">
 		<?php 
-
-		include_once "lib/php/functions.php";    //once means just one-time called
-
-		include_once "parts/templates.php";
 
 		$result = makeQuery(
 			makeConn(),
