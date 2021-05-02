@@ -4,13 +4,11 @@ include_once "lib/php/functions.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-$images = explode(",",$product->images);
+$cart_product = cartItemById($_GET['id']);
 
-$image_elements = array_reduce($images,function($r,$o){
-	return $r."<img src='img/$o'>";
-});
+//$images = explode(",",$product->images);
 
-
+//$image_elements = array_reduce($images,function($r,$o){return $r."<img src='img/$o'>";});
 
 //print_p($product);
 
@@ -32,7 +30,8 @@ $image_elements = array_reduce($images,function($r,$o){
 
 	<div class="container">
 		<div class="card soft">
-			<h2>You added <?= $product->name?> to our cart</h2>
+			<h2>You added <?= $product->name ?> to our cart</h2>
+			<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
 
 			<div class="display-flex">
 				<div class="flex-none"><a href="product_list.php">Continue Shopping</a></div>
