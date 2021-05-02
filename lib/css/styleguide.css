@@ -642,6 +642,10 @@ a:hover {
 	width: 10em;
 }
 
+
+.form-button.inline {
+	width:initial;
+}
 .form-button:hover {
 	text-decoration: none;
 	background-color: var(--color-neutral-medium);
@@ -650,6 +654,8 @@ a:hover {
 .form-button:active {
 	background-color: var(--color-neutral-medium);
 }
+
+
 
 
 
