@@ -11,6 +11,8 @@
 
 	});
 
+//print_p($_SESSION)
+
 ?>
 
 
@@ -31,7 +33,7 @@
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
 					<div class="images-main">
-						<img src="/img/store/<?= $product->thumbnail ?>">
+						<img src="img/<?= $product->thumbnail ?>">
 					</div>
 					<div class="images-thumbs">
 						<?= $image_elements ?>
@@ -39,32 +41,41 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-5">
-					<div class="card soft flat">
+					<form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+							<input type="hidden" name="product-id" value="<?= $product->id ?>">
 							<div class="card-section">
 								<div class="product-title"><?= $product->name ?></div>
 								<div class="product-price">&dollar;<?= $product->price ?></div>
 							</div>
 							
 							<div class="card-section">
-								<label for="product-amount" class="form-label">Amount</label>
-								<div class="form-select" id="product-amount">
-									<select>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-									</select>	
+								<div class="form-control">
+									<label for="product-amount" class="form-label">Amount</label>
+									<div class="form-select">
+										<select  id="product-amount" name="product-amount">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+										</select>	
+									</div>
 								</div>
-							</div>
-
-							<div class="card-section">
-								<a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add To Cart</a>	
+								<div class="card-control">
+									<label for="product-color" class="form-label">Model</label>
+									<div class="form-select">
+										<select  id="product-color" name="product-model">
+											<option>iPhone12</option>
+											<option>iPhone12 Max</option>
+										</select>
+									</div>
+								</div>
 							</div>	
-					</div>
-
-
+							<div class="card-section">
+								<input type="submit" class="form-button" value="Add To Cart">
+							</div>	
+					</form>
 			</div>
 		</div>
 		<div class="card soft light">
