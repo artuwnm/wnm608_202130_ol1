@@ -353,6 +353,10 @@ a:hover {
 	text-align: center;
 }
 
+.form-button.inline{
+	width: initial; 
+}
+
 .form-button:hover {
 	text-decoration: none;
 }

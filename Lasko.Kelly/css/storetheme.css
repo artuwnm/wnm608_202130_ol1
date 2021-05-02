@@ -117,8 +117,8 @@ body {
 
 
 img {
-	height: 200px;
-	width: 250px;
+	height: auto;
+    width: 200px;
 }
 
 .second-row {
@@ -214,8 +214,6 @@ img {
 
 
 
-
-
 .images-main img {
 	width: 100%;
 	height: 40vh;
@@ -232,6 +230,20 @@ img {
 
 
 
+span.badge:not(:empty)::after {
+	content: ')';
+}
+
+span.badge:not(:empty)::before {
+	content: '(';
+}
+
+.cart_item_names {
+	font-weight: 700; ; 
+	font-size: 1em; 
+	padding: .5em;
+
+}
 
 
 
