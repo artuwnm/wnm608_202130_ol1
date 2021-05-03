@@ -1,3 +1,9 @@
+<?php 
+
+	include_once "lib/php/functions.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +20,8 @@
 		<div class="card soft">
 			<h2>Product Checkout</h2>
 
+			<h3>Address</h3>
 			<form class="form">
-				<h3>Address</h3>
 				<div class="form-control">
 					<label for="address-street" class="form-label">Street</label>
 					<input id="address-street" type="text" placeholder="Street name" class="form-input">

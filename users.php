@@ -1,15 +1,13 @@
 <?php
 
 include "../lib/php/functions.php";
+
 $users = file_get_json("../data/users.json");
-
-
-
 
 
 function showUserPage($user) {
 
-$classes = implode(", ", $user->classes);
+$classes = implode(", ",  $user->classes);
 
 
 echo <<<HTML
@@ -36,26 +34,30 @@ echo <<<HTML
 		<input class="form-input" type="text" value="$user->classes">
 	</div>
 	<div class="form-control">
-		<input class="form-button" type="submit" value="submit">
+		<input class="form-button" type="submit" value="Save Changes">
 	</div>
 </form>
-
 HTML;
 }
 
 
-
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>User Admin Page</title>
 
-	<?php include "../parts/meta.php"; ?>
+	<meta name="viewport" content="width=device-width">	
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+
+	<base href="http://xrquandesign.com/aau/wnm608_202130_ol1/Xu.Ruiquan/">
+
+
 </head>
 <body>
-	
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
