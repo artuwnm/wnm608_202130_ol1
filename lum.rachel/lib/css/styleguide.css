@@ -355,6 +355,12 @@ a:hover{
 	text-align: center;
 
 }
+
+
+.form-button.inline{
+	width: initial;
+}
+
 .form-button:hover{
 	text-decoration: none;
 }
@@ -388,6 +394,22 @@ a:hover{
 	
 	border-radius: 0em;
 	cursor: pointer;
+}
+
+.form-select2>select{
+	padding: 0.5em 1.3em;
+	background-color: var(--color-main-light);
+	/*background-color: transparent;*/
+	color: inherit;
+
+	border-width: 0;
+	border-radius: 0em;
+	cursor: pointer;
+
+	display: inline-block;
+	-webkit-appearance: none;
+	outline: 0;
+	font: inherit;
 }
 
 .outline-button>select{

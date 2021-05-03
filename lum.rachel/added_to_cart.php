@@ -1,11 +1,11 @@
 <?php
 
 include_once "lib/php/functions.php";
-//include_once "parts/templates.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-
+$cart_product = cartItemBy($_GET['id']);
 ?>
 
 
@@ -33,6 +33,7 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 			
 
 			<h2>You added <?= $product->name ?> to your cart</h2>
+			<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
 				<div class="display-flex">
 
 					<div class="flex-none"><h3><a href="product_list.php">Keep Shopping</a></h3></div>
