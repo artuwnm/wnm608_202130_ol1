@@ -6,7 +6,7 @@ function item_card($item,$index,$col) {
   $discountTag = $discount > 0 ? "<div class=\"discount\">-$discount%</div>" : '';
   $fullTag = $discount > 0 ? "<div class=\"full\">$ $item->price</div>" : '';
   echo <<<HTML
-    <div class="item-card col-s-12 col-l-$col" onclick="location.href = '/wnm608/shen.jiawei/product.php?id=$item->id'">
+    <div class="item-card col-s-12 col-l-$col" onclick="location.href = '/wnm608/shen.jiawei/product.php?id=$item->id'" style="max-height: 500px;">
       <div class="img" style="background-image: url(/wnm608/shen.jiawei/img/products/thumb/$item->id.jpeg);">
         <div class="overlay">
           <button>Buy</button>
@@ -15,7 +15,7 @@ function item_card($item,$index,$col) {
       <div class="info">
         <div class="desc">
           <h3>$item->name</h3>
-          <p>Great stuff!</p>
+          <!-- <p>Great stuff!</p> -->
         </div>
         $discountTag
         <div class="price">
@@ -46,6 +46,38 @@ function cart_item($item,$index) {
         <button class="delete" onclick="deleteItemInCart(this)">× &nbsp;Delete</button>
       </div>
     </div>
+  HTML;
+}
+function single_select_card($name, $options) {
+  array_walk($options, function($option) use($name) {
+    $id = "radio-$name-{$option['value']}";
+    $label = isset($option['icon']) ? <<<HTML
+    <img src="/wnm608/shen.jiawei/img/icons/{$option['icon']}" alt="{$option['title']}">
+    HTML : $option['label'];
+    $checked = isset($_GET[$name]) && $option['value'] == $_GET[$name] ? " checked" : "";
+    echo <<<HTML
+    <div class="select-card">
+      <input type="radio" name="$name" value="{$option['value']}" id="$id" form="form-search-filter-sort"$checked>
+      <label for="$id" class="card no-padding flex center" title="{$option['title']}">
+        $label
+      </label>
+    </div>
+    HTML;
+  });
+}
+function multi_select_card($name, $option) {
+  $id = "checkbox-$name";
+  $label = isset($option['icon']) ? <<<HTML
+  <img src="/wnm608/shen.jiawei/img/icons/{$option['icon']}" alt="{$option['title']}">
+  HTML : $option['label'];
+  $checked = isset($_GET[$name]) && "on" == $_GET[$name] ? " checked" : "";
+  echo <<<HTML
+  <div class="select-card">
+    <input type="checkbox" name="$name" id="$id" form="form-search-filter-sort"$checked>
+    <label for="$id" class="card no-padding flex center" title="{$option['title']}">
+      $label
+    </label>
+  </div>
   HTML;
 }
 ?>

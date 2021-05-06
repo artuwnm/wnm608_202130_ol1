@@ -1,4 +1,5 @@
 <?php
+
 function queryAll($q) {
   global $db;
   $res = $db->query($q);
@@ -9,4 +10,11 @@ function queryAll($q) {
   }
   return $a;
 }
+
+function sanitize($input) {
+  global $db;
+  $input = mysqli_escape_string($db, $input);
+  return addcslashes($input, "%_");
+}
+
 ?>

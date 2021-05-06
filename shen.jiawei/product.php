@@ -2,7 +2,7 @@
 include_once "lib/php/auth.php";
 $db = db_joystore();
 include_once "lib/php/functions.php";
-$product = queryAll("SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+$product = queryAll("SELECT * FROM `products` WHERE `id`=".sanitize($_GET['id']))[0];
 $current = number_format($product->price * (1 - $product->discount / 100), 2);
 $discount = round($product->discount);
 ?>
