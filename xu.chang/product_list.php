@@ -13,6 +13,13 @@
 
 	<?php include "parts/meta.php"; ?>
 
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+
+
+
+
 
 </head>
 <body>
@@ -22,29 +29,49 @@
 	<div class="container">	
 		
 			<h2>Product List</h2>
+			<div class="form-control">
+				<form class="hotdog light" id="product-search">
+					<input type="search" placeholder="Search Products">
+				</form>
+			</div>
 
+			<div class="form-control">
+				<div class="card soft">
+				<div class="display-flex">
+					<div class="flex-stretch display-flex">
+						<div class="flex-none">
+							<button data-filter="category" data-value="" type="button" class="form-button">ALL</button>
+						</div>	
+						<div class="flex-none">
+							<button data-filter="category" data-value="Charger" type="button" class="form-button">Charger</button>
+						</div>	
+						<div class="flex-none">
+							<button data-filter="category" data-value="Stabilizers" type="button" class="form-button">Stabilizers</button>				
+						</div>
+						<div class="flex-none">
+							<button data-filter="category" data-value="Cell Phone Grips" type="button" class="form-button">Grips</button>				
+						</div>
+						<div class="flex-none">
+							<button data-filter="category" data-value="Cell Phone Cases" type="button" class="form-button">Cases</button>				
+						</div>	
+					</div>
+					<div class="flex-none">
+						<div class="form-select">
+							<select class="js-sort">
+								<option value="1">Newest</option>
+								<option value="2">Oldest</option>
+								<option value="3">Least Expensive</option>
+								<option value="4">Most Expensive</option>								
+							</select>	
+						</div>		
+					</div>
+				</div>		
+				</div>
+			</div>
 
-
-		<?php 
-
-
-		$result = makeQuery(
-			makeConn(),
-			"
-			SELECT * 
-			FROM `products`
-			ORDER BY 'date_create' DESC 
-			LIMIT 12
-			"
-		);
-
-		echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'),"</div>";
-
-		?>
-
-
-
-		</div>
+			
+			
+			<div class='productlist grid gap'></div>		
 	</div>
 
 </body>
