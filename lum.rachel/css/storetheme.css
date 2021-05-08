@@ -160,5 +160,7 @@ span.badge:not(:empty)::before{
 }
 
 
-
+.category-space{
+  padding: 0 0.5em;
+}
 

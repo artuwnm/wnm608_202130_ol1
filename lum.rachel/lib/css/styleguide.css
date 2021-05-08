@@ -309,6 +309,8 @@ a:hover{
 /* Forms */
 .form-control{
 	margin: 1em 0;
+
+
 }
 
 
@@ -326,8 +328,9 @@ a:hover{
 	font: inherit;
 	-webkit-appearance: none;
 	color: inherit;
-	width: 50%;
+	width: 100%;
 	outline: 0;
+
 }
 
 .form-input{
@@ -350,6 +353,7 @@ a:hover{
 	color: var(--color-white);
 	padding: 0.5em 1em;
 	background-color: var(--color-main-dark);
+
 	border-radius: 0.2em;
 	cursor: pointer;
 	text-align: center;
