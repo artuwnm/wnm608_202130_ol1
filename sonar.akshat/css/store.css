@@ -1,0 +1,132 @@
+/**SEARCH**/
+
+.searchbox {
+    padding-top: 50px;
+}
+
+.search {
+    text-align: center;
+}
+
+.sort {
+    display: flex;
+    justify-content: center;  
+}
+
+.js-sort {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: grey;
+    text-align-last: center;
+}
+
+.js-sort:hover {
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+}
+
+.hotdog {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.hotdog:hover {
+    box-shadow: 0 2px 50px rgba(0,0,0,0.2);
+}
+
+/**FIGURES**/
+
+
+
+.figure {
+    border-radius: 15px;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 310px; 
+    transition: all 0.3s;
+}
+
+.figure:hover {
+    box-shadow: 0 2px 50px rgba(0,0,0,0.2);
+}
+
+figcaption {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.fig {
+    padding-left: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+.productlist {
+    padding-top:50px; 
+    padding-left:50px; 
+    padding-right:50px; 
+    display:flex; 
+    flex-wrap:wrap; 
+    justify-content:center;
+}
+
+.filter {
+    display: flex;
+    justify-content: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.filterbtn {
+    display: inline-block;
+    border-width: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: grey;
+    width: 90px;
+    height: 30px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    transition: all 0.3s;
+}
+
+.filterbtn:hover {
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+}
+
+
