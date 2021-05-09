@@ -105,9 +105,7 @@ span.badge:not(:empty)::before {
 
 /* Shop Page */
 
-.shop {
 
-}
 
 .shop h1 {
 	text-align: center; 
@@ -123,6 +121,12 @@ span.badge:not(:empty)::before {
 
 .back_button {
 	margin-bottom: 3em;
+	
+}
+
+.back_button1 {
+	margin-left: 53em;
+	margin-top: 1.5em;
 }
 
 
@@ -154,6 +158,57 @@ span.badge:not(:empty)::before {
 	margin-top: 1em;
 }
 
+
+.search_right1 {
+	margin-left: 0;
+	margin-top: 1em;
+}
+
+.hotdog .search_text {
+	font-family: nunito,sans-serif; 
+	font-weight: 400; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a; 
+}
+
+
+.sort_select>select {
+	padding: 0.3em 1.3em;
+	background-color: var(--color-white);
+	border-radius: 0.5em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	cursor: pointer;
+	font-family: nunito,sans-serif; 
+	font-weight: 600; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a; 
+}
+
+.sort_select::after {
+	content: '▾'; /*  google ascii triangle, and copy a symbol */
+	font-family: nunito, sans-serif;
+	font-size: 1.2em;
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: #4a342a;
+}
+
+
+.button_filled3 {
+	font-family: nunito,sans-serif; 
+	font-weight: 400; 
+	font-style: normal; 
+	font-size: 0.9em; 
+	color: #4a342a; 
+	background-color: #f7f0eb;
+	
+
+}
 
 .all_line {
 	margin-top: 5em;

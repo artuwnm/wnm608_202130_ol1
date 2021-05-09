@@ -53,7 +53,7 @@ return $r.<<<HTML
 		<div class="cart_item_names">$o->name ($o->amount)</div>
 		<form action="cart_actions.php?action=delete-cart-item"method="post">
 			<input type="hidden" name="id" value="$o->id">
-			<input type="submit" onclick="deleteItemInCart(this)" class="form-button button_filled1 inline" value="Delete" style="width: initial; font-size: 0.8em; margin-top: 0.8em;">
+			<input type="submit" class="form-button button_filled1 inline" value="Delete" style="width: initial; font-size: 0.8em; margin-top: 0.8em;">
 		</form>
 	</div>
 	<div class="flex-none cart_price">
