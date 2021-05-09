@@ -10,13 +10,13 @@
 	<meta charset="UTF-8">
 	<title>Product List</title>
 
-	<meta name="viewport" content="width=device-width">	
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+	<?php include "parts/meta.php"; ?>
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+
+
 </head>
 <body>
 	<?php include "parts/navbar.php"; ?>
@@ -25,26 +25,44 @@
 
 			<h2>Product List</h2>
 
+			<div class="form-control">
+				<form class="hotdog light" id="product-search">
+					<input type="search" placeholder="Search Products">
+				</form>
+			</div>
+			<div class="form-control">
+				<div class="card soft">
+				<div class="display-flex">
+					<div class="flex-stretch display-flex">
+						<div class="flex-none">
+							<button data-filter="category" data-value="" type="button" class="form-button">ALL</button>
+						</div>
+						<div class="flex-none">
+							<button data-filter="category" data-value="Gaming Desktops" type="button" class="form-button">Gaming Desktops</button>
+						</div> 	
+						<div class="flex-none">
+							<button data-filter="category" data-value="Gaming Laptops" type="button" class="form-button">Gaming Laptops</button>				
+						</div>
+					</div>
+					<div class="flex-none">
+						<div class="form-select">
+							<select class="js-sort">
+								<option value="1">Newest</option>
+								<option value="2">Oldest</option>
+								<option value="3">Least Expensive</option>
+								<option value="4">Most Expensive</option>								
+							</select>	
+						</div>		
+					</div>
+				</div>		
+				</div>
+			</div>	
+			<div class="productlist grid gap"></div>
+	
 
-		<?php 
+		
 
 
-
-		$result = makeQuery(
-			makeConn(),
-			"
-			SELECT * 
-			FROM `products`
-			ORDER BY 'date_create' DESC 
-			LIMIT 12
-			"
-		);
-
-		echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'),"</div>";
-
-		?>
-
-		</div>
 	</div>
 
 </body>
