@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php 
+
+		include_once "lib/php/functions.php";
+
+		$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$cart_product = cartItemById($_GET['id']);
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,10 +23,11 @@
 	<?php include "parts/navbar.php"; ?>
 
 
+
 <div class="container">
 	<div class="card soft">
-		<h2>_____ has been added to the cart</h2>
-		
+		<h3 id="product-cart">You have added <?= $product->name ?> added to the cart</h3>
+		<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
 <div class="display-flex">
 		<div class="flex-none"><a href="product_list.php">Continue shopping</a></div>
 		<div class="flex-stretch"></div>

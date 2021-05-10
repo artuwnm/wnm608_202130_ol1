@@ -12,3 +12,6 @@
 <link rel="stylesheet" href="https://use.typekit.net/txr4hgu.css">
 <link rel="stylesheet" href="https://use.typekit.net/txr4hgu.css">
 <link rel="stylesheet" href="https://use.typekit.net/txr4hgu.css">
+
+<link rel="shortcut icon" href="#">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

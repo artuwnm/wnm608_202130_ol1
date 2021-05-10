@@ -270,8 +270,8 @@ height: 4px;
 
 .card {
 	background-color: var(--color-white);
-	margin-top: .2em;
-	margin-bottom: .5em;
+/*	margin-top: .2em;
+	margin-bottom: .2em;*/
 	padding: 1em;
 	max-width: 90%;
 	overflow: hidden;
@@ -279,7 +279,7 @@ height: 4px;
 }
 
 .card.soft {
-	margin-top: 0.4em;
+	/*margin-top: 0.4em;*/
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.5rem;
@@ -308,8 +308,19 @@ height: 4px;
 
 .card.flat {
 	padding: 0;
-	border: 2px solid var(--color-neutral-medium);
 }
+
+
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-light);
+}
+
+.card-section {
+	padding: 1em;
+}
+
+
+
 
 
 .view-window {
@@ -417,7 +428,10 @@ display: inline-block;
 	width: 100%;
 }
 
-
+.form-select {
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* BUTTON */
 
@@ -427,7 +441,7 @@ display: inline-block;
 	cursor: pointer;
 	text-align: center;
 	padding: 0.5em 1em;
-	max-width: 10em;
+	
 }
 
 .form-button:hover {
@@ -464,7 +478,7 @@ display: inline-block;
 
 .form-select>select {
 	padding:0.5em 1.5em;
-	background-color: var(--color-main-medium);
+	background-color: #f6e3de;
 	border-radius: 0.3em;
 	cursor: pointer;
 }
@@ -514,8 +528,6 @@ position: relative;
 .toggle input:checked + label::after {
 	transform: translateX(1em);	
 }
-
-
 
 
 

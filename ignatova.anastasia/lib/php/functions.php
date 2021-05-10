@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 function file_get_json($filename) {
 	$file = file_get_contents($filename);
@@ -14,8 +15,8 @@ function print_p($v) {
 include_once "auth.php";
 
 function makeConn() {
-	$conn = new mysqli(...MYSQLIAuth()); //Spread operatior, splits array
-	if($conn->connect-errno) die($conn->connect_error);
+	$conn = new mysqli(...MYSQLIAuth());
+	if($conn->connect_errno) die($conn->connect_error);
 	$conn->set_charset('utf8');
 	return $conn;
 }
@@ -31,6 +32,58 @@ while ($row = $result->fetch_object()) {
 }
 return $a;
 }
+
+
+
+
+function array_find($array,$fn) {
+	foreach($array as $o) if($fn($o)) return $o;
+	return false;
+}
+
+function getCart() {
+	return isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+}
+
+function addToCart($id,$amount) {
+	// to clear the cart, reset the session
+	// $_SESSION['cart'] = []; 
+	$cart = getCart();
+
+	$p = array_find($cart,function($o) use($id) {return $o->id==$id; });
+
+if($p) {
+	$p->amount += $amount;
+} else {
+	$_SESSION['cart'][] =(object)[
+		"id"=>$id,
+		"amount"=>$amount];
+}
+}
+
+function resetCart() { $_SESSION['cart'] = []; }
+
+function cartItemById($id)	{
+	return array_find(getCart(),function($o){return $o->id==$id;});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

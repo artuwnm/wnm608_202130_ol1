@@ -13,8 +13,6 @@ background-color: var(--color-neutral-light);
 padding-bottom: 4em;
 }
 
-
-
 .favorite label {
 transition: all 0.3s;
 display: inline-block;
@@ -141,9 +139,6 @@ border: 2px solid var(--color-neutral-medium);
 }
 
 
-
-
-
 .product-overlay:hover figcaption {
 	opacity: 1;
 }
@@ -177,7 +172,54 @@ transition: all 0.3s;
 		padding: 0;
 
 	}
+
+.images_main img {
+width: 100%;
+height: 40vh;
+object-fit: contain;
 }
+
+
+
+.images_thumbs img {
+width: 8em;
+height: 6em;
+object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
