@@ -353,13 +353,26 @@ a:hover {
 	text-align: center;
 }
 
+.filter-button {
+    background-color: var(--color-white);
+    border-radius: 10px;
+	padding: 0.5em 1em;
+    cursor: pointer;
+	text-align: center;
+	margin-left: 2em;
+	border-width: .5px;
+}
+
 .form-button.inline{
 	width: initial; 
 }
 
+.filter-button,
 .form-button:hover {
 	text-decoration: none;
 }
+
+
 .form-button:active {
 	background-color: var(--color-main-light);
 }

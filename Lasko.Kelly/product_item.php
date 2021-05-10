@@ -7,7 +7,7 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = ".$_GET[
 $images = explode(",", $product->images);
 
 $image_elements = array_reduce($images, function($r,$o){
-	return $r."<img src='$o'>";
+	return $r."<img src='img/$o'>";
 
 });
 
@@ -33,7 +33,7 @@ $image_elements = array_reduce($images, function($r,$o){
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
 					<div class="images-main">
-						<img src="<?= $product->thumbnail ?>">
+						<img src="img/<?= $product->thumbnail ?>">
 					</div>
 					<div class="images-thumbs">
 						<?= $image_elements ?>
