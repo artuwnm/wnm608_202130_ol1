@@ -1,3 +1,6 @@
+<?php include_once "lib/php/functions.php";
+resetCart()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
