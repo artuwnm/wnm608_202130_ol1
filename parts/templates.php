@@ -106,3 +106,38 @@ HTML;
 
 
 }
+
+
+
+
+
+function recommendedProducts($a) {
+
+$products = array_reduce($a,'productListTemplate');
+
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+
+}
+
+
+function recommendedCategory($cat,$limit=3) {
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='bracelet' ORDER BY 'date_create' DESC LIMIT 3");
+
+	recommendedProducts($result);
+}
+
+
+function recommendedSimilar($cat,$id=0,$limit=3) {
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+
+	recommendedProducts($result);
+}
+
+
+
+
+

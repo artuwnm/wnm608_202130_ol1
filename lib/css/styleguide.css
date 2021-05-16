@@ -795,7 +795,7 @@ a:hover{
 
 
 .form-control {
-	margin: 1em 0;
+	margin: 1.5em 0;
 }
 
 
@@ -848,17 +848,6 @@ a:hover{
 }
 
  
- .default_form {
- 	 width: 40%;
- }
-   .default_form h3{
-        font-family: proxima-nova,sans-serif;
-	  	font-weight: 700;
-	  	font-style: normal;
-	  	font-size: 1em;
-	  	color: var(--color-offblack);
-	  	margin-bottom: 2em;
-   }
 
 .expiration {
 	padding: 0.05em 0.5em 0.05em;

@@ -31,6 +31,22 @@ function makeConn() {
 
 }
 
+function makePDOConn() {
+	try {
+
+		$conn = new PDO(...PDOAuth());
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	}catch(PDOException $e) {
+
+		die($e->getMessage());
+
+	}
+
+	return $conn;
+}
+
+
 
 
 function makeQuery($conn,$qry) {

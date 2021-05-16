@@ -571,3 +571,143 @@ span.badge:not(:empty)::before {
 	margin-left: 0.5em;
 	text-align: center;
 }
+
+
+
+/* Product Admin Page */
+
+.admin_title{
+	font-family: 'Bodoni Moda', serif; 
+	font-weight: 700; 
+	
+	font-style: normal;  
+	color: #4a342a; 
+}
+
+.admin_productlist {
+	font-family: Bodoni Moda,serif;
+	  	font-weight: 700;
+	  	font-style: normal;
+	  	color: #4a342a; 
+	  	margin-top: 2em;
+}
+
+ .default_form {
+ 	 
+ }
+   .default_form h3{
+        font-family: Bodoni Moda,serif;
+	  	font-weight: 700;
+	  	font-style: normal;
+	  	font-size: 1.2em;
+	  	color: #4a342a; 
+	  	margin-bottom: 2em;
+   }
+
+.delete_product {
+	margin-right: 0;
+	
+}
+
+.admin_button {
+	font-family: nunito,sans-serif; 
+	font-weight: 500; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a;
+}
+
+.admin_info {
+	margin-left: 4.7em;
+}
+
+.admin_info h2{
+	font-family: Bodoni Moda,serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #4a342a; 
+	margin-bottom: 2em;
+}
+
+.display {
+	
+	font-family: nunito,sans-serif; 
+	font-weight: 500; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a;
+
+	
+}
+
+.admin_form {
+	width: 85%;
+	background-color: #f7f0eb;
+	margin-left: 5.5em;
+	margin-top: 1em;
+}
+
+.default_form1 h2{
+	font-family: Bodoni Moda,serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #4a342a; 
+}
+
+.default_form1 {
+  width: 80%;
+  font-family: nunito,sans-serif; 
+
+  font-style: normal; 
+  font-size: 1em; 
+  color: #4a342a;
+  margin-left: 3em;
+  margin-top: 0.7em;
+  }
+
+
+.adminProduct_title {
+	padding: 1em;
+	font-family: nunito,sans-serif; 
+	font-weight: 600; 
+	font-style: normal; 
+	font-size: 1em; 
+	color: #4a342a;
+
+}
+
+.adminProduct_button {
+	
+	font-family: nunito,sans-serif; 
+	font-weight: 500; 
+	font-style: normal; 
+	font-size: 1em; 
+	width: 5em;
+	
+
+}
+
+.edit_info {
+	font-size: 1em;
+	font-weight: 700;
+	font-style: normal;
+	color: #4a342a; 
+}
+
+.edit_info1 {
+	font-size: 1em;
+	font-weight: 600;
+	font-style: normal;
+	color: #4a342a; 
+}
+
+.edit_content {
+	font-size: 0.9em;
+	color: #4a342a; 
+}
+
+.edit_content1 {
+	
+	
+	
+}

@@ -2,6 +2,8 @@
 
 	include_once "lib/php/functions.php";
 
+	include_once "parts/templates.php";
+
 	$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = ".$_GET['id'])[0];
 
 	//print_p($product);
@@ -83,17 +85,22 @@
 
 					    <div class="item_detail col-xs-12 col-md-5">
 						
-							<ol style="list-style: none; margin-left: -2.7em;">
+							<ol style="list-style: none; margin-left: -2.6em;">
 								<li class="item_name">
 									<span class="item_bold">Name: </span>
 									<span><?= $product->name ?></span>
 								</li>
-								<li class="item_price" style="margin-top: 0.3em;">
+								<li class="item_price" style="">
 									<span class="item_bold">Price: </span>
 									<span>&dollar;<?= $product->price ?></span>
 							
 								</li>
-								<li style="margin-top: 0.5em;">
+								<li class="item_category" style="">
+									<span class="item_bold">Category: </span>
+									<span><?= $product->category ?></span>
+							
+								</li>
+								<li style="">
 								
 									
 									<label class="item_bold" for="product-amount">Quantity:</label>
@@ -109,7 +116,7 @@
 									
 								</li>
 
-								<li style="margin-top: 0.5em;">
+								<li style="">
 								
 									
 									<label class="item_bold" for="product-size">Size:</label>
@@ -137,7 +144,7 @@
 					</div>
 				
 					
-					<div style="margin-top: 1em;">
+					<div style="margin-top: -0.5em;">
 							<div class="item_bold">Description</div>
 							<p style="margin-top: -0.05px;"><?= $product->description ?></p>
 					</div>
@@ -157,7 +164,7 @@
 		<div class="item_line">
 			<h3>Recommended</h3>
 			
-			<div class="divide_line1" style="margin-top: -1.4em; margin-bottom: 3em;"></div>
+			<div class="divide_line1" style="margin-top: -0.5em; margin-bottom: 3em;"></div>
 		</div>
 
 
@@ -202,29 +209,53 @@
 
 
 
-		<div style="margin-left: 3em;">
+		<div class="container" style="margin-left: 3em;">
+
+			<?php
+				recommendedSimilar($product->category,$product->id);
+
+			?>
+
+
+			<!--
+
+			<?php
+
+				//recommendedCategory("bracelet");
+			?>
+
+
+			<?php
+
+			//$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='bracelet' ORDER BY 'date_create' DESC LIMIT 3");
+
+			//recommendedProducts($result);
+
+
+			?>
+
 			<?php 
 			
-			include_once "lib/php/functions.php";    //once means just one-time called
+			//include_once "lib/php/functions.php";    //once means just one-time called
 			
-			include_once "parts/templates.php";
+			//include_once "parts/templates.php";
 			
-			$result = makeQuery(
-				makeConn(),
-				"
-				SELECT *                     /*`id`,`title`,`price`*/
+			//$result = makeQuery(
+				//makeConn(),
+				//"
+				//SELECT *                     /*`id`,`title`,`price`*/
 			
-				FROM `products`
+				//FROM `products`
 			
-				ORDER BY 'date_create' DESC  /*ASC*/
+				//ORDER BY 'date_create' DESC  /*ASC*/
 			
-				LIMIT 3
-				"
-			);
+				//LIMIT 3
+				//"
+			//);
 			
-			echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'),"</div>";
+			//echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'),"</div>";
 			
-			?>
+			?>-->
 		</div>
 
 

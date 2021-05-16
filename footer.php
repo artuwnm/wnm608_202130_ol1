@@ -2,6 +2,6 @@
 
 
 
-<div class="footer" style="">
+<div class="footer">
 	<p>WNM618 - Final Project - Mindy Quan</p>
 </div>

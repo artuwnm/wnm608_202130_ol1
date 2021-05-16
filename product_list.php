@@ -105,11 +105,11 @@ include_once "parts/templates.php";
 	</div>
 
 
-		<div class="admin" style="margin-bottom: 15em;">
+		<!--<div class="admin" style="margin-bottom: 15em;">
 			<h3>
 				<a href="#" >Product Admin</a>
 			</h3>
-		</div>
+		</div>-->
 
 	</div>
 
