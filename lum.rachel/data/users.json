@@ -1,5 +1,4 @@
 [
-
 	{
 		"name" : "Rachel Lum",
 		"type" : "Student",
@@ -30,6 +29,4 @@
 		"email" :"cb@ucsc.edu",
 		"classes" : [605,608,613,606]
 	}
-	
-
 ]

@@ -1,5 +1,9 @@
-<! DOCTYPE html>
+<?php
 
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,53 +17,34 @@
 
 	<?php include "parts/navbar.php"; ?>
 
+
+<div class="container">
+		<h1>Home</h1>
+</div>
+
+
 	<div class="container">
-
-
-
-		<img src="img/ordinary_promo1.jpg"/>
-
-		<h1>Featured</h1>
-
-		
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Product Name</div>
-								<div>$3.99</div>
-							</div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Product Name</div>
-								<div>$3.99</div>
-							</div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Product Name</div>
-								<div>$3.99</div>
-							</div>
-						</figcaption>
-					</figure>
-				</div>
-			</div>
-
+		<h2>Featured Hair Products</h2>
+		<?php
+		recommendedCategory("hair");
+		?>
+		<h2>Featured Eye Products</h2>
+		<?php
+		recommendedCategory("eyes");
+		?>
 
 	</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
