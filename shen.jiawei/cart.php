@@ -19,9 +19,6 @@
       <div class="grow">
         <h2>$ <span class="cart-total">
           <?php
-           $total = array_reduce($products,function($price,$item) {
-              return $price + round($item->price * (1 - $item->discount / 100), 2) * $item->amount;
-            },0);
             echo number_format($total,2)
           ?>
         </span></h2>

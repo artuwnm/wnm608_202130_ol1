@@ -62,6 +62,12 @@ include_once "lib/php/templates.php";
 <head>
   <?php $title = "Store" ?>
   <?php include "parts/head.php" ?>
+  <script src="/wnm608/shen.jiawei/lib/js/remove-query.js"></script>
+  <style>
+    .select-card {
+      margin-top: var(--h-gap);
+    }
+  </style>
 </head>
 <body>
   <?php include "parts/navbar.php" ?>
@@ -78,18 +84,7 @@ include_once "lib/php/templates.php";
             <?= isset($_GET["platform"]) ? '<a href="javascript:removeQuery(\'platform\')" style="font-size: medium;">╳</a>' : '' ?>
           </div>
           <div class="flex wrap h-gap-margin">
-            <?php single_select_card("platform", [
-              [
-                "value"=>"xbox",
-                "title"=>"Xbox",
-                "icon"=>"xbox-logo.svg"
-              ],
-              [
-                "value"=>"ns",
-                "title"=>"Nintendo Switch",
-                "icon"=>"nintendo-switch-logo.svg"
-              ]
-            ]) ?>
+            <?= single_select_card("platform", $platform_options, $_GET, false, "form-search-filter-sort") ?>
           </div>
         </div>
         <div class="card soft">
@@ -98,28 +93,7 @@ include_once "lib/php/templates.php";
             <?= isset($_GET["type"]) ? '<a href="javascript:removeQuery(\'type\')" style="font-size: medium;">╳</a>' : '' ?>
           </div>
           <div class="flex wrap h-gap-margin">
-            <?php single_select_card("type", [
-              [
-                "value"=>"full",
-                "title"=>"Full Controller",
-                "icon"=>"game-controller.svg"
-              ],
-              [
-                "value"=>"left",
-                "title"=>"Left Half Controller",
-                "icon"=>"left-joy-con.svg"
-              ],
-              [
-                "value"=>"right",
-                "title"=>"Right Half Controller",
-                "icon"=>"right-joy-con.svg"
-              ],
-              [
-                "value"=>"accessory",
-                "title"=>"Accessory",
-                "label"=>"ACC"
-              ]
-            ]) ?>
+            <?= single_select_card("type", $type_options, $_GET, false, "form-search-filter-sort") ?>
           </div>
         </div>
         <div class="card soft">
@@ -128,16 +102,7 @@ include_once "lib/php/templates.php";
             <?= isset($_GET["2-4g"]) || isset($_GET["bluetooth"]) ? '<a href="javascript:removeQuery(\'2-4g\',\'bluetooth\')" style="font-size: medium;">╳</a>' : '' ?>
           </div>
           <div class="flex wrap h-gap-margin">
-            <?php
-              multi_select_card("2-4g", [
-                "title"=>"2.4g",
-                "label"=>"2.4g"
-              ]);
-              multi_select_card("bluetooth", [
-                "title"=>"Bluetooth",
-                "icon"=>"bluetooth.svg"
-              ]);
-            ?>
+            <?= implode("\n", array_map(multi_select_card($_GET, "form-search-filter-sort"), $wireless_options)) ?>
           </div>
         </div>
         <div class="card soft">
@@ -145,7 +110,7 @@ include_once "lib/php/templates.php";
             <h4 class="grow">Color</h4>
             <?= isset($hue) ? '<a href="javascript:removeQuery(\'hue\')" style="font-size: medium;">╳</a>' : '' ?>
           </div>
-          <div class="hue-input">
+          <div class="hue-input" style="margin-top: 0.56rem;">
             <div class="grid gap">
               <div class="col-s-6 card hue-white<?= isset($hue) && $hue == -2 ? " active" : "" ?>"></div>
               <div class="col-s-6 card hue-black<?= isset($hue) && $hue == -1 ? " active" : "" ?>"></div>
@@ -215,6 +180,7 @@ include_once "lib/php/templates.php";
   <!-- <script src="/wnm608/shen.jiawei/lib/js/selectable-cards.js"></script> -->
   <!-- <script>selCards("#filters" ,console.log ,true)</script> -->
   <script src="/wnm608/shen.jiawei/lib/js/clear-input-button.js"></script>
+  <script src="/wnm608/shen.jiawei/lib/js/hue-input.js"></script>
   <script src="/wnm608/shen.jiawei/js/store.js"></script>
 </body>
 </html>

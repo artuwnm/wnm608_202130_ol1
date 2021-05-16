@@ -3,8 +3,8 @@ include_once "lib/php/auth.php";
 $db = db_joystore();
 include_once "lib/php/functions.php";
 $product = queryAll("SELECT * FROM `products` WHERE `id`=".sanitize($_GET['id']))[0];
-$current = number_format($product->price * (1 - $product->discount / 100), 2);
-$discount = round($product->discount);
+$current = number_format($product->current_price, 2);
+$discount = round((1 - $product->current_price / $product->price) * 100);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@ $discount = round($product->discount);
 <body>
   <?php include "parts/navbar.php" ?>
   <section class="flex center">
-    <img src="/wnm608/shen.jiawei/img/products/<?= $product->id ?>.jpeg" alt="product">
+    <img src="/wnm608/shen.jiawei/img/products/<?= $product->image ?>" alt="product">
     <div class="flex column" style="margin-left: 50px;">
       <h2 style="text-align: left;"><?= $product->name ?></h2>
       <h3>$ <?= $current?></h3>

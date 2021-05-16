@@ -114,7 +114,7 @@ section.padded {
   justify-content: center;
 }
 
-.flex .wrap {
+.flex.wrap {
   flex-wrap: wrap;
 }
 
@@ -268,17 +268,25 @@ nav > a:hover {
 /* ITEM CARD */
 
 .item-card {
+  --margin: 0;
+  --col: 3;
   cursor: pointer;
   background-color: white;
   margin: 0 var(--margin);
   height: 100%;
-  width: calc(100% / 3 - var(--margin) * 2);
+  width: calc(100% / var(--col) - var(--margin) * 2);
   overflow: hidden;
   border-radius: var(--card-corner-radius);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   transition: 0.4s;
+}
+
+.item-card.horizontal {
+  --col: 1;
+  flex-direction: row;
+  height: 100px;
 }
 
 .grid > .item-card {
@@ -295,6 +303,12 @@ nav > a:hover {
   overflow: hidden;
   background-size: cover;
   background-position: center;
+}
+
+.item-card.horizontal > .img {
+  width: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .item-card > .img > .overlay {
@@ -354,6 +368,10 @@ nav > a:hover {
   font-size: x-small;
   text-decoration-line: line-through;
   color: var(--color-neutral-dark);
+}
+
+.item-card.item-card.horizontal > .info > .desc > p > .full {
+  text-decoration-line: line-through;
 }
 
 .item-card > .info > .price > .current {
@@ -468,7 +486,6 @@ input.search:placeholder-shown + .clear-input-button > div {
 
 .select-card {
   --h-gap: 0.56rem !important;
-  margin-top: var(--h-gap);
 }
 
 .select-card > input {
@@ -496,7 +513,8 @@ input.search:placeholder-shown + .clear-input-button > div {
 
 /* HUE INPUT */
 .hue-input {
-  margin-top: 0.56rem;
+  --select-range: 20%;
+  --select-border: 4px;
 }
 
 .hue-input > .grid.gap {
@@ -533,8 +551,8 @@ input.search:placeholder-shown + .clear-input-button > div {
 .hue-input > .grid.gap > .card.hue-spectrum > div {
   pointer-events: none;
   height: 100%;
-  width: 20%;
-  border: 4px solid white;
+  width: var(--select-range);
+  border: var(--select-border) solid white;
   border-radius: var(--card-corner-radius);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -555,6 +573,8 @@ select.pill {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: white;
+  color: black;
   height: 100%;
   border-radius: 1000vh;
   outline: none;

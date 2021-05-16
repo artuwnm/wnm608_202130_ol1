@@ -133,6 +133,10 @@ nav > a:hover {
   color: var(--color-neutral-light);
 }
 
+.item-card.item-card.horizontal > .info > .desc > p {
+  font-family: "Oxanium", cursive;
+}
+
 /* INPUT */
 
 input {

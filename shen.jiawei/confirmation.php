@@ -20,7 +20,7 @@ include_once "lib/php/getcart.php";
           array_walk($products, function ($p) {
             echo <<<HTML
             <div>
-              <img src="/wnm608/shen.jiawei/img/products/$p->id.jpeg" alt="product" style="margin: 10px;width: 300px;">
+              <img src="/wnm608/shen.jiawei/img/products/$p->image" alt="product" style="margin: 10px;width: 300px;">
             </div>
             HTML;
           })
