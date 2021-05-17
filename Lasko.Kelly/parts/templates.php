@@ -4,17 +4,17 @@
 function productListTemplate($r,$o) {
 return $r.<<<HTML
 <div class="col-xs-12 col-md-4" >
-	<div class="list_border">
-		<a href="product_item.php?id=$o->id">
-			<figure class="figure product">
-				<img src="img/$o->thumbnail" alt="">
-				<figcaption>
-					<div class="product_title">$o->title</div>
-					<div class="product_price">&dollar;$o->price</div>
-				</figcaption>
-			</figure>
-		</a>
-	</div>
+	<a href="product_item.php?id=$o->id">
+		<figure class="figure product display-flex flex-column">
+			<div class="flex-stretch">
+				<img class="media-image" src="img/$o->thumbnail" alt="">
+			</div>
+			<figcaption class="flex-none">
+				<div class="product_title">$o->title</div>
+				<div class="product_price">&dollar;$o->price</div>
+			</figcaption>
+		</figure>
+	</a>
 </div>
 HTML;
 
@@ -44,7 +44,7 @@ $selectamount = selectAmount($o->amount,10);
 return $r.<<<HTML
 <div class="display-flex">
 	<div class="flex-none image-thumbs">
-		<img src="$o->thumbnail">
+		<img src="img/$o->thumbnail">
 	</div>
 	<div class="flex-stretch">
 		<div class="cart_item_names">$o->title</div>

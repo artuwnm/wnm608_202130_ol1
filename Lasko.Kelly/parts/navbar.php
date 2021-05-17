@@ -16,7 +16,6 @@ include_once "lib/php/functions.php";
 						<span>Cart</span>
 						<span class="badge"><?= makeCartBadge(); ?></span>
 					</a></li>
-          			<li><a href="styleguide/index.html">Style Guide</a></li>
 				</ul>
 			</nav>
 		</div>	
