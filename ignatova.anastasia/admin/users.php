@@ -190,22 +190,18 @@ HTML;
 
 if (isset($_GET['id'])) {
 	showUserPage($_GET['id'] == "new" ? $empty_user : $users->users[$_GET['id']]);
-
 } else {
-
 	?>
-
 
 <h2>User List</h2>
 		<nav class="nav">
 			<ul>
 	<?php
-
 for($i=0;$i<count($users->users);$i++){
-				echo "<li>
-						<a href='{$_SERVER['PHP_SELF']}?id=$i'>{$users->users[$i]->name}</a>
-					</li>";
-			}
+		echo "<li>
+			<a href='{$_SERVER['PHP_SELF']}?id=$i'>{$users->users[$i]->name}</a>
+				</li>";
+	}
 	?>	
 
 </ul>

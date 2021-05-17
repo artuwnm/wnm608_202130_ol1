@@ -27,7 +27,8 @@ include_once "lib/php/functions.php";
 <div class="container">
 	<div class="card soft">
 		<h3 id="product-cart">You have added <?= $product->name ?> added to the cart</h3>
-		<p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
+		<!-- <p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p> -->
+		<br>
 <div class="display-flex">
 		<div class="flex-none"><a href="product_list.php">Continue shopping</a></div>
 		<div class="flex-stretch"></div>

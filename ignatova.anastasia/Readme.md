@@ -1,19 +1,17 @@
-# Anastasia Ignatova
-
 #Relevant links
 
-http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/Readme.md
-
+#Homepage
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/index.php
 #Styleguide
 http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/Styleguide/index.html
-
-#Homepage
-http://anastasia-ignatova.com/aignatova/aau/wnm608/ignatova.anastasia/index.php
-
-#Reading_Data
-http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/notes/reading_data.php
-
+#Product Admin
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/admin/index.php
 #User Admin
 http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/admin/users.php
 
-#
+
+#Extra links
+#Read Me
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/Readme.md
+#Reading Data
+http://anastasia-ignatova.com/aau/wnm608/ignatova.anastasia/notes/reading_data.php
