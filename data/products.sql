@@ -35,9 +35,9 @@ CREATE TABLE `products` (
   `category` varchar(32) NOT NULL,
   `date_create` datetime NOT NULL,
   `date_modify` datetime NOT NULL,
-  `Images` varchar(256) NOT NULL,
-  `Thumbnail` varchar(128) NOT NULL,
-  `Description` text NOT NULL
+  `images` varchar(256) NOT NULL,
+  `thumbnail` varchar(128) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
