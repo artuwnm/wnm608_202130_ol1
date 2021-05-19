@@ -1,0 +1,40 @@
+[
+    {
+        "name":"Chang Xu",
+        "type":"Student",
+        "email":"changx@gmail.com",
+        "classes":"WNM_608"
+    },
+    {
+        "name":"Anthony Vaughan",
+        "type":"Student",
+        "email":"AnthonyVaughan@gmail.com",
+        "classes":"WNM_608"
+
+    },
+    {
+        "name":"Carol Russell",
+        "type":"Student",
+        "email":"CarolRussell@gmail.com",
+        "classes":"WNM_608"
+    },
+    {
+        "name":"Oliver Poole",
+        "type":"Student",
+        "email":"Oliver Poole@gmail.com",
+        "classes":"WNM_608"
+    },
+    {
+        "name":"Jan Marshall",
+        "type":"Student",
+        "email":"JanMarshall@gmail.com",
+        "classes":"WNM_608"
+    },
+    {
+        "name":"Paul Nolan",
+        "type":"Student",
+        "email":"PaulNolan@gmail.com",
+        "classes":"WNM_608"
+    }
+]
+
