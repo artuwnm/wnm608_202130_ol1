@@ -10,7 +10,7 @@ include_once "parts/templates.php";
 	<?php include "parts/meta.php"; ?>
 </head>
 
-<body>
+<body class="flush">
 
 	<?php include "parts/navbar.php"; ?>
 
@@ -26,14 +26,5 @@ include_once "parts/templates.php";
 	<h2> Popular Cell Phone Cases</h2>
 	<?php recommendedCategory("Cell Phone Cases"); ?>
 </div>
-
-		
-	<div class="newsletters">
-		<h3>Join Newsletters</h3>
-		<div class="button">
-			<p>Join</p>
-		</div>
-	</div>
-
 </body>
 </html>

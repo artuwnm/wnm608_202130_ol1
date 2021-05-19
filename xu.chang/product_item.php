@@ -85,12 +85,10 @@
 			<p><?= $product->description ?></p>	
 		</div>
 
-	<h2>Recommended Products</h2>
-	<?php 
-		recommendedSimilar($product->category,$product->id);
-	?>	
-	
-
+		<h2>Recommended Products</h2>
+		<?php 
+			recommendedSimilar($product->category,$product->id);
+		?>	
 
 	</div>	
 
