@@ -23,7 +23,7 @@
 
 	<div class="container">	
 		<div class="card soft">	
-			<h2><?= $product->name ?> was added to your cart.</h2>
+			<h2><?= $product->title ?> was added to your cart.</h2>
 			<p>There are now <?= $cart_product->amount ?> of <?= $product->title ?> in your cart.</p>
 
 			

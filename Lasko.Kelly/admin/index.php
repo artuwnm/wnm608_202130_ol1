@@ -3,13 +3,13 @@
 include_once "../lib/php/functions.php";
 
 $empty_product = (object)[
-	"title"=>"fgf",
-	"price"=>"3.99",
-	"description"=>"g",
-	"category"=>"f",
-	"thumbnail"=>"IMG_5848.jpeg",
-	"images"=>"IMG_5848.jpeg",
-	"size"=>"small"
+	"title"=>"",
+	"price"=>"",
+	"description"=>"",
+	"category"=>"",
+	"thumbnail"=>"",
+	"images"=>"",
+	"size"=>""
 ];
 
 

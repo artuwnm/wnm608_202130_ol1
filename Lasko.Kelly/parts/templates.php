@@ -96,13 +96,44 @@ return <<<HTML
 	<div class="flex-stretch">Total</div>
 	<div class="flex-none cart_subtotal">&dollar;$taxedfixed</div>
 </div>
-<div class="card-section display-flex">
-	<div class="form-control">
-		<a href="product_checkout.php" class="form-button">Checkout</a>
-	</div>
-</div>
 
 HTML;
 
 
 }
+
+//Recommendations
+
+function recommendedProducts($a) {
+   $products = array_reduce($a,'productListTemplate');
+   echo <<<HTML
+   <div class='grid gap productlist'>$products</div>
+   HTML;
+}
+
+function recommendedAnything($limit=3) {
+   $result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() LIMIT $limit");
+   recommendedProducts($result);
+}
+
+function recommendedCategory($cat,$limit=3) {
+   $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_created` DESC LIMIT $limit");
+   recommendedProducts($result);
+}
+
+function recommendedSimilar($cat,$id=0,$limit=3) {
+   $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+   recommendedProducts($result);
+}
+
+
+
+
+
+
+
+
+
+
+
+

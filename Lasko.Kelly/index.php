@@ -12,7 +12,7 @@ include_once "lib/php/functions.php";
 	<?php include "parts/meta.php"; ?>
 
 </head>
-<body>
+<body class="flush">
 
 	<?php include "parts/navbar.php"; ?>
 
@@ -21,24 +21,14 @@ include_once "lib/php/functions.php";
 
 
 	<div class="container">
-		<h2>Product List</h2>
+		<h2>Recommended Products</h2>
 	
 		<?php
 
 		include_once "lib/php/functions.php";
 		include_once "parts/templates.php";
 
-		$result = makeQuery(
-			makeConn(),
-			"
-			SELECT * 
-			FROM `products`
-			ORDER BY `date_created` DESC
-			LIMIT 12
-			"
-		);
-
-		echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+		recommendedAnything(9); 
 
 
 		?>
