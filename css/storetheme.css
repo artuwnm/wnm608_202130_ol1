@@ -8,7 +8,56 @@ body{
 	padding-bottom:4em;
 }
 
+@media (max-width:800px){
+	.container {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	.navbar h1 {
+		padding-left:0.5em;
+	}
+}
 
+
+
+.menu-button label { display:none; }
+@media (max-width:400px){
+	.navbar .display-flex{
+		flex-wrap:wrap;
+	}
+	.navbar .nav {
+		width: 100%;
+		display:none;
+	}
+	.navbar .nav-flex ul {
+		display:block;
+	}
+	.navbar h1 {
+		line-height:2em;
+	}
+	.menu-button label {
+    display: block;
+    padding: 0 1em;
+	}
+
+	#menu:checked+.navbar .nav {
+		display:block;
+	}
+}
+
+
+.figure.product{
+	border-radius: 0.5em;
+	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+	overflow:hidden;
+	height: 100%;
+	transition:all 0.3s;
+}
+
+.product.figure img{
+	height: 100%;
+	object-fit: contain;
+}
 
 
 
