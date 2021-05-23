@@ -18,8 +18,8 @@
 
 - http://www.mindyquan.com/aau/wnm608/quan.mindy/styleguide/index.html
 
-- http://www.mindyquan.com/aau/wnm608/quan.mindy/notes/reading_data.php
-
 - http://www.mindyquan.com/aau/wnm608/quan.mindy/admin/index.php
+
+- http://www.mindyquan.com/aau/wnm608/quan.mindy/notes/reading_data.php
 
 

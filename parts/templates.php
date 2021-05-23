@@ -3,13 +3,15 @@
 
 function productListTemplate($r,$o) {
 return $r.<<<HTML
-<div class="col-xs-12 col-md-4" >
+<div class="col-xs-12 col-md-4">
 
 	<div class="list_border">
 		<a href="product_item.php?id=$o->id">
-			<figure class="figure product">
-				<img src="img/$o->thumbnail" alt="">
-				<figcaption>
+			<figure class="figure product display-flex flex-column">
+				<div class="flex-stretch">
+					<img src="img/$o->thumbnail" alt="">
+				</div>
+				<figcaption class="flex-none">
 					<div class="product_name">$o->name</div>
 					<div class="product_price">&dollar;$o->price</div>
 				</figcaption>
@@ -99,9 +101,6 @@ return <<<HTML
 	<div class="flex-stretch">Total</div>
 	<div class="flex-none cart_subtotal">&dollar;$taxedfixed</div>
 </div>
-<div class="form-control addToCart" style="margin-top: 2em; margin-left: 10em;">
-	<a href="product_checkout.php" class="form-button button_filled1">Check Out</a>
-</div>
 HTML;
 
 
@@ -122,12 +121,21 @@ HTML;
 }
 
 
-function recommendedCategory($cat,$limit=3) {
+function recommendedAnything($limit=3) {
 
-	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='bracelet' ORDER BY 'date_create' DESC LIMIT 3");
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
 
 	recommendedProducts($result);
 }
+
+
+function recommendedCategory($cat,$limit=3) {
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='bracelet' ORDER BY 'date_create' DESC LIMIT $limit");
+
+	recommendedProducts($result);
+}
+
 
 
 function recommendedSimilar($cat,$id=0,$limit=3) {

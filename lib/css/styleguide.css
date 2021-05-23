@@ -79,6 +79,8 @@ a:hover{
 
 .flex-row { flex-direction: row; }
 
+.flex-wrap { flex-wrap: wrap; }
+
 
 
 /* NAVBAR COMPONENT */
@@ -121,8 +123,8 @@ a:hover{
 
 .banner_img {
 	width: 100%;
-	height: 500px;
-	background-size: cover;
+	height: 100%;
+	background-size: contain;
 	position: relative;
 	color: #4a342a; 
 }
@@ -133,6 +135,8 @@ a:hover{
 
 	left: 545px;
 	top: 350px;
+	justify-content: center;
+	align-items: center;
 
 
 
@@ -142,10 +146,6 @@ a:hover{
 
 	.announce_title {
 		padding: 0 0.5em;
-		
-		margin-bottom: 10px;
-		margin-left: 70px;
-
 		font-family: 'Bodoni Moda', serif; 
 		font-weight: 700; 
 		font-style: normal; 
@@ -223,36 +223,36 @@ a:hover{
 	font-weight: 700; 
 	font-style: normal; 
 	font-size: 30px; 
+	color: #4a342a;
 	 
 }
 
 	.generation_content {
-		
-		justify-content: space-between;
-		align-items: center;
-		width: 1200px;
-		height: 500px;
+		width: 100%;
+		height: 80%;
 
 	}
 
 	.generation_text {
-		width: 340px;
+		width: 350px;
 		height: 420px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 2em;
+		justify-content: center;
+		padding-top: 0.5em;
 	}
 
 		.generation_text p {
-			line-height: 1.7em;
+			line-height: 1.5em;
 			font-family: 'Nunito', sans-serif;
 			font-weight: 500;
 			font-style: normal;
-			font-size: 0.9em;
-			text-align: left;
-			width: 270px;
+			font-size: 0.97em;
+			text-align: center;
+			width: 280px;
 			color: #4a342a;
+
 		}
 
 		.generation_text h2 {
@@ -280,13 +280,14 @@ a:hover{
 	}
 
 	.collection_text{
-		position: absolute;
-		left: 650px;
-		top: 50px;
+		margin-left: 45%;
 
+		padding: 0.5em;
+		margin-top: -5%;
 		color: var(--color-black);
-		width: 250px;
-		height: 200px;
+		width: 20em;
+		
+		
 		line-height: 2em;
 
 	}
@@ -295,7 +296,10 @@ a:hover{
 		font-family: 'Bodoni Moda', serif; 
 	    font-weight: 700; 
 	    font-style: normal; 
-	    font-size: 30px; 
+	    font-size: 30px;
+	    margin-top: 4em; 
+	    color: #4a342a;
+
 	    
 	}
   
@@ -304,6 +308,7 @@ a:hover{
 		font-weight: 500;
 		font-style: normal;
 		font-size: 1em;
+		width: 80%;
 
 	}
 
@@ -313,11 +318,10 @@ a:hover{
 	/* GEM INTRODUCTION COMPONENT */
 
 	.gem_intro {
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		
 		margin-top: 8em;
-		height: 450px;
+		margin-bottom: 14em;
+
 
 	}
 
@@ -326,7 +330,7 @@ a:hover{
 		height: 350px;
 		color: var(--color-black);
 		line-height: 1.5em;
-		
+		margin-left: 25%;
 		background-color: #f7f0eb;
 
 	}
@@ -336,8 +340,9 @@ a:hover{
 		font-weight: 700; 
 		font-style: normal; 
 		font-size: 30px; 
-		margin-left: 50px;
+		margin-left: 45px;
 		margin-top: 50px;
+		color: #4a342a;
 	}
 
 	.gem_text p {
@@ -349,13 +354,13 @@ a:hover{
 		text-align: left;
 		width: 270px;
 		color: #4a342a;
-		margin-left: 50px;
+		margin-left: 45px;
 	}
 
 	.gem_img img{
 		width: 350px;
 		height: 350px;
-		margin-left: 80px;
+		margin-left: 8%;
 
 	}
 
@@ -367,17 +372,16 @@ a:hover{
 		margin-top: 8em;
 		margin-bottom: 0;
 		background-color: #e5c2c1;
+		width: 100%;
 
 	}
 
-	 .news_text {
-	 	
-	 }
 
 	 .news_text h1 {
 	 	font-family: 'Bodoni Moda', serif; 
 		font-weight: 700; 
 		font-style: normal; 
+		color: #4a342a;
 	 }
 
 	 .news_text p {
@@ -393,7 +397,6 @@ a:hover{
 	 .news_button {
 	 	display: flex;
 	 	flex-direction: row;
-	 	
 	 	align-items: center;
 
 
@@ -1462,7 +1465,7 @@ a:hover{
 }
 
 .figure img {
-	width: 80%;
+	
 	vertical-align: text-bottom;
 }
 
@@ -1494,10 +1497,6 @@ a:hover{
 	margin-bottom: 5em;
 }
 
-
-.product_grid2 {
-
-}
 
 .product_frame {
 	border: 1px solid var(--color-netural-medium);

@@ -163,7 +163,7 @@ $display = <<<HTML
 	<h2>$o->name</h2>
 	<div class="form-control" style="margin-top: -1.5em;">
 		<label class="form-label edit_info">Thumbnail:</label>
-		<div class="image-main"><img src='img/$o->thumbnail'></div>
+		<div class="image-main1"><img src='img/$o->thumbnail'></div>
 	</div>
 	<div class="form-control" style="margin-top: -1em;">
 		<label class="form-label edit_info">Images:</label>

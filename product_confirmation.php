@@ -26,26 +26,31 @@ resetCart();
 
 	<div class="container shop" style="margin-bottom: 12em;">
 		
-		<div class="item_line" style="margin-top: 6em; text-align: center;">
-			<h1>Thank your for your purchase!</h1>
+		<div class="order_confirm">
+			<div class="item_line" style="margin-top: 6em; text-align: center;">
+				<h1 class="thankyou_text">Thank your for your purchase!</h1>
+			</div>
+			<div class="divide_line1" style="margin-top: -1em;"></div>
 		</div>
-		<div class="divide_line1" style="margin-top: -1em;"></div>
 
 		<div class="card thankYou_box">
 			<h2 class="thankYou_notes">We hope you enjoy your shopping</h2>
 			<h2 class="thankYou_notes">Your order was completed successfully</h2>
 		</div>
 
-	</div>
-	
 
-	<div class="back_button" style="margin: -5em 0 13em 75em;">
+		<div class="back_button" style="margin-top: 4em; text-align: right;">
 		
 				
 		<span><a href="product_list.php">Continue Shopping &#8640;</a></span>
 
 		
 	</div>
+
+	</div>
+	
+
+	
 
 
 	<?php include "footer.php"; ?>
