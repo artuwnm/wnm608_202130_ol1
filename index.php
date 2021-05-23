@@ -20,7 +20,7 @@ include_once "parts/templates.php";
 	<link rel="stylesheet" href="css/storetheme.css">
 	<title>Vintage Furniture</title>
 </head>
-<body>
+<body class="flush">
 
 	<header class="navbar">
 		<div class="container display-flex">

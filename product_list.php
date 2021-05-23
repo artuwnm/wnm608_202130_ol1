@@ -35,30 +35,15 @@ include_once "parts/templates.php";
 
 			<h1 class="center">PRODUCT LIST</h1>
 
+
+
 			<div class="form-control">
 				<form class="hotdog light" id="product-search">
 					<input type="search" placeholder="Search Products">
 				</form>
 			</div>
 
-			<div class="form-control">
-				<div class="card soft">
-					<div class="display-flex">
-						<div class="flex-stretch display-flex">
-							<div class="flex-none">
-								<button data-filter="category" data-value="" type="button" class="form-button">All</button>
-							</div>
-							<div class="flex-none">
-								<button data-filter="category" data-value="furniture" type="button" class="form-button">Furniture</button>
-							</div>
-							<div class="flex-none">
-								<button data-filter="category" data-value="light fixture" type="button" class="form-button">Light Fixture</button>
-							</div>
-							<div class="flex-none">
-								<button data-filter="category" data-value="accessories" type="button" class="form-button">Accessories</button>
-							</div>
-						</div>
-					<div class="flex-none">
+				<div class="flex-none">
 						<div class="form-select">
 							<select class="js-sort">
 								<option value="1">Newest</option>
@@ -67,8 +52,34 @@ include_once "parts/templates.php";
 								<option value="1">Most Expensive</option>
 							</select>
 						</div>
+
+			<div class="form-control center">
+			
+					<div class="display-flex flex-wrap">
+						<div class="flex-stretch display-flex">
+							
+							<div class="flex-none">
+								<button data-filter="category" data-value="light fixture" type="button" class="form-button">Light Fixture</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="accessories" type="button" class="form-button">Accessories</button>
+							</div>
+						</div>
+					</div>
+				<div class="form-control">
+
+					<div class="flex-stretch display-flex">
+
+						<div class="flex-none">
+								<button data-filter="category" data-value="" type="button" class="form-button">All</button>
+							</div>
+							<div class="flex-none">
+								<button data-filter="category" data-value="furniture" type="button" class="form-button">Furniture</button>
+							</div>
+						</div>
 					</div>
 				</div>
+			
 			</div>
 			</div>
 			<div class='productlist grid gap'></div>
