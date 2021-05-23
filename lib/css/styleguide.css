@@ -283,6 +283,7 @@ a:hover {
 .flex-justify-center { justify-content:center; }
 
 .flex-column { flex-direction:column; }
+.flex-wrap {flex-wrap:wrap;}
 
 
 
@@ -384,7 +385,9 @@ a:hover {
 	background-color: var(--color-neutral-dark);
 	color:var(--color-white);
 	line-height:var(--header-height);
+	margin-bottom: 2em;
 }
+
 
 	.navbar h1 {
 		font-size:1em;
@@ -394,6 +397,10 @@ a:hover {
 
 	.navbar a {
 		padding: 0 .5em;
+	}
+
+	.flush>.navbar {
+		margin-bottom:0;
 	}
 
 
@@ -433,6 +440,20 @@ a:hover {
 	.card.flat {
 		padding:0;
 	}
+
+	
+	[class*='col-']>.card {
+		height:100%;
+		margin:0;
+	}
+	.card-section~.card-section {
+		border-top: 1px solid var(--color-neutral-light);
+	}
+	.card-section {
+		padding: 1em;
+	}
+
+	
 
 /*view-window*/
 .view-window {
