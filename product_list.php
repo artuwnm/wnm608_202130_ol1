@@ -28,7 +28,7 @@
 
 	<div class="container">
 
-			<h1 class="center">PRODUCT LIST</h1>
+			<h2>PRODUCT LIST</h2>
 
 			<div class="form-control">
 				<form class="hotdog light" id="product-search">
@@ -38,7 +38,7 @@
 
 			<div class="form-control">
 				<div class="card soft">
-					<div class="display-flex">
+					<div class="display-flex flex-wrap">
 						<div class="flex-stretch display-flex">
 							<div class="flex-none">
 								<button data-filter="category" data-value="" type="button" class="form-button">All</button>
@@ -70,10 +70,6 @@
 			
 			
 			<div class='productlist grid gap'></div>		
-	</div>
-
-</body>
-</html>
 	</div>
 
 </body>

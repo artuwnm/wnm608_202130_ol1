@@ -16,11 +16,11 @@ $users_array = file_get_json("../data/users.json");
 	<meta charset="UTF-8">
 	<title>Reading Data</title>
 
-	<?php include "../parts/meta.php"; ?>
+	<?php include "parts/meta.php"; ?>
 </head>
 <body>
 	
-	<?php include "../parts/navbar.php"; ?>
+	<?php include "parts/navbar.php"; ?>
 
 	<div class="container">
 		<div class="card soft">
