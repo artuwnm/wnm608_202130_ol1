@@ -13,7 +13,7 @@ $cart_product = cartItemBy($_GET['id']);
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Product Item</title>
+	<title>Added to Cart</title>
 
 	<?php include "parts/meta.php"; ?>
 

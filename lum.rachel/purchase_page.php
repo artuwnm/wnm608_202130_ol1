@@ -3,22 +3,19 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-
+$cart = getCartItems();
 
 
 
 
 ?>
-
-
-
 <! DOCTYPE html>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Product Item</title>
+	<title>Purchase Page</title>
 
 	<?php include "parts/meta.php"; ?>
 
@@ -27,12 +24,18 @@ include_once "parts/templates.php";
 
 	<?php include "parts/navbar.php"; ?>
 
-	<div class="container">
-		<h1>Checkout</h1>
-			<div class="card hard">
-		<form>		
-			<h3 id="controls">Shipping Information</h3>
-				
+<div class="container">
+	<h1>Checkout</h1>
+</div>
+
+<div class="container">
+	<div class="grid gap">
+
+
+		<div class="col-xs-12 col-md-7">
+			<div class="card soft">
+				<form action="">
+					<h3 id="controls">Shipping Information</h3>
 						<div class="form-control">
 							<label class="form-label">Email</label>
 							<input type="text" placeholder="Email" class="form-input">
@@ -68,7 +71,7 @@ include_once "parts/templates.php";
 
 						<div class="form-control">
 							<label class="form-label">Street Address</label>
-							<input type="number" placeholder="Address" class="form-input">
+							<input type="text" placeholder="Address" class="form-input">
 						</div>
 
 
@@ -86,7 +89,7 @@ include_once "parts/templates.php";
 							</div>
 
 							<div class="flex-stretch">
-								<input type="search" placeholder="State" class="form-input">
+								<input type="text" placeholder="State" class="form-input">
 							</div>
 
 							<div class="flex-none">
@@ -99,7 +102,6 @@ include_once "parts/templates.php";
 						</div>
 					
 
-
 					<h3 id="controls">Payment Information</h3>
 					
 						<div class="form-control">
@@ -109,7 +111,7 @@ include_once "parts/templates.php";
 
 						<div class="form-control">
 							<label class="form-label">Card Number</label>
-							<input type="number" placeholder="Card Number" class="form-input">
+							<input type="text" placeholder="Card Number" class="form-input">
 						</div>
 
 
@@ -130,14 +132,44 @@ include_once "parts/templates.php";
 								<input type="search" placeholder="CVC" class="form-input">
 							</div>
 						</div>
+				</form>
+			</div>
+		</div>
 
 
-						<div style="text-align:center">
-							<div class="form-control">
-								<a href="confirmation_page.php" class="form-button">Checkout</a>
-							</div>
-					</form>
+
+		<div class="col-xs-12 col-md-5">
+			<div class="card soft">
+				<h2>Item Review</h2>
+				<div class="card-section">
+	
+				
+				
+				<?php
+					echo array_reduce($cart, function($r,$o){
+					$totalfixed = number_format($o->total, 2, '.','');
+					return $r."<div class='display-flex'>
+						<div class='flex-stretch'>$o->name</div>
+						<div class='flex-none'>&dollar;$totalfixed</div>
+					</div>";
+				}) ?>
+				</div>
+				<?= cartTotals(); ?>
+				<div style="text-align:center">
+					<div class="form-control">
+						<a href="confirmation_page.php" class="form-button">Checkout</a>
+					</div>
+			</div>
+		</div>
+
+	</div>
 </div>
+
+	
+
 
 </body>
 </html>
+
+
+

@@ -29,11 +29,13 @@ resetCart();
 	<div style="text-align:center">
 		<h1>Thank you for your purchase!</h1>
 		<h3>Confirmation #: 123456789</h3>
-		<img src="img/ordinary_promo1.jpg"/>
+		<img src="img/confirmation-photo.jpg"/>
 
+<div class="small-container">
 		<div class="form-control">
 			<a href="index.php" class="form-button">Keep Shopping</a>
 		</div>	
+
 	</div>
 
 </body>

@@ -24,8 +24,49 @@ nav a{
   font-weight: bold;
 }
 
+@media (max-width: 800px) {
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .navabr h1{
+    padding-left: 0.5em;
+  }
+}
 
 
+.menu-button label {display: none;}
+@media (max-width: 400px) {
+  .navbar .display-flex {
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav{
+    width: 100%;
+    display: none;
+  }
+
+  .navbar .nav-flex ul{
+    display: block;
+  }
+
+   .navbar .nav li{
+    line-height: 2em;
+  }
+
+  .menu-button label{
+    display: block;
+    padding: 0 1em;
+  }
+
+  #menu:checked+.navbar .nav{
+    display: block;
+  }
+
+  .view-window{
+    display: none;
+  }
+}
 
 
 body{
@@ -60,8 +101,9 @@ body{
   height: 100%;
   object-fit: contain;
 }
+
 .product.figure:hover{
-  box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
 }
 
 .product-overlay{
@@ -163,4 +205,14 @@ span.badge:not(:empty)::before{
 .category-space{
   padding: 0 0.5em;
 }
+
+
+
+
+
+
+
+
+
+
 

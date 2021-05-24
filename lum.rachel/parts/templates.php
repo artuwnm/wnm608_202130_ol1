@@ -76,30 +76,20 @@ function cartTotals(){
 
 	return <<<HTML
 	<div class="card-section display-flex">
-							<div class="flex-stretch"><strong>Sub Total</strong></div>
-							<div class="flex-none">&dollar;$pricefixed</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-5">
-					<div class="card soft flat">
-						<div class="card-section display-flex">
-							<div class="flex-stretch"><strong>Taxes</strong></div>
-							<div class="flex-none">&dollar;$taxfixed</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-5">
-					<div class="card soft flat">
-						<div class="card-section display-flex">
-							<div class="flex-stretch"><strong>Actual Total</strong></div>
-							<div class="flex-none">&dollar;$taxedfixed</div>
-						</div>
-					</div>
-					<div class="card-sections">
-							<a href="purchase_page.php" class="form-button">Checkout</a>
-						</div>
+		<div class="flex-stretch"><strong>Sub Total</strong></div>
+		<div class="flex-none">&dollar;$pricefixed</div>
+	</div>
+	
+	<div class="card-section display-flex">
+		<div class="flex-stretch"><strong>Taxes</strong></div>
+		<div class="flex-none">&dollar;$taxfixed</div>
+	</div>	
 
+	<div class="card-section display-flex">
+		<div class="flex-stretch"><strong>Total</strong></div>
+		<div class="flex-none">&dollar;$taxedfixed</div>
+	</div>				
+			
 	HTML;
 }
 
@@ -112,6 +102,13 @@ function recommendedProducts($a) {
 	HTML;
 }
 
+
+function recommendedAnything($limit=3) {
+		$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() LIMIT $limit");
+
+		recommendedProducts($result);
+
+}
 
 function recommendedCategory($cat,$limit=3) {
 		$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category` = '$cat' ORDER BY `date_create` DESC LIMIT $limit");

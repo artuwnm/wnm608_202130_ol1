@@ -2,6 +2,7 @@
 
 include "../lib/php/functions.php";
 
+
 //$filename = "notes.json";
 //$file = file_get_contents($filename);
 //$notes_object = json_decode($file);
@@ -22,16 +23,16 @@ $users_array = file_get_json("../data/users.json");
 <head>
 	<meta charset="UTF-8">
 	<title>Reading Data</title>
-
-	<?php include "../parts/meta.php"; ?>
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
 
 </head>
 <body>
 
-	<?php include "../parts/navbar.php"; ?>
-
 
 	<div class="container">
+		<h1>Reading Data</h1>
 		<div class="card soft">
 			<h2>Notes</h2>
 
@@ -46,24 +47,6 @@ $users_array = file_get_json("../data/users.json");
 			?>
 		</div>
 
-		<div class="card soft">
-			<h2>Users</h2>
-
-		
-			<?php
-
-			for($i=0;$i<count($users_array);$i++){
-				echo "<li>
-					<strong>{$users_array[$i]->name}</strong>
-					<span>{$users_array[$i]->type}</span>
-				</li>";
-			}
-
-
-			?>
-
-
-		</div>
 	</div>
 
 
