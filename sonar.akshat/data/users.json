@@ -1,0 +1,39 @@
+[
+	{
+		"name":"Akshat Sonar",
+		"type":"Student",
+		"email":"akshatsonar@gmail.com",
+		"classes":"608"
+	},
+	{
+		"name":"Steve Smith",
+		"type":"Student",
+		"email":"stevesmith@gmail.com",
+		"classes":"108"
+
+	},
+	{
+		"name":"David Miller",
+		"type":"Student",
+		"email":"davidmiller@gmail.com",
+		"classes":"638"
+	},
+	{
+		"name":"Joe Root",
+		"type":"Student",
+		"email":"joeroot@gmail.com",
+		"classes":"618"
+	},
+	{
+		"name":"Ben Stokes",
+		"type":"Student",
+		"email":"benstokes@gmail.com",
+		"classes":"628"
+	},
+	{
+		"name":"David Warner",
+		"type":"Student",
+		"email":"davidwarner@gmail.com",
+		"classes":"610"
+	}
+]

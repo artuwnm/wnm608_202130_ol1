@@ -1,0 +1,80 @@
+h1 {
+    font-family: aktiv-grotesk,sans-serif; 
+    font-weight: 700; 
+    font-style: bold; 
+    color: #2C23F7; 
+    padding-left: 50px;
+}
+
+h2 {
+    font-family: aktiv-grotesk,sans-serif; 
+    font-weight: 700; 
+    font-style: bold; 
+    color: #2C23F7; 
+    padding-left: 50px;
+}
+
+.listnav {
+    background-color: whitesmoke;
+    padding-bottom: 20px;
+}
+
+body {
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: whitesmoke;
+}
+
+a {
+    font-family: aktiv-grotesk,sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    text-decoration: none;
+    color: black;
+    padding-left: 50px;
+}
+
+a:hover {
+    color:#2C23F7;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.navii {
+    display: flex;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    padding-top: 20px;
+}
+
+.nav1 {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    flex-flow: right;
+    margin-right: 50px;
+    padding-top: 0px;  
+}
+
+.nav1:hover {
+    color:#2C23F7;
+    font-weight: 700; 
+    font-style: italic;
+}
+
+.navi {
+    float: left;
+}
+
+
