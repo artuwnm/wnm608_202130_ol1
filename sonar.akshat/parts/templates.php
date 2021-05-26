@@ -1,12 +1,11 @@
 <?php
 
-
 function productListTemplate($r,$o) {
 return $r.<<<HTML
-<a class="fig" href="product.php?id=$o->id">
-    <figure class="figure" style="transition: all 0.3s;">
-        <img src="img/$o->thumbnail" alt="" style="display: block;margin-left: auto;margin-right: auto;margin-top:5px;height:72%;">
-        <figcaption><div style="padding-top: 15px;">$o->name<br>&#8377;$o->price</div></figcaption>
+<a class="figu" href="product.php?id=$o->id">
+    <figure>
+        <img src="img/$o->thumbnail" alt="" class="figimg">
+        <figcaption><div>$o->name<br>&#8377;$o->price</div></figcaption>
     </figure>
 </a>
 
@@ -82,3 +81,22 @@ return <<<HTML
 
 HTML;
 }
+
+function recommendedProducts($a) {
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="productlist">$products</div>
+HTML;
+}
+
+function recommendedCategory($cat,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+function recommendedSimilar($cat,$id=0,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() DESC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+

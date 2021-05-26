@@ -131,8 +131,16 @@ $display = <<<HTML
 		<span>$product->price</span>
 	</div>
 	<div>
-		<strong>Technical Specs</strong>
-		<span>$technical_specs</span>
+		<strong>Category</strong>
+		<span>$o->category</span>
+	</div>
+	<div>
+		<strong>Thumbnail</strong>
+		<span>$o->thumbnail</span>
+	</div>
+	<div>
+		<strong>Images</strong>
+		<span>$images</span>
 	</div>
 </div>
 HTML;

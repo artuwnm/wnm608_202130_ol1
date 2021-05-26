@@ -1,17 +1,13 @@
-<?php include_once "php/functions.php"; ?>
+<?php 
+include_once "php/functions.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Cart Page</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/site.webmanifest">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="https://use.typekit.net/mzq5qsc.css">
+	<title>Cart Page</title>
+	<?php include "parts/meta.php"; ?>
+  
 </head>
 
 <body>
@@ -19,7 +15,7 @@
 	<?php include "parts/navbar.php"; ?>
 
 	<div>
-		<h1>Checkout</h1>
+		<h1 class="h1">Checkout</h1>
 	</div>
 
 	<div class="section">
@@ -91,7 +87,7 @@
 				</form>
 		</div>
 	</div>
-	
+
 	<div class="btns">	
 		<button class="defbutton4" onclick="location.href='cart.php'">Back</button> 
 		<button class="defbuttton3" onclick="location.href='confirmation.php'">Complete Checkout</button> 

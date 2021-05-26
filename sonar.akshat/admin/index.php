@@ -4,9 +4,9 @@
 include_once "../php/functions.php";
 
 $empty_product = (object)[
-	"name"=>"Cyberpunk 2077",
-	"description"=>"Test",
-	"price"=>"3499",
+	"name"=>"Spiderman Miles Morales",
+	"description"=>"Miles Morales discovers explosive powers that set him apart from his mentor, Peter Parker\r\n\r\nA war for power -a war for control of Marvel’s new York has broken out between a devious Energy Corporation and a high-tech criminal army\r\n\r\nA vibrant new home - traverse the snowy streets of his new, vibrant, and bustling neighborhood as Miles searches for a sense of belonging",
+	"price"=>"3999",
 	"category"=>"Discs",
 	"thumbnail"=>"spiderman_front.jpg",
 	"images"=>"spiderman_front.jpg,spiderman_side.jpg",
@@ -114,11 +114,12 @@ function showProductPage($o) {
 $id = $_GET['id'];
 $addoredit = $id == 'new' ? 'Add' : 'Edit';
 $createorupdate = $id == 'new' ? 'create' : 'update';
-$images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='img/$o'>";});
+$images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<div class='containerbox2'><img class='contimg' src='img/$o'></div>";});
 
 // heredoc
 $display = <<<HTML
-<head><style>
+<head>
+<style>
 		h1 {font-family: aktiv-grotesk,sans-serif; font-weight: 700; font-style: bold; color: #2C23F7; padding-left: 50px;}
 		h2 {font-family: aktiv-grotesk,sans-serif; font-weight: 700; font-style: bold; color: #2C23F7; padding-left: 50px;}
   		strong {font-family: aktiv-grotesk,sans-serif; font-weight: 700; font-style: bold; color: #2C23F7; padding-left: 50px;}
@@ -191,8 +192,7 @@ $display = <<<HTML
 		    margin-top: 15px;
 		}
 		.defbutton3:hover {
-		    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
-		}
+		    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);		}
 		.info {background-color: whitesmoke; padding-top: 5px; padding-bottom: 30px;}
 		.editpro {
 			padding-left: 50px;
@@ -212,7 +212,71 @@ $display = <<<HTML
 		.backbtn:hover {
 			box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 		}
-	</style></head>
+
+		.adminbtns {
+    		display: flex;
+		}
+
+		.delbtn {
+			display: inline-block;
+		    background: white;
+		    border-width: 0;
+		    font-family: aktiv-grotesk,sans-serif;
+		    font-weight: 700;
+		    font-style: normal;
+		    font-size: 18px;
+		    color: #2C23F7;
+		    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+		    width: 100px;
+		    height: 30px;
+		    outline: 0;
+		    border-radius: 10px;
+		    transition: all 0.2s;
+		    margin-left: 50px;
+		}
+
+		.delbtn:hover {
+			background-color: red;
+		    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+		}
+
+		.dele {
+    		color:black; font-style:normal; font-weight:400; padding: 18px;
+		}
+
+		.dele:hover {
+			color: white; font-style:normal; font-weight:400;
+		}
+
+		.containerbox {
+			box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+		    width: 150px;
+		    height: 150px;
+		    outline: 0;
+		    border-radius: 10px;
+		    overflow: hidden;
+		}
+
+		.contimg {
+			display: block;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  	margin-top: 18px;
+		}
+
+		.containerbox2 {
+			box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+		    width: 150px;
+		    height: 150px;
+		    outline: 0;
+		    border-radius: 10px;
+		    overflow: hidden;
+		    margin-top: 20px;
+		    margin-right: 50px;
+		}
+
+	</style>
+</head>
 
 <div>
 	<h2>$o->name</h2>
@@ -227,15 +291,15 @@ $display = <<<HTML
 		</div>
 		<div>
 			<label>Description</label><br>
-			<span>$o->description</span><br><br>
+			<span><div style="padding-right: 50px;">$o->description</div></span><br><br>
 		</div>
 		<div>
 			<label>Thumbnail</label><br><br>
-			<span><img src='img/$o->thumbnail'></span><br>
+			<span><div class="containerbox"><img src='img/$o->thumbnail' class="contimg"></span></div><br>
 		</div>
 		<div>
 			<label>Images</label><br>
-			<span>$images</span><br><br>
+			<span style="display: flex;">$images</span><br><br>
 		</div>
 	</div>
 </div>
@@ -268,7 +332,7 @@ $form = <<<HTML
 		</div>
 		<div class="">
 			<label class="" for="images">Images</label><br>
-			<input class="definput" name="images" id="images" type="text" value="$o->images" placeholder="Enter the Product Images">
+			<input class="definput" name="images" id="`" type="text" value="$o->images" placeholder="Enter the Product Images">
 		</div>
 		
 		<div class="btn">
@@ -286,12 +350,14 @@ $output = $id == "new" ? $form :
 	</div>
 	";
 
-$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+$delete = $id == "new" ? "" : "<button class='delbtn'><a class='dele' href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a></button>";
 
 echo <<<HTML
-<nav class="">
-	<div><a class="backbtn" style="padding-left: 0px; text-align: center; line-height: 30px; font-style: normal; font-weight: bold;" href="{$_SERVER['PHP_SELF']}">&#5176;</a></div>
-	<div class="">$delete</div>
+<nav>
+	<div class="adminbtns">
+		<div><a class="backbtn" style="padding-left: 0px; text-align: center; line-height: 30px; font-style: normal; font-weight: bold;" href="{$_SERVER['PHP_SELF']}">&#5176;</a></div>
+		$delete
+	</div>
 </nav>
 $output
 HTML;
@@ -398,6 +464,7 @@ HTML;
 		}
 		.defbutton3:hover {
 		    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+		    width: 300px;
 		}
 		.backbtn {
 			display: inline-block;
@@ -427,8 +494,8 @@ HTML;
 			<div>
 				<nav>
 					<ul>
-						<li><a href="<?= $_SERVER['PHP_SELF'] ?>">Products List</a></li>
-						<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
+						<li style="margin-left: 50px;"><a href="<?= $_SERVER['PHP_SELF'] ?>">Products List</a></li>
+						<li style="margin-left: 50px;"><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -439,16 +506,6 @@ HTML;
 
 		<?php 
 
-
-    /**if(isset($_GET['id'])) {
-		showProductPage(
-					$_GET['id']=='new' ?
-					$empty_product :
-					array_find($products,function($o){
-						return $o->id==$_GET['id'];
-						})
-					);**/
-
 			if(isset($_GET['id'])) {
 				showProductPage(
 					$_GET['id']=="new"?
@@ -456,27 +513,20 @@ HTML;
 						makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
 			);
 
-			/**if(isset($_GET['id'])) {
-
-	            if($_GET['id']=='new') {
-	                showProductPage( $empty_product );
-	            } else {
-	                $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`='{$_GET['id']}'");
-	                showProductPage( $result[0] );
-	            }**/
 	
 			} else {
 
 				?>
 				<h2>Product List</h2>
 
+				<div style="padding-left: 100px;">
 				<?php
 
-				$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY `date_create` DESC");
+				$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY `date_create` ASC");
 
 				echo array_reduce($result,'productListItem');
 
-				?>
+				?></div>
 
 			<?php } ?>
 

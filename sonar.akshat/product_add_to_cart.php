@@ -11,21 +11,17 @@ $cart_product = cartItemById($_GET['id']);
 	<meta charset="utf-8">
 	<title>Cart Page</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/site.webmanifest">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="https://use.typekit.net/mzq5qsc.css">
     <?php include "parts/meta.php"; ?>
+    <style>
+		body {background-image: url('img/balloons.svg'); background-repeat: no-repeat;width: 100%; background-position: center;}
+	</style>
 </head>
 
 <body>
 	
 	<?php include "parts/navbar.php"; ?>
 
-	<h1>You added <?= $product->name ?> to your cart</h1>
+	<h1 class="h1">You added <?= $product->name ?> to your cart</h1>
 
 	<div class="addpro">
 	<div class="addedproduct">

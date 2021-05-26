@@ -10,7 +10,7 @@ ul {
 a {
     text-decoration: none;
     color: black;
-    padding-left: 50px;
+    padding-left: 0px;
 }
 
 a:hover {
@@ -56,6 +56,7 @@ a:hover {
     font-weight: 700;
     font-style: bold;
     color: #2C23F7;
+    text-align: left;
 }
 
 .wel {
@@ -78,6 +79,28 @@ a:hover {
     padding-left: 300px;
     padding-top: 20px;
     margin: 0;
+}
+
+.defbutton {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+.defbutton:hover {
+    display: inline-block;
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
 }
 
 .defbutton3 {
@@ -158,5 +181,707 @@ body {
 
 .logo {
     padding-left: 0px;
+}
+
+.bgimg {
+  background-image: url(https://i.imgur.com/5ccKK9y.png); background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/**SEARCH**/
+
+.searchbox {
+    padding-top: 50px;
+}
+
+.search {
+    text-align: center;
+}
+
+.sort {
+    display: flex;
+    justify-content: center;  
+}
+
+.js-sort {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: grey;
+    text-align-last: center;
+}
+
+.js-sort:hover {
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+}
+
+.hotdog {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.hotdog:hover {
+    box-shadow: 0 2px 50px rgba(0,0,0,0.2);
+}
+
+/**FIGURES**/
+
+.figure {
+    border-radius: 15px;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    height: 310px; 
+    transition: all 0.3s;
+}
+
+.figure:hover {
+    box-shadow: 0 2px 50px rgba(0,0,0,0.2);
+}
+
+figcaption {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.figu {
+    padding-left: 0px;
+    border: 0px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.figimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5px;
+  height:72%;
+}
+
+body {
+    margin: 0px;
+}
+
+.productlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.filterbtn {
+    display: inline-block;
+    border-width: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: grey;
+    width: 90px;
+    height: 30px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    transition: all 0.3s;
+}
+
+.filterbtn:hover {
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+}
+
+/*Product.php*/
+
+.content {
+    margin: 0px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 200px;
+    
+}
+
+.figirine {
+    margin: 0;
+    margin-right: 100px;
+}
+
+.title2 {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    color: #2C23F7;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 0px;
+}
+
+.para {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+
+.label2 {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.info {
+    box-shadow: 0 2px 50px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.cart{
+    display: inline-block;
+    background: rgb(43,111,247);
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 600px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-right: 0px;
+}
+
+.cart:hover {
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+}
+
+.thumbnails {
+    display: flex;
+}
+
+.thumbnails2 {
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    width: 120px;
+    height: 120px;
+    outline: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 10px; 
+    margin-bottom: 50px; 
+    transition: all 0.3s;  
+}
+
+.thumbnails2:hover {
+    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+}
+
+.thumbnails img {
+    width: 80px;
+    object-fit: contain;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+.mainimg img {
+    width= "450px";
+    object-fit= "contain";
+}
+
+.sel {
+    padding: 10px 20px 10px 20px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    font-family: aktiv-grotesk,sans-serif;
+    font-style: normal;
+    margin-right: 30px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sel:hover {
+    box-shadow: 0 2px 30px rgb(0 0 0 / 20%);
+}
+
+.x {
+    padding-left: 50px;
+    height: 38px;
+}
+
+.ps {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+/*cart.php*/
+
+.h1 {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    color: #2C23F7;
+    padding-top: 100px;
+    margin: 0px;
+    text-align: center;
+}
+
+h2 {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    color: #2C23F7;
+    padding-bottom: 0px;
+}
+
+p {
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form {
+    margin-left: 100px;
+}
+
+label {
+    font-family: aktiv-grotesk,sans-serif; 
+    font-weight: 700; 
+    font-style: bold; 
+    color: #2C23F7;
+    padding-bottom: 20px;
+}
+
+.definput {
+    display: inline-block;
+    border-width: 0;
+    outline: 0;
+    padding: 12px 50px;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    color: grey;
+    width: 200px;
+    transition: all 0.2s;
+}
+
+.definput:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.definput:focus {
+    border: 2.5px solid;
+    border-color: #2B6FF7;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.btn {
+    padding-left: 50px;
+    padding-top: 10px;
+    margin: 0px;
+}
+    
+.defbuttton3 {
+    display: inline-block;
+    background: rgb(43,111,247);
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 700px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+
+.defbuttton3:hover {
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+}
+
+
+.defbutton4 {
+    display: inline-block;
+    background: white;
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+    width: 250px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+
+.defbutton4:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    color: #2C23F7;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-x: none;
+  -moz-user-x: none;
+  -ms-user-x: none;
+  user-x: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: lightgrey;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: #2C23F7;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 10%;
+  background: white;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.inlinebtn {
+  display: inline-block;
+  background: white;
+  border-width: 0;
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  color: red;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  width: 100px;
+  height: 30px;
+  outline: 0;
+  border-radius: 5px;
+  padding-bottom: 4px;
+  transition: all 0.2s;
+}
+
+.inlinebtn:hover {
+  background-color: red;
+  color: white;
+}
+
+.amtsel {
+  padding: 5px 10px 5px 10px;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    font-family: aktiv-grotesk,sans-serif;
+    font-style: normal;
+    height: 30px;
+    transition: all 0.2s;
+}
+
+.amtsel:hover {
+  box-shadow: 0 2px 30px rgb(0 0 0 / 20%);
+}
+
+.addedproduct {
+  box-shadow: 0 2px 50px rgb(0 0 0 / 20%);
+  width: 600px;
+  height: 80px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.addpro {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.cartbtn {
+    display: inline-block;
+    background: rgb(43,111,247);
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 350px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.cartbtn:hover {
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+}
+
+
+.shopbtn {
+    display: inline-block;
+    background: white;
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #2C23F7;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.2);
+    width: 200px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    margin-left: 0px;
+    transition: all 0.3s;
+}
+
+.shopbtn:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    color: #2C23F7;
+}
+
+.btns2 {
+  display: flex;
+  justify-content: center;
+}
+
+.paytext {
+  font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    color: black;
+}
+
+.paymeth {
+  box-shadow: 0 2px 50px rgba(0,0,0,0.2);
+  width: 250px;
+  height: 320px;
+  border-radius: 10px;
+  margin-top: 125px;
+}
+
+.paymeth2 {
+  padding-left: 30px;
+  padding-top: 0px;
+}
+
+.paytext2 {
+  font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: black;
+}
+
+.confirmsec {
+  box-shadow: 0 2px 50px rgb(0 0 0 / 20%);
+  width: 600px;
+  height: 170px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.confirmsec2 {
+
+}
+
+.parasec {
+    margin: 0px;
+    line-height: 120px;
+}
+
+.cartbtn3 {
+    display: inline-block;
+    background: rgb(43,111,247);
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 600px;
+    height: 50px;
+    outline: 0;
+    border-radius: 0px 0px 10px 10px;  
+}
+
+.cartbtn3:hover {
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+}
+
+.checkbtn {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+    border-width: 0;
+    font-family: aktiv-grotesk,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    width: 500px;
+    height: 50px;
+    outline: 0;
+    border-radius: 10px;
+    }
+
+.checkbtn:hover {
+    background: linear-gradient(270deg, rgba(43,111,247,1) 35%, rgba(44,35,247,1) 100%);
+}
+
+.noitem {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    transition: 0.3s;
+    vertical-align: middle;
+}
+
+.noit {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.noitems {
+    display: flex;
+    justify-content: center;
+}
+
+.noitem:hover {
+   box-shadow: 0 2px 30px rgba(0,0,0,0.2); 
+}
+
+.button {
+    margin-top: 40px;
 }
 

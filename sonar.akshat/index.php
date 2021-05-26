@@ -2,32 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <?php include "parts/meta.php"; ?>
     
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/mzq5qsc.css">
-    <style>
-        body {background-image: url(https://i.imgur.com/5ccKK9y.png); background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;}
-    </style>
+    <title>Home</title>  
 </head>
 
-<body>
+<body class="bgimg">
     <?php include "parts/navbar.php"; ?>
         
     <div class="wel">
         <h1 class="welcome">Welcome to the Game Station!</h1>
-        <p class="pari">Game Station is the only official Playstation affiliated digital store that sells exclusive Playstation 5 Game Titles, PS5 Console, and Accessories.</p>
+        <p class="pari">Game Station is the only official Playstation affiliated digital store that sells exclusive Playstation 5 Game Titles, PS5 Console, and Accessories.</p></div>
     </div>
-        
+    
     <div class="btn">
-        <button class="defbutton3" onclick="location.href='store.php'">Discover Store</button>
+        <button class="defbutton" onclick="location.href='store.php'">Discover Store</button>
     </div>
     
     <footer>
