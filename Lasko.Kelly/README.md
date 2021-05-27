@@ -8,6 +8,5 @@
 
 
 ##Extra Links
-- http://kellylasko.com/public_html/aau/WMN608/Lasko.Kelly/products.sql
 - http://kellylasko.com/public_html/aau/WMN608/Lasko.Kelly/notes
 - http://kellylasko.com/public_html/aau/WMN608/Lasko.Kelly/notes/reading_data.php
