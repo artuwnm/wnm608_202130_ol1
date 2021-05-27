@@ -7,9 +7,10 @@
 
 - http://www.mindyquan.com/aau/wnm608/quan.mindy/styleguide
 
+- http://www.mindyquan.com/aau/wnm608/quan.mindy/admin
+
 - http://www.mindyquan.com/aau/wnm608/quan.mindy/notes
 
-- http://www.mindyquan.com/aau/wnm608/quan.mindy/admin
 
 
 ## Extra Links
