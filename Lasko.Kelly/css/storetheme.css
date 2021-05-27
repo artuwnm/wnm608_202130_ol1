@@ -1,0 +1,295 @@
+
+:root{
+	--color-offwhite: #f4f4f4;
+/*Greens*/
+	--color-main-light: #a3e6c5;
+    --color-main-medium: #67bf94;
+    --color-main-dark: #406e57;
+}
+
+.name {
+	padding-left: 1em;	
+}
+
+body {
+	background-color: var(--color-offwhite);
+	padding-bottom: 10em;
+}
+
+.favorite label {
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+	color: var(--color-neutral-medium);
+}
+
+.favorite input:checked + label {
+	color: red;
+	transform:scale(1.5,1.5);
+}
+
+
+@media (max-width: 800px) {
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.navbar h1 {
+		padding-left: 0.5em;
+	}
+}
+
+.menu-button label{display:none;}
+
+@media (max-width: 400px) {
+	.navbar .display-flex{
+		flex-wrap: wrap;
+	}
+	.navbar .nav {
+		width: 100%;
+		display: none;
+	}
+	.navbar .nav-flex ul {
+		display: block;
+	}
+	.navbar .nav li {
+		line-height: 2em;
+	}
+	.menu-button label {
+    display: block;
+    padding: 0 1em;
+	}
+
+	#menu:checked+.navbar .nav {
+		display: block;
+	}
+}
+
+.view-window {
+	height: 50vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.view-window h2{
+	color: var(--color-main-light);
+}
+
+.articles {
+	
+ 	flex-direction: column;
+ 	align-items: center;
+ 	margin-top: 5em;
+ 	width: 1200px;
+	height: 500px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+	/* Float four columns side by side */
+  float: left;
+  width: 25%;
+  padding: 20px 20px;
+}
+	
+.article {
+		
+		justify-content: space-between;
+		align-items: center;
+		
+}
+
+.article-text {
+		width: 340px;
+		height: 450px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+.footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    bottom: 0;
+    left: 0;
+    display:table;
+    line-height: 1rem;
+    
+}
+
+.footer-text {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+    padding:20px;
+    font-size: .7em;
+}
+
+
+img {
+	height: auto;
+    width: 200px;
+}
+
+.second-row {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.figure.product {
+	border-radius: 0.5em;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	overflow: hidden;
+	height: 100%;
+	transition: all 0.3s;
+}
+
+.product.figure img {
+    object-fit: contain;
+    height: 20em;
+    margin-top: 1em;
+}
+.figure img {
+	width: 100%;
+	height: 100%;
+}
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 15px rgba(0,0,0,.2);
+}
+
+.product-overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.product-overlay figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product-overlay:hover figcaption {
+	opacity: 1;
+}
+
+.product-overlay .caption-body {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 1em;
+	transform: translateY(2em);
+	transition: all 0.3s;
+
+}
+
+.product-overlay:hover .caption-body {
+	transform: translateY(0);
+}
+
+.product-overlay img {
+	transform: scale(1,1);
+	transition: all 0.3s;
+
+}
+
+.product-overlay:hover img {
+	transform: scale(1.4,1.4);
+}
+
+@media(max-width: 600px) {
+	.product-overlay figcaption{
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-color: initial;
+	}
+	.product-overlay .caption-body {
+		transform: none: 
+		padding:0;
+	}
+}
+
+
+
+
+.images-main img {
+	width: 100%;
+	height: 40vh;
+	object-fit: contain;
+}
+
+
+
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+
+
+span.badge:not(:empty)::after {
+	content: ')';
+}
+
+span.badge:not(:empty)::before {
+	content: '(';
+}
+
+.cart_item_names {
+	font-weight: 700; ; 
+	font-size: 1em; 
+	padding: .5em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
