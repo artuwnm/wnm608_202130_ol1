@@ -1,6 +1,6 @@
 <?php 
 
-include "../lib/php/functions.php";
+include_once "../lib/php/functions.php";
 
 //$filename = "notes.json";
 //$file = file_get_contents($filename); //return a string value of a text content of this document
@@ -31,7 +31,7 @@ $users_array = file_get_json("../data/users.json");
 <body>
 
 
-	<?php include "../parts/header_nav.php"; ?>
+	
 
 	
 	<div class="container">
