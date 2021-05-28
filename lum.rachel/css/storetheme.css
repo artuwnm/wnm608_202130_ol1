@@ -1,0 +1,218 @@
+
+:root{
+
+--color-main-light: #c1ad98;
+  --color-main-medium: #ae9176;
+  --color-main-dark: #987655;
+
+  --color-accent-light: #f0dba6;
+  --color-accent-medium: #e5c063;
+  --color-accent-dark: #deae37;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #555;
+
+  --header-heaght: 7rem;
+  --spacing: 1rem;
+
+  --font-sans: Semplicita Pro, Helvetica, Arial, sans-serif;
+  --font-serif: Playfair Display,Georgia, "Times New Roman", serif;
+}
+
+nav a{
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .navabr h1{
+    padding-left: 0.5em;
+  }
+}
+
+
+.menu-button label {display: none;}
+@media (max-width: 400px) {
+  .navbar .display-flex {
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav{
+    width: 100%;
+    display: none;
+  }
+
+  .navbar .nav-flex ul{
+    display: block;
+  }
+
+   .navbar .nav li{
+    line-height: 2em;
+  }
+
+  .menu-button label{
+    display: block;
+    padding: 0 1em;
+  }
+
+  #menu:checked+.navbar .nav{
+    display: block;
+  }
+
+  .view-window{
+    display: none;
+  }
+}
+
+
+body{
+  
+  padding-bottom: 4em;
+}
+
+.favorite label{
+  transition: all 0.3s;
+  display: inline-block;
+  transform: scale(1,1);
+  color: var(--color-main-medium);
+}
+
+
+.favorite input:checked + label{
+  color: red;
+  transform: scale(1.3, 1.3);
+}
+
+
+
+.figure.product{
+  border-radius: 0.5em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.3s
+
+}
+.product.figure:img{
+  height: 100%;
+  object-fit: contain;
+}
+
+.product.figure:hover{
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+.product-overlay{
+  position: relative;
+  overflow: hidden;
+}
+
+.product-overlay figcaption{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-overlay:hover figcaption{
+  opacity: 1;
+}
+
+.product-overlay .caption-body{
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 1em;
+  transform: translateY(2em);
+  transition: all 0.3s;
+}
+
+.product-overlay:hover .caption-body{
+  transform: translateY(0);
+}
+
+.product-overlay img{
+  transform: scale(1,1);
+  transition: all 0.3s;
+}
+
+.product-overlay:hover img{
+  transform: scale(1.4,1.4);
+}
+
+@media (max-width: 600px){
+  .product-overlay figcaption{
+    position: relative;
+    display: block;
+    top: initial;
+    left: initial;
+    width: 100%;
+    height: initial;
+    opacity: 1;
+    background-color: initial;
+  }
+
+  .product-overlay .caption-body{
+    transform: none;
+    padding: 0;
+  }
+}
+
+
+
+.edit-button{
+  text-decoration: underline;
+  background: transparent;
+  color: var(--color-black);
+  border-width: 0;
+}
+
+
+
+.images-main img{
+  width: 100%;
+  height: 40vh;
+  object-fit: contain;
+}
+
+.images-thumbs img{
+  width: 8em;
+  height: 6em;
+  object-fit: contain;
+}
+
+
+span.badge:not(:empty)::after{
+  content: ')';
+}
+
+
+span.badge:not(:empty)::before{
+  content: '(';
+}
+
+
+.category-space{
+  padding: 0 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+

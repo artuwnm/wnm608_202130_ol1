@@ -1,0 +1,32 @@
+[
+	{
+		"name" : "Rachel Lum",
+		"type" : "Student",
+		"email" :"rllum@ucsc.edu",
+		"classes" : [605,608,613]
+	},
+	{
+		"name" : "Pheobe Buffay",
+		"type" : "Singer",
+		"email" :"pb@ucsc.edu",
+		"classes" : [605,608,613,606]
+	},
+	{
+		"name" : "Joey Tribbiani",
+		"type" : "Actor",
+		"email" :"jt@ucsc.edu",
+		"classes" : [605,608,613,606]
+	},
+	{
+		"name" : "Ross Gellar",
+		"type" : "Teacher",
+		"email" :"rg@ucsc.edu",
+		"classes" : [605,608,613,606]
+	},
+	{
+		"name" : "Chandler Bing",
+		"type" : "Who Knows",
+		"email" :"cb@ucsc.edu",
+		"classes" : [605,608,613,606]
+	}
+]
