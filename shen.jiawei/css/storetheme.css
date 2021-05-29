@@ -1,0 +1,24 @@
+:root {
+  --color-main: salmon;
+  --color-neutral-light: #eee;
+  --color-neutral-medium: lightgray;
+  --color-neutral-dark: rgb(105, 105, 105);
+}
+
+#about-us {
+  background-color: rgb(64, 64, 64);
+  color: white;
+  padding: 2rem;
+  display: flex;
+}
+
+#about-us > img {
+  width: 500px;
+}
+
+#about-us > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

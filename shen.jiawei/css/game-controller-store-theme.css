@@ -1,0 +1,186 @@
+:root {
+  --color-main: #13f2a1;
+  --color-main-dark: #038c5a;
+  --color-main-light: #82ffc4;
+  --color-sub: #760dc3;
+  --color-sub-dark: #570a90;
+  --color-sub-light: #964bcd;
+  --color-neutral-extra-dark: #111;
+  --color-neutral-dark: #222;
+  --color-neutral-medium: #333;
+  --color-neutral-light: #999;
+  --color-neutral-extra-light: white;
+  --color-neutral-contrast-1: rgba(255, 255, 255, 0.1);
+  --color-neutral-contrast-2: rgba(255, 255, 255, 0.2);
+  --color-neutral-contrast-3: rgba(255, 255, 255, 0.3);
+  --color-neutral-contrast-4: rgba(255, 255, 255, 0.4);
+  --color-neutral-contrast-5: rgba(255, 255, 255, 0.5);
+  --color-neutral-contrast-6: rgba(255, 255, 255, 0.6);
+  --color-neutral-contrast-7: rgba(255, 255, 255, 0.7);
+  --color-neutral-contrast-8: rgba(255, 255, 255, 0.8);
+  --color-neutral-contrast-9: rgba(255, 255, 255, 0.9);
+  --color-neutral-contrast-10: rgba(255, 255, 255, 1);
+
+  --gradient-main-light: linear-gradient(
+    var(--color-main-light),
+    var(--color-main)
+  );
+
+  --glow-main-light: 0 0 25px var(--color-main-light);
+  --glow-main: 0 0 25px var(--color-main);
+  --glow-main-soft: 0 0 20px var(--color-main-dark);
+  --glow-main-strong: 0 0 50px var(--color-main-light);
+
+  --card-corner-radius: 15px;
+
+  font-size: 18px;
+}
+
+* {
+  font-family: "Oxanium", cursive;
+}
+
+body {
+  background-color: var(--color-neutral-extra-dark);
+  color: var(--color-neutral-extra-light);
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 200;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+h3 {
+  margin: 0.4em;
+}
+
+h4 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* NAV */
+
+header * {
+  color: var(--color-neutral-extra-dark);
+}
+
+header {
+  /* background: var(--gradient-main-light); */
+  box-shadow: var(--glow-main-light);
+}
+
+nav > a:hover {
+  color: var(--color-neutral-extra-dark);
+  background-color: var(--color-neutral-extra-light);
+  transform: scale(1.2);
+}
+
+/* CARD */
+
+.card {
+  box-shadow: var(--glow-main-soft);
+  background-color: var(--color-neutral-extra-dark);
+}
+
+.card.soft {
+  background-color: var(--color-neutral-dark);
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); */
+}
+
+.card.selectable:hover,
+.select-card > label:hover,
+.hue-input > .grid.gap > .card:hover {
+  box-shadow: var(--glow-main);
+}
+
+.card.selected {
+  border: 4px solid var(--color-main);
+}
+
+#filters > .card {
+  margin: 10px 0;
+}
+
+/* ITEM CARD */
+
+.item-card {
+  box-shadow: var(--glow-main-soft);
+  background-color: var(--color-neutral-extra-dark);
+  /* background-color: var(--color-neutral-dark); */
+}
+
+.item-card:hover {
+  box-shadow: var(--glow-main);
+}
+
+.item-card > .info > .desc > p,
+.item-card > .info > .price > .full {
+  color: var(--color-neutral-light);
+}
+
+.item-card.item-card.horizontal > .info > .desc > p {
+  font-family: "Oxanium", cursive;
+}
+
+/* INPUT */
+
+input {
+  color: var(--color-neutral-extra-light);
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* BUTTON */
+
+button {
+  border-radius: 233vh;
+  font-weight: 500;
+}
+
+button.primary {
+  color: var(--color-neutral-extra-dark);
+  font-weight: 700;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+  box-shadow: var(--glow-main-soft);
+}
+
+button.primary:hover {
+  box-shadow: var(--glow-main);
+  background-color: var(--color-main);
+}
+
+button.primary.strong {
+  box-shadow: var(--glow-main);
+}
+
+button.primary.strong:hover {
+  background-color: var(--color-neutral-extra-light);
+  box-shadow: var(--glow-main-strong);
+}
+
+button.primary.strong:active {
+  opacity: 1;
+  border-color: var(--color-neutral-extra-light);
+  transform: scale(1.1);
+}
+
+button.delete:hover {
+  color: var(--color-neutral-extra-light);
+  background-color: red;
+  border-color: red;
+}
