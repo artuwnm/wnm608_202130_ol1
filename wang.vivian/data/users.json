@@ -1,0 +1,40 @@
+[
+	{
+		"name":"Vivian Wang",
+		"type":"Student",
+		"email":"vivianwang@gmail.com",
+		"classes":"608,345,549"
+	},
+	{
+		"name":"Amy Campos",
+		"type":"Student",
+		"email":"amycampos@gmail.com",
+		"classes":"108,549"
+
+	},
+	{
+		"name":"Jimmy Wales",
+		"type":"Student",
+		"email":"jimmywales@gmail.com",
+		"classes":"638,610,549"
+	},
+	{
+		"name":"Joe Lin",
+		"type":"Student",
+		"email":"joelin@gmail.com",
+		"classes":"618,345,638"
+	},
+	{
+		"name":"Nicole Richie",
+		"type":"Student",
+		"email":"nicolerichie@gmail.com",
+		"classes":"628,618,610"
+	},
+	{
+		"name":"Matthew Kendall",
+		"type":"Student",
+		"email":"mattkendall@gmail.com",
+		"classes":"610,549,345"
+	}
+	
+]
