@@ -17,10 +17,15 @@ resetCart()
 
 
 <div class="container">
-	<div class="card soft">
-		<h2>Thank You for your Purchase</h2>
-		<p><a href="product_list.php">Continue Shopping</a></p>
-		
+	<div class="" style="margin: 5em; text-align: center;">
+		<h1 style="font-size: 3.4em;">Thanks for your Purchase!</h2>
+			<br>
+		<p>Your order was completed successfully.</p>
+		<p>We're honored that you trust us to take care of your skin!</p>
+	</div>
+
+	<div class="continue_shopping">
+		<span ><a href="product_list.php">Continue Shopping</a></span>
 	</div>
 </div>
 

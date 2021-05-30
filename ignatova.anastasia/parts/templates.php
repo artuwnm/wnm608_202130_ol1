@@ -12,6 +12,7 @@ return $r.<<<HTML
 
 			<figcaption class="flex-none">
 				<div>&dollar;$o->price</div>
+				<div>$o->brand_name</div>
 				<div>$o->name</div>
 			</figcaption>
 			
@@ -36,26 +37,39 @@ function cartListTemplate($r,$o){
 	$totalfixed = number_format($o->total, 2, '.','');
 	$selectamount = selectAmount($o->amount,10);
 	return $r.<<<HTML
-	<div class="display-flex">
+
+	<div class="display-flex card-section">
 		<div class="flex-none images_thumbs">
 			<img src="$o->thumbnail">
-	</div>
+		</div>
+
 	<div class="flex-stretch">
-		<strong>$o->name</strong>
-		<form action="cart_actions.php?action=delete-cart-item" method="post">
-		<input type="hidden" name="id" value="$o->id">
-		<input type="submit" class="form-button" value="Delete" style="font-size:0.8em">
-		</form>
+			<div class="flex-stretch">
+				<strong>$o->brand_name</strong>
+			</div>
+
+			<div class="flex-none">
+					<p style="padding: none;">$o->name</p>
+			</div>
 	</div>
+
+		
+	
+
 	<div class="flex-none">
 		<div>&dollar;$totalfixed</div>
 			<form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
 				<input type="hidden" name="id" value="$o->id">
-				<div class="form-select" style="font-size:0.8em">
+				<div class="form-select" style="font-size:0.8em; margin-bottom: 0.5em;">
 					$selectamount
 				</div>
 			</form>
-		</div>
+
+		<form action="cart_actions.php?action=delete-cart-item" method="post">
+			<input type="hidden" name="id" value="$o->id">
+			<input type="submit" class="form-button" value="Delete" style="font-size:0.8em; bottom:0.3em;">
+		</form>
+	</div>
 	</div>
 	HTML;
 }
@@ -84,9 +98,7 @@ function cartTotals() {
 						<div class="flex-stretch"><strong>Total</strong></div>
 						<div class="flex-none">&dollar;$taxedfixed</div>
 					</div>	
-					<div class="card-section">
-						<a href="product_checkout.php" class="form-button">Proceed to Checkout</a>
-					</div>		
+							
 	HTML;
 
 }
@@ -94,10 +106,28 @@ function cartTotals() {
 
 
 
+function recommendedProducts($a) {
+	$products = array_reduce($a, 'productListTemplate');
+	echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
 
 
+function recommendedAnything($limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
+	recommendedProducts($result);
+}
 
+function recommendedCategory($cat,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+	recommendedProducts($result);
+}
 
+function recommendedSimilar($cat,$id=0,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() DESC LIMIT $limit");
+	recommendedProducts($result);
+}
 
 
 

@@ -1,6 +1,7 @@
 <?php 
-
-include_once "lib/php/functions.php";
+ 
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
 
 	$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -25,8 +26,12 @@ include_once "lib/php/functions.php";
 
 
 <div class="container">
-	<div class="card soft">
-		<h3 id="product-cart">You have added <?= $product->name ?> added to the cart</h3>
+	<div>
+		 <?=
+		<<<HTML
+	<p id="product-cart">You have added <strong>$product->brand_name</strong> - <strong>$product->name</strong> to the cart.</p>
+HTML;
+?> 
 		<!-- <p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p> -->
 		<br>
 <div class="display-flex">
@@ -35,9 +40,26 @@ include_once "lib/php/functions.php";
 		<div class="flex-none"><a href="cart.php">Go to cart</a></div>
 
 </div>
+
+
+
+
+
+
+		</div>
+		<div class="container">
+			<h2 class="recommendedProducts">You might also like</h2>
+    <?php 
+$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='serum' ORDER BY `date_create` DESC LIMIT 3");
+
+recommendedProducts($result);
+
+
+    ?>
+</div>
+
 		
-		
-	</div>
+	
 </div>
 
 

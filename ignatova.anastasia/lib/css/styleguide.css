@@ -6,13 +6,10 @@
 }
 
 :root {
-	--color-neutral-light:#fffbfa;
-	--color-neutral-medium:#f5c3c0;
-	--color-neutral-dark:#d99c9c;
-
-    --color-main-light: #fffbfa;
-    --color-main-medium: #fad3c8;
-    --color-main-dark: #e58273;
+	--color-offwhite: #fffbfa;
+	--color-neutral-light:#EACDC5;
+	--color-neutral-medium:#e8cac5;
+	--color-neutral-dark:#BBA39F;
 
 	--color-dark-light: #fffbfa;
     --color-dark-medium: #184539;
@@ -46,7 +43,8 @@ h4,
 h5, 
 h6 {
 	font-family: var(--font-headings);
-	font-weight: 400;
+	font-weight: 200;
+	line-height: 1.2em;
 	margin-top: 0.1em;
 	margin-bottom: 0.1em;
 }
@@ -84,6 +82,14 @@ a:hover {
 .flex-justify-center {justify-content: center;}
 
 .flex-column {flex-direction: column;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-end {justify-content: flex-end;}
+.flex-align-end {align-items: flex-end;}
+
+.text-center {text-align: center;}
+.text-padding-right {padding-right: 0.3em;}
+.text-padding {padding: 0.3em;}
+
 
 
 /*Small Classes*/
@@ -100,18 +106,21 @@ a:hover {
 
 /*COMPONENT CLASSES*/
 
+
+
+
 .nav ul {
 	list-style-type: none;
-	margin-top: 0;
+	/*margin-top: 0;
 	margin-bottom: 0;
-	padding-left: 0;
+	padding-left: 0;*/
 }
 
 .nav a {
 	display: block;
-	/*padding: 0.2em 0.5em;*/
+	/*padding: .7em;*/
 	font-family: var(--font-serif);
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .nav a:hover {
@@ -130,12 +139,13 @@ a:hover {
 background-color: var(--color-neutral-medium);
 color: var(--color-dark-dark);
 /*line-height: var(--header-height);*/
+margin-bottom: 1em;
 
 }
 
 .navbar h1 {
 	font-size: 1.4em;
-	margin: 0;
+	margin: .4em;
 	font-family: var(--font-serif);
 }
 
@@ -143,10 +153,11 @@ color: var(--color-dark-dark);
 	padding: 0 0.5em;
 	font-family: var(--font-serif);
 	font-weight: 300;
-
 }
 
-
+.flush>.navbar {
+	margin-bottom: 0px;
+}
 
 
 
@@ -272,18 +283,19 @@ height: 4px;
 	background-color: var(--color-white);
 /*	margin-top: .2em;
 	margin-bottom: .2em;*/
-	padding: 1em;
-	max-width: 90%;
+	padding: .5em;
+	/*max-width: 90%;*/
 	overflow: hidden;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .card.soft {
 	/*margin-top: 0.4em;*/
-	margin-left: auto;
-	margin-right: auto;
 	border-radius: 0.5rem;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	/*margin: .5em;*/
 }
 
 
@@ -311,16 +323,19 @@ height: 4px;
 }
 
 
+[class*='col-']>.card {
+	height: 100%;
+	margin: 0;
+}
+
+
 .card-section~.card-section {
 	border-top: 1px solid var(--color-neutral-light);
 }
 
 .card-section {
-	padding: 1em;
+	padding: .4em 1em;
 }
-
-
-
 
 
 .view-window {
@@ -396,7 +411,6 @@ height: 4px;
 .form-select>select,
 .hotdog input,
 .hotdog,
-.form-button,
 .form-input,
 .form-item {
 display: inline-block;
@@ -406,6 +420,7 @@ display: inline-block;
 	-webkit-appearance: none;
 	color: inherit;
 	width: 100%;
+	/*padding: 1em;*/
 /*	border-bottom: 1px solid var(--color-neutral-light);*/
 	outline:0;
 	
@@ -440,7 +455,17 @@ display: inline-block;
 	border-radius: 1em;
 	cursor: pointer;
 	text-align: center;
-	padding: 0.5em 1em;
+	padding: .7em;
+
+
+	display: inline-block;
+	border-width: 0;
+	font: inherit;
+	-webkit-appearance: none;
+	color: inherit;
+	/*padding: 1em;*/
+/*	border-bottom: 1px solid var(--color-neutral-light);*/
+	outline:0;
 	
 }
 
@@ -461,15 +486,20 @@ display: inline-block;
 
 
 .hotdog {
-	background-color: var(--color-neutral-medium);
+	background-color: var(--color-neutral-light);
 	border-radius: 2em;
 	padding: 0.5em 1.5em;
 	display: flex;
 }
 
 .hotdog.dark {
-	background-color: var(--color-neutral-medium);
+	background-color: var(--color-neutral-dark);
 	color: var(--color-neutral-light);
+}
+
+.hotdog.medium {
+	background-color: var(--color-neutral-medium);
+	color: var(--color-neutral-dark);
 }
 
 .hotdog.light {
@@ -535,7 +565,14 @@ position: relative;
 }
 
 
+#checkoutdiv {
+	position: relative;
+}
 
+#checkoutbutton {
+	position: absolute;
+  	bottom: 0.2em;
+}
 
 
 

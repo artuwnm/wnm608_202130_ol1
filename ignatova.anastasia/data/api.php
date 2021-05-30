@@ -22,9 +22,9 @@ switch ($data->type) {
 			"SELECT * 
 			FROM `products` 
 			WHERE 
+				`brand_name` LIKE '%$data->search%' OR
 				`name` LIKE '%$data->search%' OR
 				`category` LIKE '%$data->search%' OR
-				`skin type` LIKE '%$data->search%' OR
 				`description` LIKE '%$data->search%' 
 			ORDER BY `date_create` DESC 
 			LIMIT 15");
